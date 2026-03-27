@@ -1,14 +1,24 @@
+/**
+ * Bootstrap: nestjs-pino Logger + Nest Logger for startup lines (examples/nest-js style).
+ */
+
 import 'reflect-metadata';
+
+import { Logger as NestLogger, ValidationPipe } from '@nestjs/common';
 import { NestFactory } from '@nestjs/core';
-import { Logger, ValidationPipe } from '@nestjs/common';
 import config from 'config';
-import { AppModule } from './app.module';
+import { Logger } from 'nestjs-pino';
+
+import { AppModule } from '@/app.module';
 
 async function bootstrap() {
   const app = await NestFactory.create(AppModule, { bufferLogs: true });
 
-  const logger = app.get(Logger);
-  app.useLogger(logger);
+  app.useLogger(app.get(Logger));
+
+  const nestLogger = new NestLogger('Main');
+  nestLogger.log('[Main] Starting Zyreth OpenAI gateway');
+  nestLogger.log(`[Main] Runtime folder: ${process.cwd()}`);
 
   app.useGlobalPipes(
     new ValidationPipe({
@@ -20,13 +30,10 @@ async function bootstrap() {
 
   const port = config.get<number>('runtime.port') ?? 3002;
   await app.listen(port);
-  logger.log(`Zyreth OpenAI gateway listening on http://localhost:${port}`);
+  nestLogger.log(`Zyreth OpenAI gateway listening on http://localhost:${port}`);
 }
 
-bootstrap().catch((error) => {
-  // Fallback to console if logger is not available
-  // eslint-disable-next-line no-console
+bootstrap().catch(error => {
   console.error('Failed to bootstrap Zyreth OpenAI gateway', error);
   process.exit(1);
 });
-

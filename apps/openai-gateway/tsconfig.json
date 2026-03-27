@@ -1,9 +1,9 @@
 {
   "compilerOptions": {
-    "target": "ES2022",
-    "module": "CommonJS",
-    "moduleResolution": "node",
-    "lib": ["ES2022"],
+    "target": "ES2024",
+    "module": "NodeNext",
+    "moduleResolution": "NodeNext",
+    "lib": ["ES2024"],
     "experimentalDecorators": true,
     "emitDecoratorMetadata": true,
     "strict": true,
@@ -11,10 +11,12 @@
     "skipLibCheck": true,
     "forceConsistentCasingInFileNames": true,
     "resolveJsonModule": true,
+    "paths": {
+      "@/*": ["./src/*"]
+    },
     "rootDir": "./src",
     "noEmit": true
   },
   "include": ["src/**/*"],
   "exclude": ["node_modules", "dist"]
 }
-

@@ -1,16 +1,16 @@
-import { Injectable } from '@nestjs/common';
+import type { ZyrethChatMessage } from '@/use-cases/run-prompt.use-case';
 import { Agent } from '@mastra/core/agent';
+import { Injectable } from '@nestjs/common';
 import config from 'config';
-import type { ZyrethChatMessage } from '../use-cases/run-zyreth-prompt.use-case';
 
-type LlmConfig = {
+interface LlmConfig {
   baseUrl: string;
   apiKey: string;
   model: string;
-};
+}
 
 @Injectable()
-export class MastraZyrethAgentService {
+export class MastraAgentService {
   private readonly agent: Agent;
 
   constructor() {
@@ -37,11 +37,10 @@ Rules:
   }
 
   async run(messages: ZyrethChatMessage[]): Promise<string> {
-    const userMessage = messages.find((message) => message.role === 'user');
+    const userMessage = messages.find(message => message.role === 'user');
     const prompt = userMessage?.content ?? '';
 
     const result = await this.agent.generate(prompt);
     return result.text ?? '';
   }
 }
-

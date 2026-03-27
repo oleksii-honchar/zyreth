@@ -1,7 +1,12 @@
 {
+  "nodeEnv": "development",
+  "logging": {
+    "level": "debug",
+    "verbose": false
+  },
   "llm": {
     "baseUrl": "https://lite-llm.lan/v1",
-    "apiKey": "no-need-for-an-api-key",
+    "apiKey": "check-env-variable",
     "model": "qwen3.5-27b",
     "provider": "openai",
     "temperature": 0.6,
@@ -15,8 +20,8 @@
   },
   "langfuse": {
     "baseUrl": "http://langfuse.mammoth.lan",
-    "publicKey": "pk-lf-local-dev-public-key",
-    "secretKey": "sk-lf-local-dev-secret-key",
+    "publicKey": "check-env-variable",
+    "secretKey": "check-env-variable",
     "enabled": true
   },
   "runtime": {

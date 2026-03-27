@@ -7,6 +7,8 @@
 .idea/
 .vscode/
 coverage/
+.eslintcache
+**/.eslintcache
 
 # VitePress (taskasi / agasi docs)
 packages/taskasi/docs/.vitepress/cache
@@ -14,3 +16,5 @@ packages/taskasi/docs/.vitepress/dist
 packages/agasi/docs/.vitepress/cache
 packages/agasi/docs/.vitepress/dist
 packages/taskasi/test/.tmp
+# Nx local cache, daemon/workspace data — never commit
+.nx/

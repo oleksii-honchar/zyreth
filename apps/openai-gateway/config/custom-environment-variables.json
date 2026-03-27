@@ -1,4 +1,9 @@
 {
+  "nodeEnv": "NODE_ENV",
+  "logging": {
+    "level": "LOG_LEVEL",
+    "verbose": "LOG_VERBOSE"
+  },
   "llm": {
     "baseUrl": "LLM_BASE_URL",
     "apiKey": "LLM_API_KEY",

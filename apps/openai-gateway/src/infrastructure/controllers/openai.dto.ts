@@ -1,5 +1,5 @@
-import { IsArray, IsOptional, IsString, ValidateNested } from 'class-validator';
 import { Type } from 'class-transformer';
+import { IsArray, IsOptional, IsString, ValidateNested } from 'class-validator';
 
 export class OpenAiChatMessageDto {
   @IsString()
@@ -28,10 +28,9 @@ export interface OpenAiChatCompletionsResponse {
   object: 'chat.completion';
   created: number;
   model: string;
-  choices: Array<{
+  choices: {
     index: number;
     message: { role: 'assistant'; content: string };
     finish_reason: 'stop';
-  }>;
+  }[];
 }
-

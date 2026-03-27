@@ -1,22 +1,16 @@
+import { RunPromptParams, RunPromptUseCase } from '@/use-cases/run-prompt.use-case';
 import { Body, Controller, Post } from '@nestjs/common';
-import {
-  OpenAiChatCompletionsRequestDto,
-  OpenAiChatCompletionsResponse,
-} from './openai.dto';
-import {
-  RunZyrethPromptUseCase,
-  RunZyrethPromptParams,
-} from '../../use-cases/run-zyreth-prompt.use-case';
+import { OpenAiChatCompletionsRequestDto, OpenAiChatCompletionsResponse } from './openai.dto';
 
 @Controller('/v1')
 export class OpenAiController {
-  constructor(private readonly runZyrethPromptUseCase: RunZyrethPromptUseCase) { }
+  constructor(private readonly runZyrethPromptUseCase: RunPromptUseCase) {}
 
   @Post('/chat/completions')
   async createChatCompletion(
     @Body() body: OpenAiChatCompletionsRequestDto,
   ): Promise<OpenAiChatCompletionsResponse> {
-    const params: RunZyrethPromptParams = {
+    const params: RunPromptParams = {
       model: body.model,
       messages: body.messages,
     };
@@ -39,4 +33,3 @@ export class OpenAiController {
     };
   }
 }
-
