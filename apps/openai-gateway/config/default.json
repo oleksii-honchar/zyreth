@@ -1,0 +1,25 @@
+{
+  "llm": {
+    "baseUrl": "https://lite-llm.lan/v1",
+    "apiKey": "no-need-for-an-api-key",
+    "model": "qwen3.5-27b",
+    "provider": "openai",
+    "temperature": 0.6,
+    "maxTokens": 10000,
+    "topP": 0.95,
+    "topK": 20,
+    "minP": 0
+  },
+  "mcp": {
+    "gatewayUrl": "http://mcp-gateway.mammoth.lan/mcp"
+  },
+  "langfuse": {
+    "baseUrl": "http://langfuse.mammoth.lan",
+    "publicKey": "pk-lf-local-dev-public-key",
+    "secretKey": "sk-lf-local-dev-secret-key",
+    "enabled": true
+  },
+  "runtime": {
+    "port": 3002
+  }
+}

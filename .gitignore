@@ -1,0 +1,16 @@
+**/node_modules/
+**/dist/
+.env
+.env.local
+*.log
+.DS_Store
+.idea/
+.vscode/
+coverage/
+
+# VitePress (taskasi / agasi docs)
+packages/taskasi/docs/.vitepress/cache
+packages/taskasi/docs/.vitepress/dist
+packages/agasi/docs/.vitepress/cache
+packages/agasi/docs/.vitepress/dist
+packages/taskasi/test/.tmp

@@ -1,0 +1,58 @@
+{
+  "name": "@zyreth/agasi",
+  "version": "0.1.0",
+  "description": "CLI to symlink agent skills from a flat source tree into Cursor, .agents, and Codex paths",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/oleksii-honchar/zyreth.git",
+    "directory": "packages/agasi"
+  },
+  "bugs": {
+    "url": "https://github.com/oleksii-honchar/zyreth/issues"
+  },
+  "homepage": "https://github.com/oleksii-honchar/zyreth/tree/main/packages/agasi#readme",
+  "type": "module",
+  "keywords": [
+    "agent",
+    "cli",
+    "codex",
+    "cursor",
+    "developer-tools",
+    "skills",
+    "symlink"
+  ],
+  "bin": {
+    "agasi": "./dist/cli.js"
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE",
+    "PUBLISHING.md"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "test": "npm run build && node --test --test-concurrency=1 test/paths.test.mjs test/skills.test.mjs test/config.test.mjs test/targets.test.mjs test/link.test.mjs test/cli.integration.test.mjs",
+    "prepack": "npm run build",
+    "pack:dry": "npm pack --dry-run",
+    "docs:dev": "vitepress dev docs",
+    "docs:build": "vitepress build docs",
+    "docs:preview": "vitepress preview docs"
+  },
+  "dependencies": {
+    "commander": "^14.0.3",
+    "yaml": "^2.8.3"
+  },
+  "devDependencies": {
+    "@types/node": "^20.17.0",
+    "typescript": "^6.0.2",
+    "vitepress": "^1.6.3"
+  }
+}

@@ -1,0 +1,60 @@
+{
+  "name": "@zyreth/taskasi",
+  "version": "0.1.0",
+  "description": "Git worktree and VS Code workspace helper CLI",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/oleksii-honchar/zyreth.git",
+    "directory": "packages/taskasi"
+  },
+  "bugs": {
+    "url": "https://github.com/oleksii-honchar/zyreth/issues"
+  },
+  "homepage": "https://github.com/oleksii-honchar/zyreth/tree/main/packages/taskasi#readme",
+  "type": "module",
+  "keywords": [
+    "cli",
+    "cursor",
+    "developer-tools",
+    "env",
+    "git",
+    "git-worktree",
+    "multi-root",
+    "vscode",
+    "worktree",
+    "workspace"
+  ],
+  "bin": {
+    "taskasi": "dist/cli.js"
+  },
+  "files": [
+    "dist"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "prepack": "npm run build",
+    "pack:dry": "npm pack --dry-run",
+    "test": "npm run build && node --test --test-concurrency=1 test/*.test.mjs",
+    "test:integration": "npm run build && node --test --test-concurrency=1 test/integration/git.test.mjs",
+    "test:all": "npm run build && node --test --test-concurrency=1 test/*.test.mjs test/integration/git.test.mjs",
+    "docs:dev": "vitepress dev docs",
+    "docs:build": "vitepress build docs",
+    "docs:preview": "vitepress preview docs"
+  },
+  "dependencies": {
+    "commander": "^12.1.0",
+    "yaml": "^2.6.1"
+  },
+  "devDependencies": {
+    "@types/node": "^20.17.0",
+    "typescript": "^5.7.3",
+    "vitepress": "^1.6.3"
+  }
+}

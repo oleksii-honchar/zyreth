@@ -1,0 +1,17 @@
+{
+  "llm": {
+    "baseUrl": "LLM_BASE_URL",
+    "apiKey": "LLM_API_KEY",
+    "model": "LLM_MODEL"
+  },
+  "mcp": {
+    "gatewayUrl": "MCP_GATEWAY_URL"
+  },
+  "langfuse": {
+    "baseUrl": "LANGFUSE_BASE_URL",
+    "publicKey": "LANGFUSE_PUBLIC_KEY",
+    "secretKey": "LANGFUSE_SECRET_KEY",
+    "enabled": "LANGFUSE_ENABLED"
+  }
+}
+
