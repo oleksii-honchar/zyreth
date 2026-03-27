@@ -1,7 +1,8 @@
 const eslint = require('@eslint/js');
+const { defineConfig } = require('eslint/config');
 const tseslint = require('typescript-eslint');
 
-module.exports = tseslint.config(
+module.exports = defineConfig(
   {
     ignores: [
       '**/.history/**',

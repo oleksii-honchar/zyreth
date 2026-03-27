@@ -1,10 +1,11 @@
 const globals = require('globals');
+const { defineConfig } = require('eslint/config');
 const tseslint = require('typescript-eslint');
 const eslintPrettier = require('eslint-plugin-prettier');
 
 const eslintConfigBase = require('../../eslint.config.base');
 
-module.exports = tseslint.config(...eslintConfigBase, {
+module.exports = defineConfig(...eslintConfigBase, {
   files: ['src/**/*.ts'],
   plugins: {
     'typescript-eslint': tseslint.plugin,

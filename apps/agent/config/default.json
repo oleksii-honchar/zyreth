@@ -9,11 +9,14 @@
     "apiKey": "check-env-variable",
     "model": "qwen3.5-27b",
     "provider": "openai",
-    "temperature": 0.6,
+    "temperature": 1,
     "maxTokens": 10000,
     "topP": 0.95,
     "topK": 20,
-    "minP": 0
+    "minP": 0,
+    "ctxSize": 200000,
+    "huggingfaceModel": "Jackrong/Qwen3.5-27B-Claude-4.6-Opus-Reasoning-Distilled-v2-GGUF:Qwen3.5-27B.Q4_K_M.gguf",
+    "llamaCache": "Jackrong/Qwen3.5-27B-Claude-4.6-Opus-Reasoning-Distilled-v2-GGUF"
   },
   "mcp": {
     "gatewayUrl": "http://mcp-gateway.mammoth.lan/mcp"

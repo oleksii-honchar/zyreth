@@ -7,7 +7,15 @@
   "llm": {
     "baseUrl": "LLM_BASE_URL",
     "apiKey": "LLM_API_KEY",
-    "model": "LLM_MODEL"
+    "model": "LLM_MODEL",
+    "temperature": "LLM_TEMPERATURE",
+    "maxTokens": "LLM_MAX_TOKENS",
+    "topP": "LLM_TOP_P",
+    "topK": "LLM_TOP_K",
+    "minP": "LLM_MIN_P",
+    "ctxSize": "LLM_CTX_SIZE",
+    "huggingfaceModel": "LLM_HF_MODEL",
+    "llamaCache": "LLAMA_CACHE"
   },
   "mcp": {
     "gatewayUrl": "MCP_GATEWAY_URL"
