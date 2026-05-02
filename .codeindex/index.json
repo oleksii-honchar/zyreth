@@ -1,0 +1,10 @@
+{
+  "version": "1.0",
+  "name": "zyreth",
+  "root": ".",
+  "languages": [
+    "javascript",
+    "markdown",
+    "typescript"
+  ]
+}

@@ -1,0 +1,975 @@
+{"file":"apps/agent/eslint.config.js","name":"globals","kind":"variable","line":[1,1],"visibility":"private"}
+{"file":"apps/agent/eslint.config.js","name":"tseslint","kind":"variable","line":[3,3],"visibility":"private"}
+{"file":"apps/agent/eslint.config.js","name":"eslintPrettier","kind":"variable","line":[4,4],"visibility":"private"}
+{"file":"apps/agent/eslint.config.js","name":"eslintConfigBase","kind":"variable","line":[6,6],"visibility":"private"}
+{"file":"apps/agent/src/app.module.ts","name":"node:module.createRequire","kind":"import","line":[6,6],"visibility":"private"}
+{"file":"apps/agent/src/app.module.ts","name":"@nestjs/common.Module","kind":"import","line":[8,8],"visibility":"private"}
+{"file":"apps/agent/src/app.module.ts","name":"@nestjs/config.ConfigModule","kind":"import","line":[9,9],"visibility":"private"}
+{"file":"apps/agent/src/app.module.ts","name":"@nestjs/config.ConfigService","kind":"import","line":[9,9],"visibility":"private"}
+{"file":"apps/agent/src/app.module.ts","name":"nestjs-pino.LoggerModule","kind":"import","line":[10,10],"visibility":"private"}
+{"file":"apps/agent/src/app.module.ts","name":"@/infrastructure/controllers/openai.controller.OpenAiController","kind":"import","line":[12,12],"visibility":"private"}
+{"file":"apps/agent/src/app.module.ts","name":"@/infrastructure/logging/logger.module.LoggingModule","kind":"import","line":[13,13],"visibility":"private"}
+{"file":"apps/agent/src/app.module.ts","name":"@/infrastructure/logging/pino-logger-config.factory.pinoLoggerConfigFactory","kind":"import","line":[14,14],"visibility":"private"}
+{"file":"apps/agent/src/app.module.ts","name":"@/infrastructure/services/mastra-agent.service.MastraAgentService","kind":"import","line":[15,15],"visibility":"private"}
+{"file":"apps/agent/src/app.module.ts","name":"@/use-cases/run-prompt.use-case.RunPromptUseCase","kind":"import","line":[16,16],"visibility":"private"}
+{"file":"apps/agent/src/app.module.ts","name":"requireConfig","kind":"variable","line":[18,18],"tokens":"createRequire __filename","visibility":"private"}
+{"file":"apps/agent/src/app.module.ts","name":"configLoader","kind":"function","line":[20,25],"tokens":"nodeConfig requireConfig","visibility":"private"}
+{"file":"apps/agent/src/app.module.ts","name":"nodeConfig","kind":"variable","line":[21,23],"tokens":"requireConfig","visibility":"private"}
+{"file":"apps/agent/src/app.module.ts","name":"AppModule","kind":"class","line":[44,44],"visibility":"public"}
+{"file":"apps/agent/src/infrastructure/controllers/openai.controller.ts","name":"@/use-cases/run-prompt.use-case.RunPromptParams","kind":"import","line":[1,1],"visibility":"private"}
+{"file":"apps/agent/src/infrastructure/controllers/openai.controller.ts","name":"@/use-cases/run-prompt.use-case.RunPromptUseCase","kind":"import","line":[1,1],"visibility":"private"}
+{"file":"apps/agent/src/infrastructure/controllers/openai.controller.ts","name":"@nestjs/common.Body","kind":"import","line":[2,2],"visibility":"private"}
+{"file":"apps/agent/src/infrastructure/controllers/openai.controller.ts","name":"@nestjs/common.Controller","kind":"import","line":[2,2],"visibility":"private"}
+{"file":"apps/agent/src/infrastructure/controllers/openai.controller.ts","name":"@nestjs/common.Post","kind":"import","line":[2,2],"visibility":"private"}
+{"file":"apps/agent/src/infrastructure/controllers/openai.controller.ts","name":"./openai.dto.OpenAiChatCompletionsRequestDto","kind":"import","line":[3,3],"visibility":"private"}
+{"file":"apps/agent/src/infrastructure/controllers/openai.controller.ts","name":"./openai.dto.OpenAiChatCompletionsResponse","kind":"import","line":[3,3],"visibility":"private"}
+{"file":"apps/agent/src/infrastructure/controllers/openai.controller.ts","name":"OpenAiController","kind":"class","line":[6,35],"tokens":"body params Date runZyrethPromptUseCase Post Math Body now result","visibility":"public"}
+{"file":"apps/agent/src/infrastructure/controllers/openai.controller.ts","name":"OpenAiController.constructor","kind":"method","line":[7,7],"parent":"OpenAiController","visibility":"public"}
+{"file":"apps/agent/src/infrastructure/controllers/openai.controller.ts","name":"OpenAiController.createChatCompletion","kind":"method","line":[10,34],"parent":"OpenAiController","tokens":"body Date now params Math result","visibility":"public"}
+{"file":"apps/agent/src/infrastructure/controllers/openai.controller.ts","name":"OpenAiController.createChatCompletion.params","kind":"variable","line":[13,16],"parent":"OpenAiController.createChatCompletion","tokens":"body","visibility":"private"}
+{"file":"apps/agent/src/infrastructure/controllers/openai.controller.ts","name":"OpenAiController.createChatCompletion.result","kind":"variable","line":[18,18],"parent":"OpenAiController.createChatCompletion","tokens":"params","visibility":"private"}
+{"file":"apps/agent/src/infrastructure/controllers/openai.controller.ts","name":"OpenAiController.createChatCompletion.now","kind":"variable","line":[19,19],"parent":"OpenAiController.createChatCompletion","tokens":"Math Date","visibility":"private"}
+{"file":"apps/agent/src/infrastructure/controllers/openai.dto.ts","name":"class-transformer.Type","kind":"import","line":[1,1],"visibility":"private"}
+{"file":"apps/agent/src/infrastructure/controllers/openai.dto.ts","name":"class-validator.IsArray","kind":"import","line":[2,2],"visibility":"private"}
+{"file":"apps/agent/src/infrastructure/controllers/openai.dto.ts","name":"class-validator.IsOptional","kind":"import","line":[2,2],"visibility":"private"}
+{"file":"apps/agent/src/infrastructure/controllers/openai.dto.ts","name":"class-validator.IsString","kind":"import","line":[2,2],"visibility":"private"}
+{"file":"apps/agent/src/infrastructure/controllers/openai.dto.ts","name":"class-validator.ValidateNested","kind":"import","line":[2,2],"visibility":"private"}
+{"file":"apps/agent/src/infrastructure/controllers/openai.dto.ts","name":"OpenAiChatMessageDto","kind":"class","line":[4,10],"tokens":"IsString","visibility":"public"}
+{"file":"apps/agent/src/infrastructure/controllers/openai.dto.ts","name":"OpenAiChatCompletionsRequestDto","kind":"class","line":[12,24],"tokens":"IsArray OpenAiChatMessageDto ValidateNested IsOptional IsString","visibility":"public"}
+{"file":"apps/agent/src/infrastructure/controllers/openai.dto.ts","name":"OpenAiChatCompletionsResponse","kind":"interface","line":[26,36],"visibility":"public"}
+{"file":"apps/agent/src/infrastructure/controllers/openai.dto.ts","name":"OpenAiChatCompletionsResponse.id","kind":"property","line":[27,27],"parent":"OpenAiChatCompletionsResponse","visibility":"public"}
+{"file":"apps/agent/src/infrastructure/controllers/openai.dto.ts","name":"OpenAiChatCompletionsResponse.object","kind":"property","line":[28,28],"parent":"OpenAiChatCompletionsResponse","visibility":"public"}
+{"file":"apps/agent/src/infrastructure/controllers/openai.dto.ts","name":"OpenAiChatCompletionsResponse.created","kind":"property","line":[29,29],"parent":"OpenAiChatCompletionsResponse","visibility":"public"}
+{"file":"apps/agent/src/infrastructure/controllers/openai.dto.ts","name":"OpenAiChatCompletionsResponse.model","kind":"property","line":[30,30],"parent":"OpenAiChatCompletionsResponse","visibility":"public"}
+{"file":"apps/agent/src/infrastructure/controllers/openai.dto.ts","name":"OpenAiChatCompletionsResponse.choices","kind":"property","line":[31,35],"parent":"OpenAiChatCompletionsResponse","visibility":"public"}
+{"file":"apps/agent/src/infrastructure/logging/base-pino-logger.ts","name":"@nestjs/common.LoggerService","kind":"import","line":[2,2],"visibility":"private"}
+{"file":"apps/agent/src/infrastructure/logging/base-pino-logger.ts","name":"BasePinoLogger","kind":"class","line":[7,42],"tokens":"bindings value context message metadata prefix optionalParams","visibility":"public"}
+{"file":"apps/agent/src/infrastructure/logging/logger.module.ts","name":"@nestjs/common.Global","kind":"import","line":[5,5],"visibility":"private"}
+{"file":"apps/agent/src/infrastructure/logging/logger.module.ts","name":"@nestjs/common.Module","kind":"import","line":[5,5],"visibility":"private"}
+{"file":"apps/agent/src/infrastructure/logging/logger.module.ts","name":"./base-pino-logger.BasePinoLogger","kind":"import","line":[7,7],"visibility":"private"}
+{"file":"apps/agent/src/infrastructure/logging/logger.module.ts","name":"./nestjs-pino-logger.NestjsPinoLogger","kind":"import","line":[8,8],"visibility":"private"}
+{"file":"apps/agent/src/infrastructure/logging/logger.module.ts","name":"LoggingModule","kind":"class","line":[20,20],"visibility":"public"}
+{"file":"apps/agent/src/infrastructure/logging/nestjs-pino-logger.ts","name":"@nestjs/common.Injectable","kind":"import","line":[2,2],"visibility":"private"}
+{"file":"apps/agent/src/infrastructure/logging/nestjs-pino-logger.ts","name":"@nestjs/common.Scope","kind":"import","line":[2,2],"visibility":"private"}
+{"file":"apps/agent/src/infrastructure/logging/nestjs-pino-logger.ts","name":"nestjs-pino.PinoLogger","kind":"import","line":[3,3],"visibility":"private"}
+{"file":"apps/agent/src/infrastructure/logging/nestjs-pino-logger.ts","name":"nestjs-pino/storage.storage","kind":"import","line":[4,4],"visibility":"private"}
+{"file":"apps/agent/src/infrastructure/logging/nestjs-pino-logger.ts","name":"nestjs-pino/storage.Store","kind":"import","line":[4,4],"visibility":"private"}
+{"file":"apps/agent/src/infrastructure/logging/nestjs-pino-logger.ts","name":"./base-pino-logger.BasePinoLogger","kind":"import","line":[6,6],"visibility":"private"}
+{"file":"apps/agent/src/infrastructure/logging/nestjs-pino-logger.ts","name":"NestjsPinoLogger","kind":"class","line":[9,114],"tokens":"NestjsPinoLogger storage value Store formatted bindings message optionalParams context childLogger pinoLogger metadata prefix Array","visibility":"public"}
+{"file":"apps/agent/src/infrastructure/logging/nestjs-pino-logger.ts","name":"NestjsPinoLogger.constructor","kind":"method","line":[12,12],"parent":"NestjsPinoLogger","visibility":"public"}
+{"file":"apps/agent/src/infrastructure/logging/nestjs-pino-logger.ts","name":"NestjsPinoLogger.setContext","kind":"method","line":[14,16],"parent":"NestjsPinoLogger","tokens":"context","visibility":"public"}
+{"file":"apps/agent/src/infrastructure/logging/nestjs-pino-logger.ts","name":"NestjsPinoLogger.setPrefix","kind":"method","line":[18,20],"parent":"NestjsPinoLogger","tokens":"prefix","visibility":"public"}
+{"file":"apps/agent/src/infrastructure/logging/nestjs-pino-logger.ts","name":"NestjsPinoLogger.formatMessage","kind":"method","line":[22,39],"parent":"NestjsPinoLogger","tokens":"message optionalParams Array","visibility":"private"}
+{"file":"apps/agent/src/infrastructure/logging/nestjs-pino-logger.ts","name":"NestjsPinoLogger.addMetadata","kind":"method","line":[41,46],"parent":"NestjsPinoLogger","tokens":"Store metadata storage","visibility":"public"}
+{"file":"apps/agent/src/infrastructure/logging/nestjs-pino-logger.ts","name":"NestjsPinoLogger.log","kind":"method","line":[48,50],"parent":"NestjsPinoLogger","tokens":"message optionalParams","visibility":"public"}
+{"file":"apps/agent/src/infrastructure/logging/nestjs-pino-logger.ts","name":"NestjsPinoLogger.verbose","kind":"method","line":[52,54],"parent":"NestjsPinoLogger","tokens":"optionalParams message","visibility":"public"}
+{"file":"apps/agent/src/infrastructure/logging/nestjs-pino-logger.ts","name":"NestjsPinoLogger.trace","kind":"method","line":[56,59],"parent":"NestjsPinoLogger","tokens":"formatted message optionalParams","visibility":"public"}
+{"file":"apps/agent/src/infrastructure/logging/nestjs-pino-logger.ts","name":"NestjsPinoLogger.trace.formatted","kind":"variable","line":[57,57],"parent":"NestjsPinoLogger.trace","tokens":"message optionalParams","visibility":"private"}
+{"file":"apps/agent/src/infrastructure/logging/nestjs-pino-logger.ts","name":"NestjsPinoLogger.debug","kind":"method","line":[61,64],"parent":"NestjsPinoLogger","tokens":"optionalParams formatted message","visibility":"public"}
+{"file":"apps/agent/src/infrastructure/logging/nestjs-pino-logger.ts","name":"NestjsPinoLogger.debug.formatted","kind":"variable","line":[62,62],"parent":"NestjsPinoLogger.debug","tokens":"optionalParams message","visibility":"private"}
+{"file":"apps/agent/src/infrastructure/logging/nestjs-pino-logger.ts","name":"NestjsPinoLogger.info","kind":"method","line":[66,69],"parent":"NestjsPinoLogger","tokens":"optionalParams formatted message","visibility":"public"}
+{"file":"apps/agent/src/infrastructure/logging/nestjs-pino-logger.ts","name":"NestjsPinoLogger.info.formatted","kind":"variable","line":[67,67],"parent":"NestjsPinoLogger.info","tokens":"optionalParams message","visibility":"private"}
+{"file":"apps/agent/src/infrastructure/logging/nestjs-pino-logger.ts","name":"NestjsPinoLogger.warn","kind":"method","line":[71,74],"parent":"NestjsPinoLogger","tokens":"message optionalParams formatted","visibility":"public"}
+{"file":"apps/agent/src/infrastructure/logging/nestjs-pino-logger.ts","name":"NestjsPinoLogger.warn.formatted","kind":"variable","line":[72,72],"parent":"NestjsPinoLogger.warn","tokens":"message optionalParams","visibility":"private"}
+{"file":"apps/agent/src/infrastructure/logging/nestjs-pino-logger.ts","name":"NestjsPinoLogger.error","kind":"method","line":[76,79],"parent":"NestjsPinoLogger","tokens":"message formatted optionalParams","visibility":"public"}
+{"file":"apps/agent/src/infrastructure/logging/nestjs-pino-logger.ts","name":"NestjsPinoLogger.error.formatted","kind":"variable","line":[77,77],"parent":"NestjsPinoLogger.error","tokens":"optionalParams message","visibility":"private"}
+{"file":"apps/agent/src/infrastructure/logging/nestjs-pino-logger.ts","name":"NestjsPinoLogger.fatal","kind":"method","line":[81,84],"parent":"NestjsPinoLogger","tokens":"message optionalParams formatted","visibility":"public"}
+{"file":"apps/agent/src/infrastructure/logging/nestjs-pino-logger.ts","name":"NestjsPinoLogger.fatal.formatted","kind":"variable","line":[82,82],"parent":"NestjsPinoLogger.fatal","tokens":"optionalParams message","visibility":"private"}
+{"file":"apps/agent/src/infrastructure/logging/nestjs-pino-logger.ts","name":"NestjsPinoLogger.child","kind":"method","line":[86,89],"parent":"NestjsPinoLogger","tokens":"NestjsPinoLogger bindings childLogger","visibility":"public"}
+{"file":"apps/agent/src/infrastructure/logging/nestjs-pino-logger.ts","name":"NestjsPinoLogger.child.childLogger","kind":"variable","line":[87,87],"parent":"NestjsPinoLogger.child","tokens":"bindings","visibility":"private"}
+{"file":"apps/agent/src/infrastructure/logging/nestjs-pino-logger.ts","name":"NestjsPinoLogger.bindings","kind":"method","line":[91,93],"parent":"NestjsPinoLogger","visibility":"public"}
+{"file":"apps/agent/src/infrastructure/logging/nestjs-pino-logger.ts","name":"NestjsPinoLogger.flush","kind":"method","line":[95,97],"parent":"NestjsPinoLogger","visibility":"public"}
+{"file":"apps/agent/src/infrastructure/logging/nestjs-pino-logger.ts","name":"NestjsPinoLogger.level","kind":"property","line":[99,101],"parent":"NestjsPinoLogger","visibility":"public"}
+{"file":"apps/agent/src/infrastructure/logging/nestjs-pino-logger.ts","name":"NestjsPinoLogger.level","kind":"property","line":[103,105],"parent":"NestjsPinoLogger","tokens":"value","visibility":"public"}
+{"file":"apps/agent/src/infrastructure/logging/nestjs-pino-logger.ts","name":"NestjsPinoLogger.levelVal","kind":"property","line":[107,109],"parent":"NestjsPinoLogger","visibility":"public"}
+{"file":"apps/agent/src/infrastructure/logging/nestjs-pino-logger.ts","name":"NestjsPinoLogger.useOnlyCustomLevels","kind":"property","line":[111,113],"parent":"NestjsPinoLogger","visibility":"public"}
+{"file":"apps/agent/src/infrastructure/logging/pino-logger-config.factory.ts","name":"@nestjs/config.ConfigService","kind":"import","line":[1,1],"visibility":"private"}
+{"file":"apps/agent/src/infrastructure/logging/pino-logger-config.factory.ts","name":"express.Request","kind":"import","line":[2,2],"visibility":"private"}
+{"file":"apps/agent/src/infrastructure/logging/pino-logger-config.factory.ts","name":"express.Response","kind":"import","line":[2,2],"visibility":"private"}
+{"file":"apps/agent/src/infrastructure/logging/pino-logger-config.factory.ts","name":"nestjs-pino.Params","kind":"import","line":[3,3],"visibility":"private"}
+{"file":"apps/agent/src/infrastructure/logging/pino-logger-config.factory.ts","name":"pino-http.Options","kind":"import","line":[4,4],"visibility":"private"}
+{"file":"apps/agent/src/infrastructure/logging/pino-logger-config.factory.ts","name":"../../../package.json","kind":"import","line":[5,5],"alias":"pkg","visibility":"private"}
+{"file":"apps/agent/src/infrastructure/logging/pino-logger-config.factory.ts","name":"pinoLoggerConfigFactory","kind":"function","line":[7,78],"tokens":"isProduction process pinoHttpOptions isLocalLogVerbose configService serviceName logLevel pinoPrettyOptions Date pkg verboseFromConfig environment request response","visibility":"public"}
+{"file":"apps/agent/src/infrastructure/logging/pino-logger-config.factory.ts","name":"serviceName","kind":"variable","line":[8,8],"tokens":"pkg","visibility":"private"}
+{"file":"apps/agent/src/infrastructure/logging/pino-logger-config.factory.ts","name":"environment","kind":"variable","line":[10,10],"tokens":"process configService","visibility":"private"}
+{"file":"apps/agent/src/infrastructure/logging/pino-logger-config.factory.ts","name":"isProduction","kind":"variable","line":[12,12],"tokens":"environment","visibility":"private"}
+{"file":"apps/agent/src/infrastructure/logging/pino-logger-config.factory.ts","name":"logLevel","kind":"variable","line":[14,14],"tokens":"configService process","visibility":"private"}
+{"file":"apps/agent/src/infrastructure/logging/pino-logger-config.factory.ts","name":"verboseFromConfig","kind":"variable","line":[16,16],"tokens":"configService","visibility":"private"}
+{"file":"apps/agent/src/infrastructure/logging/pino-logger-config.factory.ts","name":"isLocalLogVerbose","kind":"variable","line":[18,21],"tokens":"verboseFromConfig process","visibility":"private"}
+{"file":"apps/agent/src/infrastructure/logging/pino-logger-config.factory.ts","name":"pinoHttpOptions","kind":"variable","line":[23,54],"tokens":"request logLevel serviceName Date response","visibility":"private"}
+{"file":"apps/agent/src/infrastructure/logging/pino-logger-config.factory.ts","name":"pinoPrettyOptions","kind":"variable","line":[57,63],"visibility":"private"}
+{"file":"apps/agent/src/infrastructure/services/mastra-agent.service.ts","name":"@/use-cases/run-prompt.use-case.ZyrethChatMessage","kind":"import","line":[1,1],"visibility":"private"}
+{"file":"apps/agent/src/infrastructure/services/mastra-agent.service.ts","name":"@mastra/core/agent.Agent","kind":"import","line":[2,2],"visibility":"private"}
+{"file":"apps/agent/src/infrastructure/services/mastra-agent.service.ts","name":"@nestjs/common.Injectable","kind":"import","line":[3,3],"visibility":"private"}
+{"file":"apps/agent/src/infrastructure/services/mastra-agent.service.ts","name":"config","kind":"import","line":[4,4],"alias":"config","visibility":"private"}
+{"file":"apps/agent/src/infrastructure/services/mastra-agent.service.ts","name":"zod.z","kind":"import","line":[5,5],"visibility":"private"}
+{"file":"apps/agent/src/infrastructure/services/mastra-agent.service.ts","name":"llmConfigSchema","kind":"variable","line":[8,25],"visibility":"private"}
+{"file":"apps/agent/src/infrastructure/services/mastra-agent.service.ts","name":"LlmConfig","kind":"type_alias","line":[27,27],"tokens":"llmConfigSchema","visibility":"private"}
+{"file":"apps/agent/src/infrastructure/services/mastra-agent.service.ts","name":"buildModelSettings","kind":"function","line":[29,42],"tokens":"maxOutputTokens","visibility":"private"}
+{"file":"apps/agent/src/infrastructure/services/mastra-agent.service.ts","name":"buildModelSettings.maxOutputTokens","kind":"variable","line":[35,35],"parent":"buildModelSettings","visibility":"private"}
+{"file":"apps/agent/src/infrastructure/services/mastra-agent.service.ts","name":"MastraAgentService","kind":"class","line":[45,99],"tokens":"prompt Agent modelSettings detail buildModelSettings userMessage hasMinP message result hasModelSettings Error llmConfig parsed llmConfigSchema messages config","visibility":"public"}
+{"file":"apps/agent/src/infrastructure/services/mastra-agent.service.ts","name":"MastraAgentService.constructor","kind":"method","line":[48,90],"parent":"MastraAgentService","tokens":"detail llmConfigSchema Agent buildModelSettings config parsed hasModelSettings modelSettings llmConfig Error hasMinP","visibility":"public"}
+{"file":"apps/agent/src/infrastructure/services/mastra-agent.service.ts","name":"MastraAgentService.constructor.parsed","kind":"variable","line":[49,49],"parent":"MastraAgentService.constructor","tokens":"llmConfigSchema config","visibility":"private"}
+{"file":"apps/agent/src/infrastructure/services/mastra-agent.service.ts","name":"MastraAgentService.constructor.detail","kind":"variable","line":[51,51],"parent":"MastraAgentService.constructor","tokens":"parsed","visibility":"private"}
+{"file":"apps/agent/src/infrastructure/services/mastra-agent.service.ts","name":"MastraAgentService.constructor.llmConfig","kind":"variable","line":[54,54],"parent":"MastraAgentService.constructor","tokens":"parsed","visibility":"private"}
+{"file":"apps/agent/src/infrastructure/services/mastra-agent.service.ts","name":"MastraAgentService.constructor.modelSettings","kind":"variable","line":[55,55],"parent":"MastraAgentService.constructor","tokens":"buildModelSettings llmConfig","visibility":"private"}
+{"file":"apps/agent/src/infrastructure/services/mastra-agent.service.ts","name":"MastraAgentService.constructor.hasModelSettings","kind":"variable","line":[56,56],"parent":"MastraAgentService.constructor","tokens":"modelSettings","visibility":"private"}
+{"file":"apps/agent/src/infrastructure/services/mastra-agent.service.ts","name":"MastraAgentService.constructor.hasMinP","kind":"variable","line":[57,57],"parent":"MastraAgentService.constructor","tokens":"llmConfig","visibility":"private"}
+{"file":"apps/agent/src/infrastructure/services/mastra-agent.service.ts","name":"MastraAgentService.run","kind":"method","line":[92,98],"parent":"MastraAgentService","tokens":"userMessage result prompt messages message","visibility":"public"}
+{"file":"apps/agent/src/infrastructure/services/mastra-agent.service.ts","name":"MastraAgentService.run.userMessage","kind":"variable","line":[93,93],"parent":"MastraAgentService.run","tokens":"messages message","visibility":"private"}
+{"file":"apps/agent/src/infrastructure/services/mastra-agent.service.ts","name":"MastraAgentService.run.prompt","kind":"variable","line":[94,94],"parent":"MastraAgentService.run","tokens":"userMessage","visibility":"private"}
+{"file":"apps/agent/src/infrastructure/services/mastra-agent.service.ts","name":"MastraAgentService.run.result","kind":"variable","line":[96,96],"parent":"MastraAgentService.run","tokens":"prompt","visibility":"private"}
+{"file":"apps/agent/src/main.ts","name":"@nestjs/common.Logger","kind":"import","line":[7,7],"alias":"NestLogger","visibility":"private"}
+{"file":"apps/agent/src/main.ts","name":"@nestjs/common.ValidationPipe","kind":"import","line":[7,7],"visibility":"private"}
+{"file":"apps/agent/src/main.ts","name":"@nestjs/core.NestFactory","kind":"import","line":[8,8],"visibility":"private"}
+{"file":"apps/agent/src/main.ts","name":"config","kind":"import","line":[9,9],"alias":"config","visibility":"private"}
+{"file":"apps/agent/src/main.ts","name":"nestjs-pino.Logger","kind":"import","line":[10,10],"visibility":"private"}
+{"file":"apps/agent/src/main.ts","name":"@/app.module.AppModule","kind":"import","line":[12,12],"visibility":"private"}
+{"file":"apps/agent/src/main.ts","name":"bootstrap","kind":"function","line":[14,34],"tokens":"nestLogger config app NestFactory Logger NestLogger process AppModule ValidationPipe port","visibility":"private"}
+{"file":"apps/agent/src/main.ts","name":"bootstrap.app","kind":"variable","line":[15,15],"parent":"bootstrap","tokens":"NestFactory AppModule","visibility":"private"}
+{"file":"apps/agent/src/main.ts","name":"bootstrap.nestLogger","kind":"variable","line":[19,19],"parent":"bootstrap","tokens":"NestLogger","visibility":"private"}
+{"file":"apps/agent/src/main.ts","name":"bootstrap.port","kind":"variable","line":[31,31],"parent":"bootstrap","tokens":"config","visibility":"private"}
+{"file":"apps/agent/src/use-cases/run-prompt.use-case.ts","name":"@/infrastructure/logging/base-pino-logger.BasePinoLogger","kind":"import","line":[1,1],"visibility":"private"}
+{"file":"apps/agent/src/use-cases/run-prompt.use-case.ts","name":"@/infrastructure/services/mastra-agent.service.MastraAgentService","kind":"import","line":[2,2],"visibility":"private"}
+{"file":"apps/agent/src/use-cases/run-prompt.use-case.ts","name":"@nestjs/common.Injectable","kind":"import","line":[3,3],"visibility":"private"}
+{"file":"apps/agent/src/use-cases/run-prompt.use-case.ts","name":"ZyrethChatMessage","kind":"interface","line":[5,8],"visibility":"public"}
+{"file":"apps/agent/src/use-cases/run-prompt.use-case.ts","name":"ZyrethChatMessage.role","kind":"property","line":[6,6],"parent":"ZyrethChatMessage","visibility":"public"}
+{"file":"apps/agent/src/use-cases/run-prompt.use-case.ts","name":"ZyrethChatMessage.content","kind":"property","line":[7,7],"parent":"ZyrethChatMessage","visibility":"public"}
+{"file":"apps/agent/src/use-cases/run-prompt.use-case.ts","name":"RunPromptParams","kind":"interface","line":[10,13],"visibility":"public"}
+{"file":"apps/agent/src/use-cases/run-prompt.use-case.ts","name":"RunPromptParams.model","kind":"property","line":[11,11],"parent":"RunPromptParams","visibility":"public"}
+{"file":"apps/agent/src/use-cases/run-prompt.use-case.ts","name":"RunPromptParams.messages","kind":"property","line":[12,12],"parent":"RunPromptParams","visibility":"public"}
+{"file":"apps/agent/src/use-cases/run-prompt.use-case.ts","name":"RunPromptResult","kind":"interface","line":[15,17],"visibility":"public"}
+{"file":"apps/agent/src/use-cases/run-prompt.use-case.ts","name":"RunPromptResult.content","kind":"property","line":[16,16],"parent":"RunPromptResult","visibility":"public"}
+{"file":"apps/agent/src/use-cases/run-prompt.use-case.ts","name":"RunPromptUseCase","kind":"class","line":[20,38],"tokens":"message responseContent RunPromptUseCase logger mastraAgentService params","visibility":"public"}
+{"file":"apps/agent/src/use-cases/run-prompt.use-case.ts","name":"RunPromptUseCase.constructor","kind":"method","line":[21,26],"parent":"RunPromptUseCase","tokens":"RunPromptUseCase","visibility":"public"}
+{"file":"apps/agent/src/use-cases/run-prompt.use-case.ts","name":"RunPromptUseCase.execute","kind":"method","line":[28,37],"parent":"RunPromptUseCase","tokens":"params message responseContent","visibility":"public"}
+{"file":"apps/agent/src/use-cases/run-prompt.use-case.ts","name":"RunPromptUseCase.execute.responseContent","kind":"variable","line":[34,34],"parent":"RunPromptUseCase.execute","tokens":"params","visibility":"private"}
+{"file":"eslint.config.base.js","name":"eslint","kind":"variable","line":[1,1],"visibility":"private"}
+{"file":"eslint.config.base.js","name":"tseslint","kind":"variable","line":[3,3],"visibility":"private"}
+{"file":"packages/agasi/PUBLISHING.md","name":"Publishing `@zyreth/agasi` to npm","kind":"section","line":[1,1]}
+{"file":"packages/agasi/PUBLISHING.md","name":"Publishing `@zyreth/agasi` to npm/Preconditions","kind":"section","line":[5,5],"parent":"Publishing `@zyreth/agasi` to npm"}
+{"file":"packages/agasi/PUBLISHING.md","name":"Publishing `@zyreth/agasi` to npm/Dry run (local tarball)","kind":"section","line":[11,11],"parent":"Publishing `@zyreth/agasi` to npm"}
+{"file":"packages/agasi/PUBLISHING.md","name":"Publishing `@zyreth/agasi` to npm/Version bump","kind":"section","line":[30,30],"parent":"Publishing `@zyreth/agasi` to npm"}
+{"file":"packages/agasi/PUBLISHING.md","name":"Publishing `@zyreth/agasi` to npm/Publish","kind":"section","line":[48,48],"parent":"Publishing `@zyreth/agasi` to npm"}
+{"file":"packages/agasi/PUBLISHING.md","name":"Publishing `@zyreth/agasi` to npm/Publish/First-time login","kind":"section","line":[57,57],"parent":"Publishing `@zyreth/agasi` to npm/Publish"}
+{"file":"packages/agasi/PUBLISHING.md","name":"Publishing `@zyreth/agasi` to npm/After publish — install for users","kind":"section","line":[72,72],"parent":"Publishing `@zyreth/agasi` to npm"}
+{"file":"packages/agasi/PUBLISHING.md","name":"Publishing `@zyreth/agasi` to npm/Static documentation site (optional)","kind":"section","line":[89,89],"parent":"Publishing `@zyreth/agasi` to npm"}
+{"file":"packages/agasi/PUBLISHING.md","name":"Publishing `@zyreth/agasi` to npm/CI checklist (optional)","kind":"section","line":[100,100],"parent":"Publishing `@zyreth/agasi` to npm"}
+{"file":"packages/agasi/PUBLISHING.md","name":"Publishing `@zyreth/agasi` to npm/Unpublish / deprecation","kind":"section","line":[106,106],"parent":"Publishing `@zyreth/agasi` to npm"}
+{"file":"packages/agasi/README.md","name":"@zyreth/agasi","kind":"section","line":[1,1]}
+{"file":"packages/agasi/README.md","name":"@zyreth/agasi/Full documentation (searchable static site)","kind":"section","line":[9,9],"parent":"@zyreth/agasi"}
+{"file":"packages/agasi/README.md","name":"@zyreth/agasi/Full documentation (searchable static site)/Doc contents (table of contents)","kind":"section","line":[22,22],"parent":"@zyreth/agasi/Full documentation (searchable static site)"}
+{"file":"packages/agasi/README.md","name":"@zyreth/agasi/Requirements","kind":"section","line":[34,34],"parent":"@zyreth/agasi"}
+{"file":"packages/agasi/README.md","name":"@zyreth/agasi/Install (CLI)","kind":"section","line":[41,41],"parent":"@zyreth/agasi"}
+{"file":"packages/agasi/README.md","name":"@zyreth/agasi/Quick start","kind":"section","line":[64,64],"parent":"@zyreth/agasi"}
+{"file":"packages/agasi/README.md","name":"@zyreth/agasi/Configuration (overview)","kind":"section","line":[85,85],"parent":"@zyreth/agasi"}
+{"file":"packages/agasi/README.md","name":"@zyreth/agasi/Safety (short)","kind":"section","line":[105,105],"parent":"@zyreth/agasi"}
+{"file":"packages/agasi/README.md","name":"@zyreth/agasi/Development","kind":"section","line":[115,115],"parent":"@zyreth/agasi"}
+{"file":"packages/agasi/README.md","name":"@zyreth/agasi/Development/Tests","kind":"section","line":[126,126],"parent":"@zyreth/agasi/Development"}
+{"file":"packages/agasi/README.md","name":"@zyreth/agasi/Related ecosystem","kind":"section","line":[143,143],"parent":"@zyreth/agasi"}
+{"file":"packages/agasi/README.md","name":"@zyreth/agasi/License","kind":"section","line":[149,149],"parent":"@zyreth/agasi"}
+{"file":"packages/agasi/README.md","name":"@zyreth/agasi/Maintainer publishing","kind":"section","line":[153,153],"parent":"@zyreth/agasi"}
+{"file":"packages/agasi/docs/.vitepress/config.mts","name":"vitepress.defineConfig","kind":"import","line":[1,1],"visibility":"private"}
+{"file":"packages/agasi/docs/README.md","name":"agasi documentation sources","kind":"section","line":[1,1]}
+{"file":"packages/agasi/docs/advanced/publishing.md","name":"Publishing to npm","kind":"section","line":[1,1]}
+{"file":"packages/agasi/docs/advanced/publishing.md","name":"Publishing to npm/Quick commands","kind":"section","line":[5,5],"parent":"Publishing to npm"}
+{"file":"packages/agasi/docs/advanced/publishing.md","name":"Publishing to npm/What gets published","kind":"section","line":[16,16],"parent":"Publishing to npm"}
+{"file":"packages/agasi/docs/advanced/publishing.md","name":"Publishing to npm/Deploying the static doc site","kind":"section","line":[20,20],"parent":"Publishing to npm"}
+{"file":"packages/agasi/docs/advanced/publishing.md","name":"Publishing to npm/Links","kind":"section","line":[28,28],"parent":"Publishing to npm"}
+{"file":"packages/agasi/docs/guide/configuration.md","name":"Configuration","kind":"section","line":[1,1]}
+{"file":"packages/agasi/docs/guide/configuration.md","name":"Configuration/Location","kind":"section","line":[3,3],"parent":"Configuration"}
+{"file":"packages/agasi/docs/guide/configuration.md","name":"Configuration/Minimal example","kind":"section","line":[13,13],"parent":"Configuration"}
+{"file":"packages/agasi/docs/guide/configuration.md","name":"Configuration/Keys","kind":"section","line":[37,37],"parent":"Configuration"}
+{"file":"packages/agasi/docs/guide/configuration.md","name":"Configuration/Keys/`sources`","kind":"section","line":[39,39],"parent":"Configuration/Keys"}
+{"file":"packages/agasi/docs/guide/configuration.md","name":"Configuration/Keys/`targets`","kind":"section","line":[48,48],"parent":"Configuration/Keys"}
+{"file":"packages/agasi/docs/guide/configuration.md","name":"Configuration/Keys/Destination objects","kind":"section","line":[57,57],"parent":"Configuration/Keys"}
+{"file":"packages/agasi/docs/guide/configuration.md","name":"Configuration/CLI vs hand-edited YAML","kind":"section","line":[66,66],"parent":"Configuration"}
+{"file":"packages/agasi/docs/guide/configuration.md","name":"Configuration/See also","kind":"section","line":[77,77],"parent":"Configuration"}
+{"file":"packages/agasi/docs/guide/getting-started.md","name":"Getting started","kind":"section","line":[1,1]}
+{"file":"packages/agasi/docs/guide/getting-started.md","name":"Getting started/Mental model","kind":"section","line":[5,5],"parent":"Getting started"}
+{"file":"packages/agasi/docs/guide/getting-started.md","name":"Getting started/One-minute flow","kind":"section","line":[11,11],"parent":"Getting started"}
+{"file":"packages/agasi/docs/guide/getting-started.md","name":"Getting started/What is *not* in v0.1","kind":"section","line":[27,27],"parent":"Getting started"}
+{"file":"packages/agasi/docs/guide/getting-started.md","name":"Getting started/Next","kind":"section","line":[31,31],"parent":"Getting started"}
+{"file":"packages/agasi/docs/guide/installation.md","name":"Installation","kind":"section","line":[1,1]}
+{"file":"packages/agasi/docs/guide/installation.md","name":"Installation/Requirements","kind":"section","line":[3,3],"parent":"Installation"}
+{"file":"packages/agasi/docs/guide/installation.md","name":"Installation/Global install (recommended for daily use)","kind":"section","line":[8,8],"parent":"Installation"}
+{"file":"packages/agasi/docs/guide/installation.md","name":"Installation/One-off via npx","kind":"section","line":[15,15],"parent":"Installation"}
+{"file":"packages/agasi/docs/guide/installation.md","name":"Installation/From this monorepo (development)","kind":"section","line":[24,24],"parent":"Installation"}
+{"file":"packages/agasi/docs/guide/installation.md","name":"Installation/Configuration path","kind":"section","line":[34,34],"parent":"Installation"}
+{"file":"packages/agasi/docs/guide/installation.md","name":"Installation/Running tests (contributors)","kind":"section","line":[39,39],"parent":"Installation"}
+{"file":"packages/agasi/docs/guide/installation.md","name":"Installation/Static documentation site (searchable)","kind":"section","line":[50,50],"parent":"Installation"}
+{"file":"packages/agasi/docs/guide/installation.md","name":"Installation/Publishing the npm package","kind":"section","line":[76,76],"parent":"Installation"}
+{"file":"packages/agasi/docs/guide/integrations.md","name":"Integrations — Cursor, Codex, and other agents","kind":"section","line":[1,1]}
+{"file":"packages/agasi/docs/guide/integrations.md","name":"Integrations — Cursor, Codex, and other agents/Cursor","kind":"section","line":[5,5],"parent":"Integrations — Cursor, Codex, and other agents"}
+{"file":"packages/agasi/docs/guide/integrations.md","name":"Integrations — Cursor, Codex, and other agents/`.agents/skills`","kind":"section","line":[17,17],"parent":"Integrations — Cursor, Codex, and other agents"}
+{"file":"packages/agasi/docs/guide/integrations.md","name":"Integrations — Cursor, Codex, and other agents/Codex (OpenAI CLI)","kind":"section","line":[25,25],"parent":"Integrations — Cursor, Codex, and other agents"}
+{"file":"packages/agasi/docs/guide/integrations.md","name":"Integrations — Cursor, Codex, and other agents/“Plugin” usage in practice","kind":"section","line":[40,40],"parent":"Integrations — Cursor, Codex, and other agents"}
+{"file":"packages/agasi/docs/guide/integrations.md","name":"Integrations — Cursor, Codex, and other agents/Custom destination","kind":"section","line":[52,52],"parent":"Integrations — Cursor, Codex, and other agents"}
+{"file":"packages/agasi/docs/guide/troubleshooting.md","name":"Troubleshooting","kind":"section","line":[1,1]}
+{"file":"packages/agasi/docs/guide/troubleshooting.md","name":"Troubleshooting/Verbose debugging","kind":"section","line":[13,13],"parent":"Troubleshooting"}
+{"file":"packages/agasi/docs/guide/troubleshooting.md","name":"Troubleshooting/Getting help","kind":"section","line":[19,19],"parent":"Troubleshooting"}
+{"file":"packages/agasi/docs/index.md","name":"Search","kind":"section","line":[26,26]}
+{"file":"packages/agasi/docs/index.md","name":"Package","kind":"section","line":[30,30]}
+{"file":"packages/agasi/docs/reference/cli.md","name":"CLI reference","kind":"section","line":[1,1]}
+{"file":"packages/agasi/docs/reference/cli.md","name":"CLI reference/`agasi init`","kind":"section","line":[11,11],"parent":"CLI reference"}
+{"file":"packages/agasi/docs/reference/cli.md","name":"CLI reference/`agasi config`","kind":"section","line":[17,17],"parent":"CLI reference"}
+{"file":"packages/agasi/docs/reference/cli.md","name":"CLI reference/`agasi source list`","kind":"section","line":[23,23],"parent":"CLI reference"}
+{"file":"packages/agasi/docs/reference/cli.md","name":"CLI reference/`agasi source add <name> <path>`","kind":"section","line":[29,29],"parent":"CLI reference"}
+{"file":"packages/agasi/docs/reference/cli.md","name":"CLI reference/`agasi source remove <name>`","kind":"section","line":[37,37],"parent":"CLI reference"}
+{"file":"packages/agasi/docs/reference/cli.md","name":"CLI reference/`agasi target list`","kind":"section","line":[43,43],"parent":"CLI reference"}
+{"file":"packages/agasi/docs/reference/cli.md","name":"CLI reference/`agasi target add`","kind":"section","line":[49,49],"parent":"CLI reference"}
+{"file":"packages/agasi/docs/reference/cli.md","name":"CLI reference/`agasi target add`/Required flags","kind":"section","line":[51,51],"parent":"CLI reference/`agasi target add`"}
+{"file":"packages/agasi/docs/reference/cli.md","name":"CLI reference/`agasi target add`/Optional","kind":"section","line":[59,59],"parent":"CLI reference/`agasi target add`"}
+{"file":"packages/agasi/docs/reference/cli.md","name":"CLI reference/`agasi target add`/`--dest` values","kind":"section","line":[65,65],"parent":"CLI reference/`agasi target add`"}
+{"file":"packages/agasi/docs/reference/cli.md","name":"CLI reference/`agasi target remove <id>`","kind":"section","line":[85,85],"parent":"CLI reference"}
+{"file":"packages/agasi/docs/reference/cli.md","name":"CLI reference/`agasi install [skill...]`","kind":"section","line":[91,91],"parent":"CLI reference"}
+{"file":"packages/agasi/docs/reference/cli.md","name":"CLI reference/`agasi sync [skill...]`","kind":"section","line":[104,104],"parent":"CLI reference"}
+{"file":"packages/agasi/docs/reference/cli.md","name":"CLI reference/`agasi doctor`","kind":"section","line":[116,116],"parent":"CLI reference"}
+{"file":"packages/agasi/docs/reference/cli.md","name":"CLI reference/Safety behavior","kind":"section","line":[122,122],"parent":"CLI reference"}
+{"file":"packages/agasi/docs/reference/config.md","name":"Config file reference","kind":"section","line":[1,1]}
+{"file":"packages/agasi/docs/reference/config.md","name":"Config file reference/Top level","kind":"section","line":[5,5],"parent":"Config file reference"}
+{"file":"packages/agasi/docs/reference/config.md","name":"Config file reference/Source entry","kind":"section","line":[13,13],"parent":"Config file reference"}
+{"file":"packages/agasi/docs/reference/config.md","name":"Config file reference/Target entry","kind":"section","line":[26,26],"parent":"Config file reference"}
+{"file":"packages/agasi/docs/reference/config.md","name":"Config file reference/Destination object","kind":"section","line":[45,45],"parent":"Config file reference"}
+{"file":"packages/agasi/docs/reference/config.md","name":"Config file reference/Example: codex-only","kind":"section","line":[65,65],"parent":"Config file reference"}
+{"file":"packages/agasi/src/cli.ts","name":"node:fs","kind":"import","line":[2,2],"alias":"fs","visibility":"private"}
+{"file":"packages/agasi/src/cli.ts","name":"node:path","kind":"import","line":[3,3],"alias":"path","visibility":"private"}
+{"file":"packages/agasi/src/cli.ts","name":"node:process","kind":"import","line":[4,4],"alias":"process","visibility":"private"}
+{"file":"packages/agasi/src/cli.ts","name":"commander.Command","kind":"import","line":[5,5],"visibility":"private"}
+{"file":"packages/agasi/src/cli.ts","name":"./config.js.initConfigFile","kind":"import","line":[6,14],"visibility":"private"}
+{"file":"packages/agasi/src/cli.ts","name":"./config.js.loadConfig","kind":"import","line":[6,14],"visibility":"private"}
+{"file":"packages/agasi/src/cli.ts","name":"./config.js.saveConfig","kind":"import","line":[6,14],"visibility":"private"}
+{"file":"packages/agasi/src/cli.ts","name":"./config.js.findSource","kind":"import","line":[6,14],"visibility":"private"}
+{"file":"packages/agasi/src/cli.ts","name":"./config.js.assertSourcePathsExist","kind":"import","line":[6,14],"visibility":"private"}
+{"file":"packages/agasi/src/cli.ts","name":"./config.js.targetReferencesSource","kind":"import","line":[6,14],"visibility":"private"}
+{"file":"packages/agasi/src/cli.ts","name":"./config.js.DestinationEntry","kind":"import","line":[6,14],"visibility":"private"}
+{"file":"packages/agasi/src/cli.ts","name":"./paths.js.AGASI_CONFIG_PATH","kind":"import","line":[15,15],"visibility":"private"}
+{"file":"packages/agasi/src/cli.ts","name":"./paths.js.expandHome","kind":"import","line":[15,15],"visibility":"private"}
+{"file":"packages/agasi/src/cli.ts","name":"./skills.js.listSkillNames","kind":"import","line":[16,16],"visibility":"private"}
+{"file":"packages/agasi/src/cli.ts","name":"./skills.js.skillSourceDir","kind":"import","line":[16,16],"visibility":"private"}
+{"file":"packages/agasi/src/cli.ts","name":"./targets.js.resolveDestinations","kind":"import","line":[17,21],"visibility":"private"}
+{"file":"packages/agasi/src/cli.ts","name":"./targets.js.resolveSkillsRoot","kind":"import","line":[17,21],"visibility":"private"}
+{"file":"packages/agasi/src/cli.ts","name":"./targets.js.ensureBaseParentDirs","kind":"import","line":[17,21],"visibility":"private"}
+{"file":"packages/agasi/src/cli.ts","name":"./link.js.linkSkillDir","kind":"import","line":[22,22],"visibility":"private"}
+{"file":"packages/agasi/src/cli.ts","name":"./link.js.pruneStaleSymlinks","kind":"import","line":[22,22],"visibility":"private"}
+{"file":"packages/agasi/src/cli.ts","name":"PKG_VERSION","kind":"constant","line":[24,24],"visibility":"private"}
+{"file":"packages/agasi/src/cli.ts","name":"resolveConfigPath","kind":"function","line":[26,35],"tokens":"explicit env process AGASI_CONFIG_PATH expandHome path","visibility":"private"}
+{"file":"packages/agasi/src/cli.ts","name":"resolveConfigPath.env","kind":"variable","line":[30,30],"parent":"resolveConfigPath","tokens":"process","visibility":"private"}
+{"file":"packages/agasi/src/cli.ts","name":"parseDestToken","kind":"function","line":[37,50],"tokens":"rel Error","visibility":"private"}
+{"file":"packages/agasi/src/cli.ts","name":"parseDestToken.t","kind":"variable","line":[38,38],"parent":"parseDestToken","visibility":"private"}
+{"file":"packages/agasi/src/cli.ts","name":"parseDestToken.rel","kind":"variable","line":[43,43],"parent":"parseDestToken","visibility":"private"}
+{"file":"packages/agasi/src/cli.ts","name":"collectDest","kind":"function","line":[52,55],"tokens":"value prev","visibility":"private"}
+{"file":"packages/agasi/src/cli.ts","name":"runInstallOrSync","kind":"function","line":[57,130],"tokens":"resolveSkillsRoot targets listSkillNames names baseDir Error skill removed label opts allSet pruneStaleSymlinks loadConfig destLink srcDir ensureBaseParentDirs linkSkillDir want dests cfg root outcome path assertSourcePathsExist resolveDestinations cfgPath allNames Set skillSourceDir","visibility":"private"}
+{"file":"packages/agasi/src/cli.ts","name":"runInstallOrSync.cfg","kind":"variable","line":[68,68],"parent":"runInstallOrSync","tokens":"loadConfig cfgPath","visibility":"private"}
+{"file":"packages/agasi/src/cli.ts","name":"runInstallOrSync.targets","kind":"variable","line":[71,73],"parent":"runInstallOrSync","tokens":"cfg opts","visibility":"private"}
+{"file":"packages/agasi/src/cli.ts","name":"runInstallOrSync.root","kind":"variable","line":[79,79],"parent":"runInstallOrSync","tokens":"cfg resolveSkillsRoot","visibility":"private"}
+{"file":"packages/agasi/src/cli.ts","name":"runInstallOrSync.allNames","kind":"variable","line":[80,80],"parent":"runInstallOrSync","tokens":"listSkillNames root","visibility":"private"}
+{"file":"packages/agasi/src/cli.ts","name":"runInstallOrSync.allSet","kind":"variable","line":[81,81],"parent":"runInstallOrSync","tokens":"Set allNames","visibility":"private"}
+{"file":"packages/agasi/src/cli.ts","name":"runInstallOrSync.names","kind":"variable","line":[83,83],"parent":"runInstallOrSync","tokens":"allNames","visibility":"private"}
+{"file":"packages/agasi/src/cli.ts","name":"runInstallOrSync.want","kind":"variable","line":[90,90],"parent":"runInstallOrSync","tokens":"opts Set","visibility":"private"}
+{"file":"packages/agasi/src/cli.ts","name":"runInstallOrSync.dests","kind":"variable","line":[94,94],"parent":"runInstallOrSync","tokens":"cfg resolveDestinations","visibility":"private"}
+{"file":"packages/agasi/src/cli.ts","name":"runInstallOrSync.srcDir","kind":"variable","line":[98,98],"parent":"runInstallOrSync","tokens":"skill skillSourceDir root","visibility":"private"}
+{"file":"packages/agasi/src/cli.ts","name":"runInstallOrSync.destLink","kind":"variable","line":[99,99],"parent":"runInstallOrSync","tokens":"baseDir path skill","visibility":"private"}
+{"file":"packages/agasi/src/cli.ts","name":"runInstallOrSync.outcome","kind":"variable","line":[100,100],"parent":"runInstallOrSync","tokens":"linkSkillDir srcDir destLink opts","visibility":"private"}
+{"file":"packages/agasi/src/cli.ts","name":"runInstallOrSync.removed","kind":"variable","line":[123,123],"parent":"runInstallOrSync","tokens":"root pruneStaleSymlinks allSet baseDir","visibility":"private"}
+{"file":"packages/agasi/src/cli.ts","name":"runDoctor","kind":"function","line":[132,206],"tokens":"st process cfgPath issues allNames dests resolveDestinations baseDir listSkillNames ent resolved md cur label Set Error loadConfig path cfg resolveSkillsRoot fs root","visibility":"private"}
+{"file":"packages/agasi/src/cli.ts","name":"runDoctor.cfg","kind":"variable","line":[133,133],"parent":"runDoctor","tokens":"cfgPath loadConfig","visibility":"private"}
+{"file":"packages/agasi/src/cli.ts","name":"runDoctor.issues","kind":"variable","line":[134,134],"parent":"runDoctor","visibility":"private"}
+{"file":"packages/agasi/src/cli.ts","name":"runDoctor.root","kind":"variable","line":[142,142],"parent":"runDoctor","visibility":"private"}
+{"file":"packages/agasi/src/cli.ts","name":"runDoctor.allNames","kind":"variable","line":[150,150],"parent":"runDoctor","tokens":"Set listSkillNames root","visibility":"private"}
+{"file":"packages/agasi/src/cli.ts","name":"runDoctor.dests","kind":"variable","line":[151,151],"parent":"runDoctor","visibility":"private"}
+{"file":"packages/agasi/src/cli.ts","name":"runDoctor.p","kind":"variable","line":[165,165],"parent":"runDoctor","tokens":"path ent baseDir","visibility":"private"}
+{"file":"packages/agasi/src/cli.ts","name":"runDoctor.st","kind":"variable","line":[166,166],"parent":"runDoctor","tokens":"fs","visibility":"private"}
+{"file":"packages/agasi/src/cli.ts","name":"runDoctor.cur","kind":"variable","line":[170,170],"parent":"runDoctor","visibility":"private"}
+{"file":"packages/agasi/src/cli.ts","name":"runDoctor.resolved","kind":"variable","line":[178,180],"parent":"runDoctor","tokens":"path cur","visibility":"private"}
+{"file":"packages/agasi/src/cli.ts","name":"runDoctor.md","kind":"variable","line":[186,186],"parent":"runDoctor","tokens":"path resolved","visibility":"private"}
+{"file":"packages/agasi/src/cli.ts","name":"program","kind":"variable","line":[208,208],"tokens":"Command","visibility":"private"}
+{"file":"packages/agasi/src/cli.ts","name":"activeConfigPath","kind":"function","line":[216,219],"tokens":"resolveConfigPath program","visibility":"private"}
+{"file":"packages/agasi/src/cli.ts","name":"activeConfigPath.o","kind":"variable","line":[217,217],"parent":"activeConfigPath","tokens":"program","visibility":"private"}
+{"file":"packages/agasi/src/cli.ts","name":"cfgPath","kind":"variable","line":[225,225],"tokens":"activeConfigPath","visibility":"private"}
+{"file":"packages/agasi/src/cli.ts","name":"cfgPath","kind":"variable","line":[234,234],"tokens":"activeConfigPath","visibility":"private"}
+{"file":"packages/agasi/src/cli.ts","name":"cfg","kind":"variable","line":[236,236],"tokens":"loadConfig cfgPath","visibility":"private"}
+{"file":"packages/agasi/src/cli.ts","name":"sourceCmd","kind":"variable","line":[241,241],"tokens":"program","visibility":"private"}
+{"file":"packages/agasi/src/cli.ts","name":"cfgPath","kind":"variable","line":[247,247],"tokens":"activeConfigPath","visibility":"private"}
+{"file":"packages/agasi/src/cli.ts","name":"cfg","kind":"variable","line":[249,249],"tokens":"cfgPath loadConfig","visibility":"private"}
+{"file":"packages/agasi/src/cli.ts","name":"cfgPath","kind":"variable","line":[261,261],"tokens":"activeConfigPath","visibility":"private"}
+{"file":"packages/agasi/src/cli.ts","name":"cfg","kind":"variable","line":[263,263],"tokens":"cfgPath loadConfig","visibility":"private"}
+{"file":"packages/agasi/src/cli.ts","name":"abs","kind":"variable","line":[267,267],"tokens":"expandHome","visibility":"private"}
+{"file":"packages/agasi/src/cli.ts","name":"cfgPath","kind":"variable","line":[281,281],"tokens":"activeConfigPath","visibility":"private"}
+{"file":"packages/agasi/src/cli.ts","name":"cfg","kind":"variable","line":[282,282],"tokens":"loadConfig cfgPath","visibility":"private"}
+{"file":"packages/agasi/src/cli.ts","name":"next","kind":"variable","line":[286,286],"tokens":"cfg","visibility":"private"}
+{"file":"packages/agasi/src/cli.ts","name":"targetCmd","kind":"variable","line":[295,295],"tokens":"program","visibility":"private"}
+{"file":"packages/agasi/src/cli.ts","name":"cfgPath","kind":"variable","line":[301,301],"tokens":"activeConfigPath","visibility":"private"}
+{"file":"packages/agasi/src/cli.ts","name":"cfg","kind":"variable","line":[303,303],"tokens":"cfgPath loadConfig","visibility":"private"}
+{"file":"packages/agasi/src/cli.ts","name":"dests","kind":"variable","line":[306,306],"visibility":"private"}
+{"file":"packages/agasi/src/cli.ts","name":"cfgPath","kind":"variable","line":[336,336],"tokens":"activeConfigPath","visibility":"private"}
+{"file":"packages/agasi/src/cli.ts","name":"cfg","kind":"variable","line":[338,338],"tokens":"loadConfig cfgPath","visibility":"private"}
+{"file":"packages/agasi/src/cli.ts","name":"o","kind":"variable","line":[339,339],"tokens":"cmd","visibility":"private"}
+{"file":"packages/agasi/src/cli.ts","name":"tokens","kind":"variable","line":[346,346],"visibility":"private"}
+{"file":"packages/agasi/src/cli.ts","name":"destinations","kind":"variable","line":[350,350],"tokens":"tokens parseDestToken","visibility":"private"}
+{"file":"packages/agasi/src/cli.ts","name":"repoRoot","kind":"variable","line":[351,351],"tokens":"expandHome path","visibility":"private"}
+{"file":"packages/agasi/src/cli.ts","name":"cfgPath","kind":"variable","line":[368,368],"tokens":"activeConfigPath","visibility":"private"}
+{"file":"packages/agasi/src/cli.ts","name":"cfg","kind":"variable","line":[369,369],"tokens":"loadConfig cfgPath","visibility":"private"}
+{"file":"packages/agasi/src/cli.ts","name":"next","kind":"variable","line":[370,370],"tokens":"cfg id","visibility":"private"}
+{"file":"packages/agasi/src/cli.ts","name":"addInstallLikeCommand","kind":"function","line":[379,417],"tokens":"program _opt list initConfigFile cmd skills Array local runInstallOrSync cfgPath opts activeConfigPath","visibility":"private"}
+{"file":"packages/agasi/src/cli.ts","name":"addInstallLikeCommand.c","kind":"variable","line":[383,393],"parent":"addInstallLikeCommand","tokens":"opts program","visibility":"private"}
+{"file":"packages/agasi/src/cli.ts","name":"addInstallLikeCommand.cfgPath","kind":"variable","line":[399,399],"parent":"addInstallLikeCommand","tokens":"activeConfigPath","visibility":"private"}
+{"file":"packages/agasi/src/cli.ts","name":"addInstallLikeCommand.local","kind":"variable","line":[401,406],"parent":"addInstallLikeCommand","tokens":"cmd","visibility":"private"}
+{"file":"packages/agasi/src/cli.ts","name":"addInstallLikeCommand.list","kind":"variable","line":[407,407],"parent":"addInstallLikeCommand","tokens":"skills Array","visibility":"private"}
+{"file":"packages/agasi/src/cli.ts","name":"cfgPath","kind":"variable","line":[426,426],"tokens":"activeConfigPath","visibility":"private"}
+{"file":"packages/agasi/src/config.ts","name":"node:fs","kind":"import","line":[1,1],"alias":"fs","visibility":"private"}
+{"file":"packages/agasi/src/config.ts","name":"node:path","kind":"import","line":[2,2],"alias":"path","visibility":"private"}
+{"file":"packages/agasi/src/config.ts","name":"yaml","kind":"import","line":[3,3],"alias":"YAML","visibility":"private"}
+{"file":"packages/agasi/src/config.ts","name":"./paths.js.AGASI_CONFIG_PATH","kind":"import","line":[4,4],"visibility":"private"}
+{"file":"packages/agasi/src/config.ts","name":"./paths.js.ensureDir","kind":"import","line":[4,4],"visibility":"private"}
+{"file":"packages/agasi/src/config.ts","name":"./paths.js.expandHome","kind":"import","line":[4,4],"visibility":"private"}
+{"file":"packages/agasi/src/config.ts","name":"DestinationEntry","kind":"type_alias","line":[6,10],"visibility":"public"}
+{"file":"packages/agasi/src/config.ts","name":"TargetEntry","kind":"type_alias","line":[12,17],"visibility":"public"}
+{"file":"packages/agasi/src/config.ts","name":"SourceEntry","kind":"type_alias","line":[19,22],"visibility":"public"}
+{"file":"packages/agasi/src/config.ts","name":"AgasiConfig","kind":"type_alias","line":[24,28],"visibility":"public"}
+{"file":"packages/agasi/src/config.ts","name":"DEFAULTS","kind":"constant","line":[30,34],"visibility":"private"}
+{"file":"packages/agasi/src/config.ts","name":"deepMerge","kind":"function","line":[36,56],"tokens":"deepMerge out base Array patch","visibility":"private"}
+{"file":"packages/agasi/src/config.ts","name":"deepMerge.out","kind":"variable","line":[40,40],"parent":"deepMerge","tokens":"base","visibility":"private"}
+{"file":"packages/agasi/src/config.ts","name":"defaultConfigYaml","kind":"function","line":[58,67],"tokens":"YAML DEFAULTS","visibility":"public"}
+{"file":"packages/agasi/src/config.ts","name":"initConfigFile","kind":"function","line":[69,76],"tokens":"defaultConfigYaml dir ensureDir path configPath fs","visibility":"public"}
+{"file":"packages/agasi/src/config.ts","name":"initConfigFile.dir","kind":"variable","line":[70,70],"parent":"initConfigFile","tokens":"path configPath","visibility":"private"}
+{"file":"packages/agasi/src/config.ts","name":"normalizeDestinations","kind":"function","line":[78,100],"tokens":"raw Array Error item out rel","visibility":"private"}
+{"file":"packages/agasi/src/config.ts","name":"normalizeDestinations.out","kind":"variable","line":[82,82],"parent":"normalizeDestinations","visibility":"private"}
+{"file":"packages/agasi/src/config.ts","name":"normalizeDestinations.o","kind":"variable","line":[87,87],"parent":"normalizeDestinations","tokens":"item","visibility":"private"}
+{"file":"packages/agasi/src/config.ts","name":"normalizeDestinations.t","kind":"variable","line":[88,88],"parent":"normalizeDestinations","visibility":"private"}
+{"file":"packages/agasi/src/config.ts","name":"normalizeDestinations.rel","kind":"variable","line":[92,92],"parent":"normalizeDestinations","visibility":"private"}
+{"file":"packages/agasi/src/config.ts","name":"normalizeSources","kind":"function","line":[102,129],"tokens":"hasGit raw Error Array item out expandHome","visibility":"private"}
+{"file":"packages/agasi/src/config.ts","name":"normalizeSources.out","kind":"variable","line":[106,106],"parent":"normalizeSources","visibility":"private"}
+{"file":"packages/agasi/src/config.ts","name":"normalizeSources.o","kind":"variable","line":[111,111],"parent":"normalizeSources","tokens":"item","visibility":"private"}
+{"file":"packages/agasi/src/config.ts","name":"normalizeSources.name","kind":"variable","line":[112,112],"parent":"normalizeSources","visibility":"private"}
+{"file":"packages/agasi/src/config.ts","name":"normalizeSources.p","kind":"variable","line":[113,113],"parent":"normalizeSources","visibility":"private"}
+{"file":"packages/agasi/src/config.ts","name":"normalizeSources.hasGit","kind":"variable","line":[114,114],"parent":"normalizeSources","visibility":"private"}
+{"file":"packages/agasi/src/config.ts","name":"normalizeTargets","kind":"function","line":[131,167],"tokens":"item id raw out normalizeDestinations source repoRoot Error Array destinations","visibility":"private"}
+{"file":"packages/agasi/src/config.ts","name":"normalizeTargets.out","kind":"variable","line":[135,135],"parent":"normalizeTargets","visibility":"private"}
+{"file":"packages/agasi/src/config.ts","name":"normalizeTargets.o","kind":"variable","line":[140,140],"parent":"normalizeTargets","tokens":"item","visibility":"private"}
+{"file":"packages/agasi/src/config.ts","name":"normalizeTargets.id","kind":"variable","line":[141,141],"parent":"normalizeTargets","visibility":"private"}
+{"file":"packages/agasi/src/config.ts","name":"normalizeTargets.source","kind":"variable","line":[142,142],"parent":"normalizeTargets","visibility":"private"}
+{"file":"packages/agasi/src/config.ts","name":"normalizeTargets.repoRoot","kind":"variable","line":[143,148],"parent":"normalizeTargets","visibility":"private"}
+{"file":"packages/agasi/src/config.ts","name":"normalizeTargets.destinations","kind":"variable","line":[155,155],"parent":"normalizeTargets","tokens":"normalizeDestinations","visibility":"private"}
+{"file":"packages/agasi/src/config.ts","name":"loadConfig","kind":"function","line":[169,191],"tokens":"sources parsed normalizeSources merged DEFAULTS targets normalizeTargets YAML version deepMerge rawFile fs configPath","visibility":"public"}
+{"file":"packages/agasi/src/config.ts","name":"loadConfig.rawFile","kind":"variable","line":[177,177],"parent":"loadConfig","tokens":"configPath fs","visibility":"private"}
+{"file":"packages/agasi/src/config.ts","name":"loadConfig.parsed","kind":"variable","line":[178,178],"parent":"loadConfig","tokens":"YAML rawFile","visibility":"private"}
+{"file":"packages/agasi/src/config.ts","name":"loadConfig.merged","kind":"variable","line":[179,186],"parent":"loadConfig","tokens":"deepMerge parsed DEFAULTS","visibility":"private"}
+{"file":"packages/agasi/src/config.ts","name":"loadConfig.sources","kind":"variable","line":[187,187],"parent":"loadConfig","tokens":"merged normalizeSources","visibility":"private"}
+{"file":"packages/agasi/src/config.ts","name":"loadConfig.targets","kind":"variable","line":[188,188],"parent":"loadConfig","tokens":"merged normalizeTargets","visibility":"private"}
+{"file":"packages/agasi/src/config.ts","name":"loadConfig.version","kind":"variable","line":[189,189],"parent":"loadConfig","tokens":"merged","visibility":"private"}
+{"file":"packages/agasi/src/config.ts","name":"saveConfig","kind":"function","line":[193,206],"tokens":"ensureDir doc configPath path cfg fs YAML","visibility":"public"}
+{"file":"packages/agasi/src/config.ts","name":"saveConfig.doc","kind":"variable","line":[195,204],"parent":"saveConfig","tokens":"cfg","visibility":"private"}
+{"file":"packages/agasi/src/config.ts","name":"assertSourcePathsExist","kind":"function","line":[208,217],"tokens":"fs cfg Error","visibility":"public"}
+{"file":"packages/agasi/src/config.ts","name":"findSource","kind":"function","line":[219,221],"tokens":"cfg","visibility":"public"}
+{"file":"packages/agasi/src/config.ts","name":"targetReferencesSource","kind":"function","line":[223,225],"tokens":"cfg sourceName","visibility":"public"}
+{"file":"packages/agasi/src/config.ts","name":"needsRepoRoot","kind":"function","line":[227,229],"visibility":"public"}
+{"file":"packages/agasi/src/config.ts","name":"validateTargetForInstall","kind":"function","line":[231,237],"tokens":"needsRepoRoot needs","visibility":"public"}
+{"file":"packages/agasi/src/config.ts","name":"validateTargetForInstall.needs","kind":"variable","line":[232,232],"parent":"validateTargetForInstall","tokens":"needsRepoRoot","visibility":"private"}
+{"file":"packages/agasi/src/link.ts","name":"node:fs","kind":"import","line":[1,1],"alias":"fs","visibility":"private"}
+{"file":"packages/agasi/src/link.ts","name":"node:path","kind":"import","line":[2,2],"alias":"path","visibility":"private"}
+{"file":"packages/agasi/src/link.ts","name":"symlinkType","kind":"function","line":[4,6],"tokens":"process","visibility":"private"}
+{"file":"packages/agasi/src/link.ts","name":"resolveLinkTarget","kind":"function","line":[8,12],"tokens":"linkPath path linkTarget","visibility":"private"}
+{"file":"packages/agasi/src/link.ts","name":"LinkOutcome","kind":"type_alias","line":[14,18],"visibility":"public"}
+{"file":"packages/agasi/src/link.ts","name":"linkSkillDir","kind":"function","line":[20,74],"tokens":"src opts cur path resolved resolveLinkTarget fs sourceSkillDir st destLinkPath symlinkType","visibility":"public"}
+{"file":"packages/agasi/src/link.ts","name":"linkSkillDir.src","kind":"variable","line":[25,25],"parent":"linkSkillDir","tokens":"path sourceSkillDir","visibility":"private"}
+{"file":"packages/agasi/src/link.ts","name":"linkSkillDir.st","kind":"variable","line":[31,31],"parent":"linkSkillDir","tokens":"fs destLinkPath","visibility":"private"}
+{"file":"packages/agasi/src/link.ts","name":"linkSkillDir.cur","kind":"variable","line":[34,34],"parent":"linkSkillDir","tokens":"fs destLinkPath","visibility":"private"}
+{"file":"packages/agasi/src/link.ts","name":"linkSkillDir.resolved","kind":"variable","line":[35,35],"parent":"linkSkillDir","tokens":"resolveLinkTarget destLinkPath cur","visibility":"private"}
+{"file":"packages/agasi/src/link.ts","name":"pruneStaleSymlinks","kind":"function","line":[76,114],"tokens":"resolveLinkTarget st destBase cur fs validNames path skillPath rootResolved skillsRoot removed resolved","visibility":"public"}
+{"file":"packages/agasi/src/link.ts","name":"pruneStaleSymlinks.rootResolved","kind":"variable","line":[84,84],"parent":"pruneStaleSymlinks","tokens":"path skillsRoot","visibility":"private"}
+{"file":"packages/agasi/src/link.ts","name":"pruneStaleSymlinks.removed","kind":"variable","line":[85,85],"parent":"pruneStaleSymlinks","visibility":"private"}
+{"file":"packages/agasi/src/link.ts","name":"pruneStaleSymlinks.p","kind":"variable","line":[90,90],"parent":"pruneStaleSymlinks","tokens":"destBase path","visibility":"private"}
+{"file":"packages/agasi/src/link.ts","name":"pruneStaleSymlinks.st","kind":"variable","line":[91,91],"parent":"pruneStaleSymlinks","visibility":"private"}
+{"file":"packages/agasi/src/link.ts","name":"pruneStaleSymlinks.cur","kind":"variable","line":[100,100],"parent":"pruneStaleSymlinks","visibility":"private"}
+{"file":"packages/agasi/src/link.ts","name":"pruneStaleSymlinks.resolved","kind":"variable","line":[106,106],"parent":"pruneStaleSymlinks","tokens":"cur resolveLinkTarget","visibility":"private"}
+{"file":"packages/agasi/src/link.ts","name":"pruneStaleSymlinks.skillPath","kind":"variable","line":[107,107],"parent":"pruneStaleSymlinks","tokens":"path rootResolved","visibility":"private"}
+{"file":"packages/agasi/src/paths.ts","name":"node:fs","kind":"import","line":[1,1],"alias":"fs","visibility":"private"}
+{"file":"packages/agasi/src/paths.ts","name":"node:os","kind":"import","line":[2,2],"alias":"os","visibility":"private"}
+{"file":"packages/agasi/src/paths.ts","name":"node:path","kind":"import","line":[3,3],"alias":"path","visibility":"private"}
+{"file":"packages/agasi/src/paths.ts","name":"AGASI_CONFIG_DIR","kind":"constant","line":[5,5],"tokens":"os path","visibility":"public"}
+{"file":"packages/agasi/src/paths.ts","name":"AGASI_CONFIG_PATH","kind":"constant","line":[6,6],"tokens":"AGASI_CONFIG_DIR path","visibility":"public"}
+{"file":"packages/agasi/src/paths.ts","name":"AGASI_CACHE_DIR","kind":"constant","line":[7,7],"tokens":"AGASI_CONFIG_DIR path","visibility":"public"}
+{"file":"packages/agasi/src/paths.ts","name":"ensureDir","kind":"function","line":[9,11],"tokens":"fs dir","visibility":"public"}
+{"file":"packages/agasi/src/paths.ts","name":"expandHome","kind":"function","line":[13,19],"tokens":"trimmed os path","visibility":"public"}
+{"file":"packages/agasi/src/paths.ts","name":"expandHome.trimmed","kind":"variable","line":[14,14],"parent":"expandHome","visibility":"private"}
+{"file":"packages/agasi/src/skills.ts","name":"node:fs","kind":"import","line":[1,1],"alias":"fs","visibility":"private"}
+{"file":"packages/agasi/src/skills.ts","name":"node:path","kind":"import","line":[2,2],"alias":"path","visibility":"private"}
+{"file":"packages/agasi/src/skills.ts","name":"listSkillNames","kind":"function","line":[4,21],"tokens":"skillsRoot path skillDir ent md names fs","visibility":"public"}
+{"file":"packages/agasi/src/skills.ts","name":"listSkillNames.names","kind":"variable","line":[8,8],"parent":"listSkillNames","visibility":"private"}
+{"file":"packages/agasi/src/skills.ts","name":"listSkillNames.skillDir","kind":"variable","line":[13,13],"parent":"listSkillNames","tokens":"skillsRoot path ent","visibility":"private"}
+{"file":"packages/agasi/src/skills.ts","name":"listSkillNames.md","kind":"variable","line":[14,14],"parent":"listSkillNames","tokens":"skillDir path","visibility":"private"}
+{"file":"packages/agasi/src/skills.ts","name":"skillSourceDir","kind":"function","line":[23,25],"tokens":"skillName path skillsRoot","visibility":"public"}
+{"file":"packages/agasi/src/targets.ts","name":"node:fs","kind":"import","line":[1,1],"alias":"fs","visibility":"private"}
+{"file":"packages/agasi/src/targets.ts","name":"node:os","kind":"import","line":[2,2],"alias":"os","visibility":"private"}
+{"file":"packages/agasi/src/targets.ts","name":"node:path","kind":"import","line":[3,3],"alias":"path","visibility":"private"}
+{"file":"packages/agasi/src/targets.ts","name":"./config.js.AgasiConfig","kind":"import","line":[4,4],"visibility":"private"}
+{"file":"packages/agasi/src/targets.ts","name":"./config.js.DestinationEntry","kind":"import","line":[4,4],"visibility":"private"}
+{"file":"packages/agasi/src/targets.ts","name":"./config.js.TargetEntry","kind":"import","line":[4,4],"visibility":"private"}
+{"file":"packages/agasi/src/targets.ts","name":"./config.js.findSource","kind":"import","line":[5,5],"visibility":"private"}
+{"file":"packages/agasi/src/targets.ts","name":"./config.js.needsRepoRoot","kind":"import","line":[5,5],"visibility":"private"}
+{"file":"packages/agasi/src/targets.ts","name":"./config.js.validateTargetForInstall","kind":"import","line":[5,5],"visibility":"private"}
+{"file":"packages/agasi/src/targets.ts","name":"ResolvedDestination","kind":"type_alias","line":[7,10],"visibility":"public"}
+{"file":"packages/agasi/src/targets.ts","name":"codexSkillsDir","kind":"function","line":[12,19],"tokens":"process os fromEnv path home","visibility":"private"}
+{"file":"packages/agasi/src/targets.ts","name":"codexSkillsDir.home","kind":"variable","line":[13,13],"parent":"codexSkillsDir","tokens":"os","visibility":"private"}
+{"file":"packages/agasi/src/targets.ts","name":"codexSkillsDir.fromEnv","kind":"variable","line":[14,14],"parent":"codexSkillsDir","tokens":"process","visibility":"private"}
+{"file":"packages/agasi/src/targets.ts","name":"resolveDestinations","kind":"function","line":[21,66],"tokens":"repoRoot codexSkillsDir err validateTargetForInstall Error path target out","visibility":"public"}
+{"file":"packages/agasi/src/targets.ts","name":"resolveDestinations.err","kind":"variable","line":[25,25],"parent":"resolveDestinations","tokens":"validateTargetForInstall target","visibility":"private"}
+{"file":"packages/agasi/src/targets.ts","name":"resolveDestinations.repoRoot","kind":"variable","line":[29,31],"parent":"resolveDestinations","tokens":"target path","visibility":"private"}
+{"file":"packages/agasi/src/targets.ts","name":"resolveDestinations.out","kind":"variable","line":[32,32],"parent":"resolveDestinations","visibility":"private"}
+{"file":"packages/agasi/src/targets.ts","name":"resolveSkillsRoot","kind":"function","line":[68,74],"tokens":"cfg Error path src findSource target","visibility":"public"}
+{"file":"packages/agasi/src/targets.ts","name":"resolveSkillsRoot.src","kind":"variable","line":[69,69],"parent":"resolveSkillsRoot","tokens":"cfg target findSource","visibility":"private"}
+{"file":"packages/agasi/src/targets.ts","name":"ensureBaseParentDirs","kind":"function","line":[76,78],"tokens":"fs baseDir","visibility":"public"}
+{"file":"packages/agasi/src/targets.ts","name":"targetNeedsRepoRoot","kind":"function","line":[80,82],"tokens":"target needsRepoRoot","visibility":"public"}
+{"file":"packages/agasi/test/README.md","name":"agasi tests","kind":"section","line":[1,1]}
+{"file":"packages/agasi/test/cli.integration.test.mjs","name":"node:assert","kind":"import","line":[1,1],"alias":"assert","visibility":"private"}
+{"file":"packages/agasi/test/cli.integration.test.mjs","name":"node:child_process.spawnSync","kind":"import","line":[2,2],"visibility":"private"}
+{"file":"packages/agasi/test/cli.integration.test.mjs","name":"node:fs","kind":"import","line":[3,3],"alias":"fs","visibility":"private"}
+{"file":"packages/agasi/test/cli.integration.test.mjs","name":"node:path","kind":"import","line":[4,4],"alias":"path","visibility":"private"}
+{"file":"packages/agasi/test/cli.integration.test.mjs","name":"node:test.test","kind":"import","line":[5,5],"visibility":"private"}
+{"file":"packages/agasi/test/cli.integration.test.mjs","name":"./helpers.mjs.cliPath","kind":"import","line":[6,6],"visibility":"private"}
+{"file":"packages/agasi/test/cli.integration.test.mjs","name":"./helpers.mjs.mkTempDir","kind":"import","line":[6,6],"visibility":"private"}
+{"file":"packages/agasi/test/cli.integration.test.mjs","name":"./helpers.mjs.writeSkill","kind":"import","line":[6,6],"visibility":"private"}
+{"file":"packages/agasi/test/cli.integration.test.mjs","name":"run","kind":"function","line":[8,13],"tokens":"process env spawnSync args cliPath","visibility":"private"}
+{"file":"packages/agasi/test/cli.integration.test.mjs","name":"r","kind":"variable","line":[16,16],"tokens":"run","visibility":"private"}
+{"file":"packages/agasi/test/cli.integration.test.mjs","name":"dir","kind":"variable","line":[22,22],"tokens":"mkTempDir","visibility":"private"}
+{"file":"packages/agasi/test/cli.integration.test.mjs","name":"cfg","kind":"variable","line":[23,23],"tokens":"path dir","visibility":"private"}
+{"file":"packages/agasi/test/cli.integration.test.mjs","name":"r","kind":"variable","line":[24,24],"tokens":"run cfg","visibility":"private"}
+{"file":"packages/agasi/test/cli.integration.test.mjs","name":"base","kind":"variable","line":[31,31],"tokens":"mkTempDir","visibility":"private"}
+{"file":"packages/agasi/test/cli.integration.test.mjs","name":"cfg","kind":"variable","line":[32,32],"tokens":"base path","visibility":"private"}
+{"file":"packages/agasi/test/cli.integration.test.mjs","name":"skills","kind":"variable","line":[33,33],"tokens":"path base","visibility":"private"}
+{"file":"packages/agasi/test/cli.integration.test.mjs","name":"repo","kind":"variable","line":[34,34],"tokens":"path base","visibility":"private"}
+{"file":"packages/agasi/test/cli.integration.test.mjs","name":"r","kind":"variable","line":[38,38],"tokens":"cfg run","visibility":"private"}
+{"file":"packages/agasi/test/cli.integration.test.mjs","name":"linkPath","kind":"variable","line":[63,63],"tokens":"repo path","visibility":"private"}
+{"file":"packages/agasi/test/cli.integration.test.mjs","name":"base","kind":"variable","line":[69,69],"tokens":"mkTempDir","visibility":"private"}
+{"file":"packages/agasi/test/cli.integration.test.mjs","name":"cfg","kind":"variable","line":[70,70],"tokens":"path base","visibility":"private"}
+{"file":"packages/agasi/test/cli.integration.test.mjs","name":"r","kind":"variable","line":[72,72],"tokens":"run cfg","visibility":"private"}
+{"file":"packages/agasi/test/config.test.mjs","name":"node:assert","kind":"import","line":[1,1],"alias":"assert","visibility":"private"}
+{"file":"packages/agasi/test/config.test.mjs","name":"node:fs","kind":"import","line":[2,2],"alias":"fs","visibility":"private"}
+{"file":"packages/agasi/test/config.test.mjs","name":"node:os","kind":"import","line":[3,3],"alias":"os","visibility":"private"}
+{"file":"packages/agasi/test/config.test.mjs","name":"node:path","kind":"import","line":[4,4],"alias":"path","visibility":"private"}
+{"file":"packages/agasi/test/config.test.mjs","name":"node:test.test","kind":"import","line":[5,5],"visibility":"private"}
+{"file":"packages/agasi/test/config.test.mjs","name":"../dist/config.js.loadConfig","kind":"import","line":[6,14],"visibility":"private"}
+{"file":"packages/agasi/test/config.test.mjs","name":"../dist/config.js.saveConfig","kind":"import","line":[6,14],"visibility":"private"}
+{"file":"packages/agasi/test/config.test.mjs","name":"../dist/config.js.assertSourcePathsExist","kind":"import","line":[6,14],"visibility":"private"}
+{"file":"packages/agasi/test/config.test.mjs","name":"../dist/config.js.findSource","kind":"import","line":[6,14],"visibility":"private"}
+{"file":"packages/agasi/test/config.test.mjs","name":"../dist/config.js.targetReferencesSource","kind":"import","line":[6,14],"visibility":"private"}
+{"file":"packages/agasi/test/config.test.mjs","name":"../dist/config.js.needsRepoRoot","kind":"import","line":[6,14],"visibility":"private"}
+{"file":"packages/agasi/test/config.test.mjs","name":"../dist/config.js.validateTargetForInstall","kind":"import","line":[6,14],"visibility":"private"}
+{"file":"packages/agasi/test/config.test.mjs","name":"./helpers.mjs.mkTempDir","kind":"import","line":[15,15],"visibility":"private"}
+{"file":"packages/agasi/test/config.test.mjs","name":"./helpers.mjs.writeSkill","kind":"import","line":[15,15],"visibility":"private"}
+{"file":"packages/agasi/test/config.test.mjs","name":"p","kind":"variable","line":[18,18],"tokens":"path mkTempDir","visibility":"private"}
+{"file":"packages/agasi/test/config.test.mjs","name":"c","kind":"variable","line":[19,19],"tokens":"loadConfig","visibility":"private"}
+{"file":"packages/agasi/test/config.test.mjs","name":"dir","kind":"variable","line":[26,26],"tokens":"mkTempDir","visibility":"private"}
+{"file":"packages/agasi/test/config.test.mjs","name":"cfgPath","kind":"variable","line":[27,27],"tokens":"path dir","visibility":"private"}
+{"file":"packages/agasi/test/config.test.mjs","name":"skills","kind":"variable","line":[28,28],"tokens":"path dir","visibility":"private"}
+{"file":"packages/agasi/test/config.test.mjs","name":"cfg","kind":"variable","line":[31,42],"tokens":"skills dir","visibility":"private"}
+{"file":"packages/agasi/test/config.test.mjs","name":"loaded","kind":"variable","line":[44,44],"tokens":"loadConfig cfgPath","visibility":"private"}
+{"file":"packages/agasi/test/config.test.mjs","name":"marker","kind":"variable","line":[53,53],"tokens":"Date","visibility":"private"}
+{"file":"packages/agasi/test/config.test.mjs","name":"underHome","kind":"variable","line":[54,54],"tokens":"path marker os","visibility":"private"}
+{"file":"packages/agasi/test/config.test.mjs","name":"dir","kind":"variable","line":[58,58],"tokens":"mkTempDir","visibility":"private"}
+{"file":"packages/agasi/test/config.test.mjs","name":"cfgPath","kind":"variable","line":[59,59],"tokens":"path dir","visibility":"private"}
+{"file":"packages/agasi/test/config.test.mjs","name":"c","kind":"variable","line":[70,70],"tokens":"loadConfig cfgPath","visibility":"private"}
+{"file":"packages/agasi/test/config.test.mjs","name":"dir","kind":"variable","line":[78,78],"tokens":"mkTempDir","visibility":"private"}
+{"file":"packages/agasi/test/config.test.mjs","name":"cfgPath","kind":"variable","line":[79,79],"tokens":"dir path","visibility":"private"}
+{"file":"packages/agasi/test/config.test.mjs","name":"dir","kind":"variable","line":[96,96],"tokens":"mkTempDir","visibility":"private"}
+{"file":"packages/agasi/test/config.test.mjs","name":"cfgPath","kind":"variable","line":[97,97],"tokens":"path dir","visibility":"private"}
+{"file":"packages/agasi/test/config.test.mjs","name":"dir","kind":"variable","line":[117,117],"tokens":"mkTempDir","visibility":"private"}
+{"file":"packages/agasi/test/config.test.mjs","name":"skills","kind":"variable","line":[118,118],"tokens":"dir path","visibility":"private"}
+{"file":"packages/agasi/test/config.test.mjs","name":"cfg","kind":"variable","line":[140,147],"visibility":"private"}
+{"file":"packages/agasi/test/helpers.mjs","name":"node:fs","kind":"import","line":[1,1],"alias":"fs","visibility":"private"}
+{"file":"packages/agasi/test/helpers.mjs","name":"node:os","kind":"import","line":[2,2],"alias":"os","visibility":"private"}
+{"file":"packages/agasi/test/helpers.mjs","name":"node:path","kind":"import","line":[3,3],"alias":"path","visibility":"private"}
+{"file":"packages/agasi/test/helpers.mjs","name":"node:url.fileURLToPath","kind":"import","line":[4,4],"visibility":"private"}
+{"file":"packages/agasi/test/helpers.mjs","name":"__dirname","kind":"variable","line":[6,6],"tokens":"fileURLToPath path","visibility":"private"}
+{"file":"packages/agasi/test/helpers.mjs","name":"mkTempDir","kind":"function","line":[9,11],"tokens":"prefix fs path os","visibility":"public"}
+{"file":"packages/agasi/test/helpers.mjs","name":"cliPath","kind":"function","line":[14,16],"tokens":"__dirname path","visibility":"public"}
+{"file":"packages/agasi/test/helpers.mjs","name":"writeSkill","kind":"function","line":[19,24],"tokens":"path skillsRoot dir fs","visibility":"public"}
+{"file":"packages/agasi/test/helpers.mjs","name":"dir","kind":"variable","line":[20,20],"tokens":"path skillsRoot","visibility":"private"}
+{"file":"packages/agasi/test/link.test.mjs","name":"node:assert","kind":"import","line":[1,1],"alias":"assert","visibility":"private"}
+{"file":"packages/agasi/test/link.test.mjs","name":"node:fs","kind":"import","line":[2,2],"alias":"fs","visibility":"private"}
+{"file":"packages/agasi/test/link.test.mjs","name":"node:path","kind":"import","line":[3,3],"alias":"path","visibility":"private"}
+{"file":"packages/agasi/test/link.test.mjs","name":"node:os","kind":"import","line":[4,4],"alias":"os","visibility":"private"}
+{"file":"packages/agasi/test/link.test.mjs","name":"node:test.test","kind":"import","line":[5,5],"visibility":"private"}
+{"file":"packages/agasi/test/link.test.mjs","name":"../dist/link.js.linkSkillDir","kind":"import","line":[6,6],"visibility":"private"}
+{"file":"packages/agasi/test/link.test.mjs","name":"../dist/link.js.pruneStaleSymlinks","kind":"import","line":[6,6],"visibility":"private"}
+{"file":"packages/agasi/test/link.test.mjs","name":"tmpDir","kind":"function","line":[8,10],"tokens":"fs os path","visibility":"private"}
+{"file":"packages/agasi/test/link.test.mjs","name":"root","kind":"variable","line":[13,13],"tokens":"tmpDir","visibility":"private"}
+{"file":"packages/agasi/test/link.test.mjs","name":"skill","kind":"variable","line":[14,14],"tokens":"root path","visibility":"private"}
+{"file":"packages/agasi/test/link.test.mjs","name":"destBase","kind":"variable","line":[17,17],"tokens":"root path","visibility":"private"}
+{"file":"packages/agasi/test/link.test.mjs","name":"destLink","kind":"variable","line":[19,19],"tokens":"destBase path","visibility":"private"}
+{"file":"packages/agasi/test/link.test.mjs","name":"r","kind":"variable","line":[20,20],"tokens":"linkSkillDir skill destLink","visibility":"private"}
+{"file":"packages/agasi/test/link.test.mjs","name":"root","kind":"variable","line":[27,27],"tokens":"tmpDir","visibility":"private"}
+{"file":"packages/agasi/test/link.test.mjs","name":"skill","kind":"variable","line":[28,28],"tokens":"root path","visibility":"private"}
+{"file":"packages/agasi/test/link.test.mjs","name":"dest","kind":"variable","line":[31,31],"tokens":"path root","visibility":"private"}
+{"file":"packages/agasi/test/link.test.mjs","name":"r","kind":"variable","line":[33,33],"tokens":"skill linkSkillDir dest","visibility":"private"}
+{"file":"packages/agasi/test/link.test.mjs","name":"root","kind":"variable","line":[38,38],"tokens":"tmpDir","visibility":"private"}
+{"file":"packages/agasi/test/link.test.mjs","name":"skillA","kind":"variable","line":[39,39],"tokens":"path root","visibility":"private"}
+{"file":"packages/agasi/test/link.test.mjs","name":"skillB","kind":"variable","line":[40,40],"tokens":"path root","visibility":"private"}
+{"file":"packages/agasi/test/link.test.mjs","name":"dest","kind":"variable","line":[45,45],"tokens":"root path","visibility":"private"}
+{"file":"packages/agasi/test/link.test.mjs","name":"r","kind":"variable","line":[47,47],"tokens":"dest linkSkillDir skillA","visibility":"private"}
+{"file":"packages/agasi/test/link.test.mjs","name":"root","kind":"variable","line":[53,53],"tokens":"tmpDir","visibility":"private"}
+{"file":"packages/agasi/test/link.test.mjs","name":"skillA","kind":"variable","line":[54,54],"tokens":"path root","visibility":"private"}
+{"file":"packages/agasi/test/link.test.mjs","name":"skillB","kind":"variable","line":[55,55],"tokens":"path root","visibility":"private"}
+{"file":"packages/agasi/test/link.test.mjs","name":"dest","kind":"variable","line":[60,60],"tokens":"path root","visibility":"private"}
+{"file":"packages/agasi/test/link.test.mjs","name":"r","kind":"variable","line":[62,62],"tokens":"linkSkillDir skillA dest","visibility":"private"}
+{"file":"packages/agasi/test/link.test.mjs","name":"root","kind":"variable","line":[68,68],"tokens":"tmpDir","visibility":"private"}
+{"file":"packages/agasi/test/link.test.mjs","name":"skill","kind":"variable","line":[69,69],"tokens":"root path","visibility":"private"}
+{"file":"packages/agasi/test/link.test.mjs","name":"dest","kind":"variable","line":[72,72],"tokens":"root path","visibility":"private"}
+{"file":"packages/agasi/test/link.test.mjs","name":"r","kind":"variable","line":[74,74],"tokens":"linkSkillDir dest skill","visibility":"private"}
+{"file":"packages/agasi/test/link.test.mjs","name":"root","kind":"variable","line":[80,80],"tokens":"tmpDir","visibility":"private"}
+{"file":"packages/agasi/test/link.test.mjs","name":"skillsRoot","kind":"variable","line":[81,81],"tokens":"root path","visibility":"private"}
+{"file":"packages/agasi/test/link.test.mjs","name":"keep","kind":"variable","line":[82,82],"tokens":"path skillsRoot","visibility":"private"}
+{"file":"packages/agasi/test/link.test.mjs","name":"gone","kind":"variable","line":[85,85],"tokens":"path skillsRoot","visibility":"private"}
+{"file":"packages/agasi/test/link.test.mjs","name":"destBase","kind":"variable","line":[88,88],"tokens":"path root","visibility":"private"}
+{"file":"packages/agasi/test/link.test.mjs","name":"n","kind":"variable","line":[92,92],"tokens":"Set skillsRoot destBase pruneStaleSymlinks","visibility":"private"}
+{"file":"packages/agasi/test/paths.test.mjs","name":"node:assert","kind":"import","line":[1,1],"alias":"assert","visibility":"private"}
+{"file":"packages/agasi/test/paths.test.mjs","name":"node:os","kind":"import","line":[2,2],"alias":"os","visibility":"private"}
+{"file":"packages/agasi/test/paths.test.mjs","name":"node:path","kind":"import","line":[3,3],"alias":"path","visibility":"private"}
+{"file":"packages/agasi/test/paths.test.mjs","name":"node:test.test","kind":"import","line":[4,4],"visibility":"private"}
+{"file":"packages/agasi/test/paths.test.mjs","name":"../dist/paths.js.expandHome","kind":"import","line":[5,5],"visibility":"private"}
+{"file":"packages/agasi/test/paths.test.mjs","name":"h","kind":"variable","line":[8,8],"tokens":"os","visibility":"private"}
+{"file":"packages/agasi/test/paths.test.mjs","name":"r","kind":"variable","line":[14,14],"tokens":"expandHome","visibility":"private"}
+{"file":"packages/agasi/test/skills.test.mjs","name":"node:assert","kind":"import","line":[1,1],"alias":"assert","visibility":"private"}
+{"file":"packages/agasi/test/skills.test.mjs","name":"node:fs","kind":"import","line":[2,2],"alias":"fs","visibility":"private"}
+{"file":"packages/agasi/test/skills.test.mjs","name":"node:path","kind":"import","line":[3,3],"alias":"path","visibility":"private"}
+{"file":"packages/agasi/test/skills.test.mjs","name":"node:test.test","kind":"import","line":[4,4],"visibility":"private"}
+{"file":"packages/agasi/test/skills.test.mjs","name":"../dist/skills.js.listSkillNames","kind":"import","line":[5,5],"visibility":"private"}
+{"file":"packages/agasi/test/skills.test.mjs","name":"../dist/skills.js.skillSourceDir","kind":"import","line":[5,5],"visibility":"private"}
+{"file":"packages/agasi/test/skills.test.mjs","name":"./helpers.mjs.mkTempDir","kind":"import","line":[6,6],"visibility":"private"}
+{"file":"packages/agasi/test/skills.test.mjs","name":"./helpers.mjs.writeSkill","kind":"import","line":[6,6],"visibility":"private"}
+{"file":"packages/agasi/test/skills.test.mjs","name":"root","kind":"variable","line":[13,13],"tokens":"mkTempDir","visibility":"private"}
+{"file":"packages/agasi/test/skills.test.mjs","name":"root","kind":"variable","line":[21,21],"tokens":"mkTempDir","visibility":"private"}
+{"file":"packages/agasi/test/targets.test.mjs","name":"node:assert","kind":"import","line":[1,1],"alias":"assert","visibility":"private"}
+{"file":"packages/agasi/test/targets.test.mjs","name":"node:fs","kind":"import","line":[2,2],"alias":"fs","visibility":"private"}
+{"file":"packages/agasi/test/targets.test.mjs","name":"node:path","kind":"import","line":[3,3],"alias":"path","visibility":"private"}
+{"file":"packages/agasi/test/targets.test.mjs","name":"node:test.test","kind":"import","line":[4,4],"visibility":"private"}
+{"file":"packages/agasi/test/targets.test.mjs","name":"../dist/targets.js.resolveDestinations","kind":"import","line":[5,5],"visibility":"private"}
+{"file":"packages/agasi/test/targets.test.mjs","name":"../dist/targets.js.resolveSkillsRoot","kind":"import","line":[5,5],"visibility":"private"}
+{"file":"packages/agasi/test/targets.test.mjs","name":"./helpers.mjs.mkTempDir","kind":"import","line":[6,6],"visibility":"private"}
+{"file":"packages/agasi/test/targets.test.mjs","name":"./helpers.mjs.writeSkill","kind":"import","line":[6,6],"visibility":"private"}
+{"file":"packages/agasi/test/targets.test.mjs","name":"dir","kind":"variable","line":[9,9],"tokens":"mkTempDir","visibility":"private"}
+{"file":"packages/agasi/test/targets.test.mjs","name":"skills","kind":"variable","line":[10,10],"tokens":"path dir","visibility":"private"}
+{"file":"packages/agasi/test/targets.test.mjs","name":"cfg","kind":"variable","line":[12,16],"tokens":"skills","visibility":"private"}
+{"file":"packages/agasi/test/targets.test.mjs","name":"root","kind":"variable","line":[17,22],"tokens":"resolveSkillsRoot dir cfg","visibility":"private"}
+{"file":"packages/agasi/test/targets.test.mjs","name":"repo","kind":"variable","line":[43,43],"tokens":"mkTempDir","visibility":"private"}
+{"file":"packages/agasi/test/targets.test.mjs","name":"cfg","kind":"variable","line":[44,44],"visibility":"private"}
+{"file":"packages/agasi/test/targets.test.mjs","name":"dests","kind":"variable","line":[45,50],"tokens":"resolveDestinations cfg repo","visibility":"private"}
+{"file":"packages/agasi/test/targets.test.mjs","name":"repo","kind":"variable","line":[58,58],"tokens":"mkTempDir","visibility":"private"}
+{"file":"packages/agasi/test/targets.test.mjs","name":"cfg","kind":"variable","line":[59,59],"visibility":"private"}
+{"file":"packages/agasi/test/targets.test.mjs","name":"dests","kind":"variable","line":[60,65],"tokens":"repo resolveDestinations cfg","visibility":"private"}
+{"file":"packages/agasi/test/targets.test.mjs","name":"codexHome","kind":"variable","line":[70,70],"tokens":"mkTempDir","visibility":"private"}
+{"file":"packages/agasi/test/targets.test.mjs","name":"prev","kind":"variable","line":[71,71],"tokens":"process","visibility":"private"}
+{"file":"packages/agasi/test/targets.test.mjs","name":"cfg","kind":"variable","line":[74,74],"visibility":"private"}
+{"file":"packages/agasi/test/targets.test.mjs","name":"dests","kind":"variable","line":[75,80],"tokens":"cfg resolveDestinations","visibility":"private"}
+{"file":"packages/taskasi/PUBLISHING.md","name":"Publishing `@zyreth/taskasi`","kind":"section","line":[1,1]}
+{"file":"packages/taskasi/PUBLISHING.md","name":"Publishing `@zyreth/taskasi`/Prerequisites","kind":"section","line":[5,5],"parent":"Publishing `@zyreth/taskasi`"}
+{"file":"packages/taskasi/PUBLISHING.md","name":"Publishing `@zyreth/taskasi`/One-time: npm login","kind":"section","line":[12,12],"parent":"Publishing `@zyreth/taskasi`"}
+{"file":"packages/taskasi/PUBLISHING.md","name":"Publishing `@zyreth/taskasi`/Before every release","kind":"section","line":[19,19],"parent":"Publishing `@zyreth/taskasi`"}
+{"file":"packages/taskasi/PUBLISHING.md","name":"Publishing `@zyreth/taskasi`/Publish","kind":"section","line":[44,44],"parent":"Publishing `@zyreth/taskasi`"}
+{"file":"packages/taskasi/PUBLISHING.md","name":"Publishing `@zyreth/taskasi`/After publish","kind":"section","line":[54,54],"parent":"Publishing `@zyreth/taskasi`"}
+{"file":"packages/taskasi/PUBLISHING.md","name":"Publishing `@zyreth/taskasi`/Documentation site (optional)","kind":"section","line":[62,62],"parent":"Publishing `@zyreth/taskasi`"}
+{"file":"packages/taskasi/PUBLISHING.md","name":"Publishing `@zyreth/taskasi`/Dry run without publishing","kind":"section","line":[72,72],"parent":"Publishing `@zyreth/taskasi`"}
+{"file":"packages/taskasi/PUBLISHING.md","name":"Publishing `@zyreth/taskasi`/Troubleshooting","kind":"section","line":[80,80],"parent":"Publishing `@zyreth/taskasi`"}
+{"file":"packages/taskasi/README.md","name":"@zyreth/taskasi","kind":"section","line":[1,1]}
+{"file":"packages/taskasi/README.md","name":"@zyreth/taskasi/Features","kind":"section","line":[13,13],"parent":"@zyreth/taskasi"}
+{"file":"packages/taskasi/README.md","name":"@zyreth/taskasi/Install","kind":"section","line":[22,22],"parent":"@zyreth/taskasi"}
+{"file":"packages/taskasi/README.md","name":"@zyreth/taskasi/Quick start","kind":"section","line":[33,33],"parent":"@zyreth/taskasi"}
+{"file":"packages/taskasi/README.md","name":"@zyreth/taskasi/Configuration","kind":"section","line":[48,48],"parent":"@zyreth/taskasi"}
+{"file":"packages/taskasi/README.md","name":"@zyreth/taskasi/Documentation (static site)","kind":"section","line":[63,63],"parent":"@zyreth/taskasi"}
+{"file":"packages/taskasi/README.md","name":"@zyreth/taskasi/Documentation (static site)/Develop (hot reload)","kind":"section","line":[67,67],"parent":"@zyreth/taskasi/Documentation (static site)"}
+{"file":"packages/taskasi/README.md","name":"@zyreth/taskasi/Documentation (static site)/Build static HTML","kind":"section","line":[77,77],"parent":"@zyreth/taskasi/Documentation (static site)"}
+{"file":"packages/taskasi/README.md","name":"@zyreth/taskasi/Documentation (static site)/Deploy notes","kind":"section","line":[89,89],"parent":"@zyreth/taskasi/Documentation (static site)"}
+{"file":"packages/taskasi/README.md","name":"@zyreth/taskasi/Requirements","kind":"section","line":[96,96],"parent":"@zyreth/taskasi"}
+{"file":"packages/taskasi/README.md","name":"@zyreth/taskasi/Development (package)","kind":"section","line":[103,103],"parent":"@zyreth/taskasi"}
+{"file":"packages/taskasi/README.md","name":"@zyreth/taskasi/Tests","kind":"section","line":[114,114],"parent":"@zyreth/taskasi"}
+{"file":"packages/taskasi/README.md","name":"@zyreth/taskasi/Publishing the npm package","kind":"section","line":[129,129],"parent":"@zyreth/taskasi"}
+{"file":"packages/taskasi/README.md","name":"@zyreth/taskasi/Session / handoff","kind":"section","line":[135,135],"parent":"@zyreth/taskasi"}
+{"file":"packages/taskasi/docs/.vitepress/config.mts","name":"vitepress.defineConfig","kind":"import","line":[1,1],"visibility":"private"}
+{"file":"packages/taskasi/docs/README.md","name":"taskasi documentation sources","kind":"section","line":[1,1]}
+{"file":"packages/taskasi/docs/guide/configuration.md","name":"Configuration","kind":"section","line":[1,1]}
+{"file":"packages/taskasi/docs/guide/configuration.md","name":"Configuration/File location","kind":"section","line":[11,11],"parent":"Configuration"}
+{"file":"packages/taskasi/docs/guide/configuration.md","name":"Configuration/Merging","kind":"section","line":[19,19],"parent":"Configuration"}
+{"file":"packages/taskasi/docs/guide/configuration.md","name":"Configuration/Quick reference","kind":"section","line":[23,23],"parent":"Configuration"}
+{"file":"packages/taskasi/docs/guide/configuration.md","name":"Configuration/Example: custom branch prefix","kind":"section","line":[33,33],"parent":"Configuration"}
+{"file":"packages/taskasi/docs/guide/configuration.md","name":"Configuration/Example: disable workspace generation","kind":"section","line":[41,41],"parent":"Configuration"}
+{"file":"packages/taskasi/docs/guide/configuration.md","name":"Configuration/Example: legacy single `.env` at worktree root","kind":"section","line":[48,48],"parent":"Configuration"}
+{"file":"packages/taskasi/docs/guide/env-files.md","name":"Environment files","kind":"section","line":[1,1]}
+{"file":"packages/taskasi/docs/guide/env-files.md","name":"Environment files/What gets copied (discovery)","kind":"section","line":[5,5],"parent":"Environment files"}
+{"file":"packages/taskasi/docs/guide/env-files.md","name":"Environment files/What gets copied (discovery)/1. Dotenv-style names (always)","kind":"section","line":[7,7],"parent":"Environment files/What gets copied (discovery)"}
+{"file":"packages/taskasi/docs/guide/env-files.md","name":"Environment files/What gets copied (discovery)/2. Gitignore hints (optional)","kind":"section","line":[16,16],"parent":"Environment files/What gets copied (discovery)"}
+{"file":"packages/taskasi/docs/guide/env-files.md","name":"Environment files/What gets copied (discovery)/3. Extra basenames","kind":"section","line":[25,25],"parent":"Environment files/What gets copied (discovery)"}
+{"file":"packages/taskasi/docs/guide/env-files.md","name":"Environment files/What is skipped when scanning","kind":"section","line":[29,29],"parent":"Environment files"}
+{"file":"packages/taskasi/docs/guide/env-files.md","name":"Environment files/Legacy mode: single file","kind":"section","line":[37,37],"parent":"Environment files"}
+{"file":"packages/taskasi/docs/guide/env-files.md","name":"Environment files/Disabling env copy","kind":"section","line":[41,41],"parent":"Environment files"}
+{"file":"packages/taskasi/docs/guide/env-files.md","name":"Environment files/Tips","kind":"section","line":[56,56],"parent":"Environment files"}
+{"file":"packages/taskasi/docs/guide/getting-started.md","name":"Getting started","kind":"section","line":[1,1]}
+{"file":"packages/taskasi/docs/guide/getting-started.md","name":"Getting started/Prerequisites","kind":"section","line":[5,5],"parent":"Getting started"}
+{"file":"packages/taskasi/docs/guide/getting-started.md","name":"Getting started/Install the CLI","kind":"section","line":[11,11],"parent":"Getting started"}
+{"file":"packages/taskasi/docs/guide/getting-started.md","name":"Getting started/Initialize config (optional)","kind":"section","line":[18,18],"parent":"Getting started"}
+{"file":"packages/taskasi/docs/guide/getting-started.md","name":"Getting started/Run a switch","kind":"section","line":[28,28],"parent":"Getting started"}
+{"file":"packages/taskasi/docs/guide/getting-started.md","name":"Getting started/Next steps","kind":"section","line":[43,43],"parent":"Getting started"}
+{"file":"packages/taskasi/docs/guide/installation.md","name":"Installation","kind":"section","line":[1,1]}
+{"file":"packages/taskasi/docs/guide/installation.md","name":"Installation/From npm (recommended)","kind":"section","line":[3,3],"parent":"Installation"}
+{"file":"packages/taskasi/docs/guide/installation.md","name":"Installation/From a git clone (development)","kind":"section","line":[18,18],"parent":"Installation"}
+{"file":"packages/taskasi/docs/guide/installation.md","name":"Installation/Documentation site (this book)","kind":"section","line":[35,35],"parent":"Installation"}
+{"file":"packages/taskasi/docs/guide/installation.md","name":"Installation/Documentation site (this book)/Deploying static docs","kind":"section","line":[57,57],"parent":"Installation/Documentation site (this book)"}
+{"file":"packages/taskasi/docs/guide/installation.md","name":"Installation/Requirements","kind":"section","line":[62,62],"parent":"Installation"}
+{"file":"packages/taskasi/docs/guide/troubleshooting.md","name":"Troubleshooting","kind":"section","line":[1,1]}
+{"file":"packages/taskasi/docs/guide/troubleshooting.md","name":"Troubleshooting/`fatal: not a git repository`","kind":"section","line":[3,3],"parent":"Troubleshooting"}
+{"file":"packages/taskasi/docs/guide/troubleshooting.md","name":"Troubleshooting/Worktree path already exists","kind":"section","line":[7,7],"parent":"Troubleshooting"}
+{"file":"packages/taskasi/docs/guide/troubleshooting.md","name":"Troubleshooting/No env files copied","kind":"section","line":[11,11],"parent":"Troubleshooting"}
+{"file":"packages/taskasi/docs/guide/troubleshooting.md","name":"Troubleshooting/Workspace template not found","kind":"section","line":[17,17],"parent":"Troubleshooting"}
+{"file":"packages/taskasi/docs/guide/troubleshooting.md","name":"Troubleshooting/Search in the docs site does nothing","kind":"section","line":[21,21],"parent":"Troubleshooting"}
+{"file":"packages/taskasi/docs/guide/troubleshooting.md","name":"Troubleshooting/Publish / scope errors","kind":"section","line":[25,25],"parent":"Troubleshooting"}
+{"file":"packages/taskasi/docs/guide/workflows.md","name":"Workflows","kind":"section","line":[1,1]}
+{"file":"packages/taskasi/docs/guide/workflows.md","name":"Workflows/Typical task branch","kind":"section","line":[3,3],"parent":"Workflows"}
+{"file":"packages/taskasi/docs/guide/workflows.md","name":"Workflows/Same branch, new worktree path","kind":"section","line":[15,15],"parent":"Workflows"}
+{"file":"packages/taskasi/docs/guide/workflows.md","name":"Workflows/Monorepo","kind":"section","line":[19,19],"parent":"Workflows"}
+{"file":"packages/taskasi/docs/guide/workflows.md","name":"Workflows/CI / headless","kind":"section","line":[23,23],"parent":"Workflows"}
+{"file":"packages/taskasi/docs/guide/workflows.md","name":"Workflows/Global config across repos","kind":"section","line":[27,27],"parent":"Workflows"}
+{"file":"packages/taskasi/docs/guide/workspaces.md","name":"Workspaces (VS Code / Cursor)","kind":"section","line":[1,1]}
+{"file":"packages/taskasi/docs/guide/workspaces.md","name":"Workspaces (VS Code / Cursor)/Template discovery","kind":"section","line":[5,5],"parent":"Workspaces (VS Code / Cursor)"}
+{"file":"packages/taskasi/docs/guide/workspaces.md","name":"Workspaces (VS Code / Cursor)/Default output","kind":"section","line":[16,16],"parent":"Workspaces (VS Code / Cursor)"}
+{"file":"packages/taskasi/docs/guide/workspaces.md","name":"Workspaces (VS Code / Cursor)/Path rewriting","kind":"section","line":[28,28],"parent":"Workspaces (VS Code / Cursor)"}
+{"file":"packages/taskasi/docs/guide/workspaces.md","name":"Workspaces (VS Code / Cursor)/`.gitignore` integration","kind":"section","line":[34,34],"parent":"Workspaces (VS Code / Cursor)"}
+{"file":"packages/taskasi/docs/guide/workspaces.md","name":"Workspaces (VS Code / Cursor)/Disabling workspace generation","kind":"section","line":[56,56],"parent":"Workspaces (VS Code / Cursor)"}
+{"file":"packages/taskasi/docs/index.md","name":"Search","kind":"section","line":[25,25]}
+{"file":"packages/taskasi/docs/index.md","name":"Package","kind":"section","line":[29,29]}
+{"file":"packages/taskasi/docs/reference/commands.md","name":"CLI commands","kind":"section","line":[1,1]}
+{"file":"packages/taskasi/docs/reference/commands.md","name":"CLI commands/`taskasi init`","kind":"section","line":[5,5],"parent":"CLI commands"}
+{"file":"packages/taskasi/docs/reference/commands.md","name":"CLI commands/`taskasi config`","kind":"section","line":[13,13],"parent":"CLI commands"}
+{"file":"packages/taskasi/docs/reference/commands.md","name":"CLI commands/`taskasi switch <id>`","kind":"section","line":[21,21],"parent":"CLI commands"}
+{"file":"packages/taskasi/docs/reference/commands.md","name":"CLI commands/`taskasi switch <id>`/Arguments","kind":"section","line":[31,31],"parent":"CLI commands/`taskasi switch <id>`"}
+{"file":"packages/taskasi/docs/reference/commands.md","name":"CLI commands/`taskasi switch <id>`/Options","kind":"section","line":[37,37],"parent":"CLI commands/`taskasi switch <id>`"}
+{"file":"packages/taskasi/docs/reference/commands.md","name":"CLI commands/`taskasi switch <id>`/Exit codes","kind":"section","line":[44,44],"parent":"CLI commands/`taskasi switch <id>`"}
+{"file":"packages/taskasi/docs/reference/commands.md","name":"CLI commands/Global options","kind":"section","line":[48,48],"parent":"CLI commands"}
+{"file":"packages/taskasi/docs/reference/config-keys.md","name":"Config keys","kind":"section","line":[1,1]}
+{"file":"packages/taskasi/docs/reference/config-keys.md","name":"Config keys/Top level","kind":"section","line":[5,5],"parent":"Config keys"}
+{"file":"packages/taskasi/docs/reference/config-keys.md","name":"Config keys/`env`","kind":"section","line":[13,13],"parent":"Config keys"}
+{"file":"packages/taskasi/docs/reference/config-keys.md","name":"Config keys/`env`/`env.useGitignoreHints`","kind":"section","line":[23,23],"parent":"Config keys/`env`"}
+{"file":"packages/taskasi/docs/reference/config-keys.md","name":"Config keys/`workspace`","kind":"section","line":[27,27],"parent":"Config keys"}
+{"file":"packages/taskasi/docs/reference/placeholders.md","name":"Placeholders","kind":"section","line":[1,1]}
+{"file":"packages/taskasi/docs/reference/placeholders.md","name":"Placeholders/Context variables","kind":"section","line":[5,5],"parent":"Placeholders"}
+{"file":"packages/taskasi/docs/reference/placeholders.md","name":"Placeholders/`worktreeFolderTemplate`","kind":"section","line":[17,17],"parent":"Placeholders"}
+{"file":"packages/taskasi/docs/reference/placeholders.md","name":"Placeholders/`workspace.output`","kind":"section","line":[27,27],"parent":"Placeholders"}
+{"file":"packages/taskasi/docs/reference/testing.md","name":"Testing","kind":"section","line":[1,1]}
+{"file":"packages/taskasi/docs/reference/testing.md","name":"Testing/Commands","kind":"section","line":[5,5],"parent":"Testing"}
+{"file":"packages/taskasi/docs/reference/testing.md","name":"Testing/Commands/Git integration (open shell / full permissions)","kind":"section","line":[13,13],"parent":"Testing/Commands"}
+{"file":"packages/taskasi/docs/reference/testing.md","name":"Testing/Layout","kind":"section","line":[25,25],"parent":"Testing"}
+{"file":"packages/taskasi/docs/reference/testing.md","name":"Testing/`node --test` flags","kind":"section","line":[33,33],"parent":"Testing"}
+{"file":"packages/taskasi/docs/reference/testing.md","name":"Testing/Config tests","kind":"section","line":[41,41],"parent":"Testing"}
+{"file":"packages/taskasi/docs/reference/testing.md","name":"Testing/Adding tests","kind":"section","line":[51,51],"parent":"Testing"}
+{"file":"packages/taskasi/src/cli.ts","name":"node:fs","kind":"import","line":[2,2],"alias":"fs","visibility":"private"}
+{"file":"packages/taskasi/src/cli.ts","name":"node:path","kind":"import","line":[3,3],"alias":"path","visibility":"private"}
+{"file":"packages/taskasi/src/cli.ts","name":"node:process","kind":"import","line":[4,4],"alias":"process","visibility":"private"}
+{"file":"packages/taskasi/src/cli.ts","name":"commander.Command","kind":"import","line":[5,5],"visibility":"private"}
+{"file":"packages/taskasi/src/cli.ts","name":"./config.js.initConfigFile","kind":"import","line":[6,14],"visibility":"private"}
+{"file":"packages/taskasi/src/cli.ts","name":"./config.js.loadConfig","kind":"import","line":[6,14],"visibility":"private"}
+{"file":"packages/taskasi/src/cli.ts","name":"./config.js.buildPathContext","kind":"import","line":[6,14],"visibility":"private"}
+{"file":"packages/taskasi/src/cli.ts","name":"./config.js.resolveWorktreeFolder","kind":"import","line":[6,14],"visibility":"private"}
+{"file":"packages/taskasi/src/cli.ts","name":"./config.js.resolveEnvSource","kind":"import","line":[6,14],"visibility":"private"}
+{"file":"packages/taskasi/src/cli.ts","name":"./config.js.resolveWorkspaceSource","kind":"import","line":[6,14],"visibility":"private"}
+{"file":"packages/taskasi/src/cli.ts","name":"./config.js.resolveWorkspaceOutput","kind":"import","line":[6,14],"visibility":"private"}
+{"file":"packages/taskasi/src/cli.ts","name":"./paths.js.getTaskasiConfigPath","kind":"import","line":[15,15],"visibility":"private"}
+{"file":"packages/taskasi/src/cli.ts","name":"./env-mirror.js.findEnvFilesInRepo","kind":"import","line":[16,16],"visibility":"private"}
+{"file":"packages/taskasi/src/cli.ts","name":"./env-mirror.js.mirrorEnvFilesToWorktree","kind":"import","line":[16,16],"visibility":"private"}
+{"file":"packages/taskasi/src/cli.ts","name":"./gitignore.js.ensureTaskasiGitignoreRules","kind":"import","line":[17,17],"visibility":"private"}
+{"file":"packages/taskasi/src/cli.ts","name":"./git.js.addWorktree","kind":"import","line":[18,18],"visibility":"private"}
+{"file":"packages/taskasi/src/cli.ts","name":"./git.js.getGitRoot","kind":"import","line":[18,18],"visibility":"private"}
+{"file":"packages/taskasi/src/cli.ts","name":"./workspace.js.writeWorkspace","kind":"import","line":[19,19],"visibility":"private"}
+{"file":"packages/taskasi/src/cli.ts","name":"copyLegacyEnvToRoot","kind":"function","line":[22,30],"tokens":"dest source fs path worktreePath","visibility":"private"}
+{"file":"packages/taskasi/src/cli.ts","name":"copyLegacyEnvToRoot.dest","kind":"variable","line":[27,27],"parent":"copyLegacyEnvToRoot","tokens":"worktreePath path","visibility":"private"}
+{"file":"packages/taskasi/src/cli.ts","name":"program","kind":"variable","line":[32,32],"tokens":"Command","visibility":"private"}
+{"file":"packages/taskasi/src/cli.ts","name":"cfg","kind":"variable","line":[52,52],"tokens":"loadConfig","visibility":"private"}
+{"file":"packages/taskasi/src/cli.ts","name":"cwd","kind":"variable","line":[68,68],"tokens":"process","visibility":"private"}
+{"file":"packages/taskasi/src/cli.ts","name":"repoRoot","kind":"variable","line":[69,69],"tokens":"cwd getGitRoot","visibility":"private"}
+{"file":"packages/taskasi/src/cli.ts","name":"cfg","kind":"variable","line":[71,71],"tokens":"loadConfig","visibility":"private"}
+{"file":"packages/taskasi/src/cli.ts","name":"ctx","kind":"variable","line":[72,72],"tokens":"repoRoot id buildPathContext cfg","visibility":"private"}
+{"file":"packages/taskasi/src/cli.ts","name":"folderName","kind":"variable","line":[73,73],"tokens":"ctx resolveWorktreeFolder cfg","visibility":"private"}
+{"file":"packages/taskasi/src/cli.ts","name":"worktreePath","kind":"variable","line":[74,78],"tokens":"path ctx cfg folderName","visibility":"private"}
+{"file":"packages/taskasi/src/cli.ts","name":"envOn","kind":"variable","line":[86,86],"tokens":"opts cfg","visibility":"private"}
+{"file":"packages/taskasi/src/cli.ts","name":"envFiles","kind":"variable","line":[91,96],"tokens":"ctx cfg findEnvFilesInRepo","visibility":"private"}
+{"file":"packages/taskasi/src/cli.ts","name":"wsOn","kind":"variable","line":[107,107],"tokens":"cfg opts","visibility":"private"}
+{"file":"packages/taskasi/src/cli.ts","name":"src","kind":"variable","line":[109,109],"tokens":"ctx resolveWorkspaceSource cfg","visibility":"private"}
+{"file":"packages/taskasi/src/cli.ts","name":"out","kind":"variable","line":[115,115],"tokens":"resolveWorkspaceOutput cfg ctx","visibility":"private"}
+{"file":"packages/taskasi/src/cli.ts","name":"touched","kind":"variable","line":[119,119],"tokens":"ensureTaskasiGitignoreRules ctx","visibility":"private"}
+{"file":"packages/taskasi/src/config.ts","name":"node:fs","kind":"import","line":[1,1],"alias":"fs","visibility":"private"}
+{"file":"packages/taskasi/src/config.ts","name":"node:path","kind":"import","line":[2,2],"alias":"path","visibility":"private"}
+{"file":"packages/taskasi/src/config.ts","name":"yaml","kind":"import","line":[3,3],"alias":"YAML","visibility":"private"}
+{"file":"packages/taskasi/src/config.ts","name":"./paths.js.ensureDir","kind":"import","line":[4,4],"visibility":"private"}
+{"file":"packages/taskasi/src/config.ts","name":"./paths.js.expandPlaceholders","kind":"import","line":[4,4],"visibility":"private"}
+{"file":"packages/taskasi/src/config.ts","name":"./paths.js.getTaskasiConfigPath","kind":"import","line":[4,4],"visibility":"private"}
+{"file":"packages/taskasi/src/config.ts","name":"TaskasiConfig","kind":"type_alias","line":[6,27],"visibility":"public"}
+{"file":"packages/taskasi/src/config.ts","name":"DEFAULTS","kind":"constant","line":[29,46],"visibility":"private"}
+{"file":"packages/taskasi/src/config.ts","name":"deepMerge","kind":"function","line":[48,68],"tokens":"Array deepMerge out base patch","visibility":"private"}
+{"file":"packages/taskasi/src/config.ts","name":"deepMerge.out","kind":"variable","line":[52,52],"parent":"deepMerge","tokens":"base","visibility":"private"}
+{"file":"packages/taskasi/src/config.ts","name":"defaultConfigYaml","kind":"function","line":[70,81],"tokens":"YAML DEFAULTS","visibility":"public"}
+{"file":"packages/taskasi/src/config.ts","name":"initConfigFile","kind":"function","line":[83,90],"tokens":"ensureDir path defaultConfigYaml fs configPath getTaskasiConfigPath","visibility":"public"}
+{"file":"packages/taskasi/src/config.ts","name":"initConfigFile.configPath","kind":"variable","line":[84,84],"parent":"initConfigFile","tokens":"getTaskasiConfigPath","visibility":"private"}
+{"file":"packages/taskasi/src/config.ts","name":"loadConfig","kind":"function","line":[92,118],"tokens":"merged DEFAULTS parsed fs getTaskasiConfigPath configPath raw deepMerge YAML","visibility":"public"}
+{"file":"packages/taskasi/src/config.ts","name":"loadConfig.configPath","kind":"variable","line":[93,93],"parent":"loadConfig","tokens":"getTaskasiConfigPath","visibility":"private"}
+{"file":"packages/taskasi/src/config.ts","name":"loadConfig.raw","kind":"variable","line":[104,104],"parent":"loadConfig","tokens":"configPath fs","visibility":"private"}
+{"file":"packages/taskasi/src/config.ts","name":"loadConfig.parsed","kind":"variable","line":[105,105],"parent":"loadConfig","tokens":"YAML raw","visibility":"private"}
+{"file":"packages/taskasi/src/config.ts","name":"loadConfig.merged","kind":"variable","line":[106,116],"parent":"loadConfig","tokens":"deepMerge DEFAULTS parsed","visibility":"private"}
+{"file":"packages/taskasi/src/config.ts","name":"PathContext","kind":"type_alias","line":[120,128],"visibility":"public"}
+{"file":"packages/taskasi/src/config.ts","name":"buildPathContext","kind":"function","line":[130,142],"tokens":"cfg id prefix branch repoRoot path","visibility":"public"}
+{"file":"packages/taskasi/src/config.ts","name":"buildPathContext.prefix","kind":"variable","line":[131,131],"parent":"buildPathContext","tokens":"cfg","visibility":"private"}
+{"file":"packages/taskasi/src/config.ts","name":"buildPathContext.branch","kind":"variable","line":[132,132],"parent":"buildPathContext","tokens":"id prefix","visibility":"private"}
+{"file":"packages/taskasi/src/config.ts","name":"pathVars","kind":"function","line":[144,154],"tokens":"ctx","visibility":"public"}
+{"file":"packages/taskasi/src/config.ts","name":"resolveWorktreeFolder","kind":"function","line":[156,159],"tokens":"cfg pathVars ctx raw expandPlaceholders sanitizePathSegment","visibility":"public"}
+{"file":"packages/taskasi/src/config.ts","name":"resolveWorktreeFolder.raw","kind":"variable","line":[157,157],"parent":"resolveWorktreeFolder","tokens":"ctx cfg pathVars expandPlaceholders","visibility":"private"}
+{"file":"packages/taskasi/src/config.ts","name":"sanitizePathSegment","kind":"function","line":[161,167],"tokens":"Error cleaned","visibility":"private"}
+{"file":"packages/taskasi/src/config.ts","name":"sanitizePathSegment.cleaned","kind":"variable","line":[162,162],"parent":"sanitizePathSegment","visibility":"private"}
+{"file":"packages/taskasi/src/config.ts","name":"resolveEnvSource","kind":"function","line":[169,176],"tokens":"ctx cfg relOrAbs path","visibility":"public"}
+{"file":"packages/taskasi/src/config.ts","name":"resolveEnvSource.relOrAbs","kind":"variable","line":[170,172],"parent":"resolveEnvSource","tokens":"ctx path cfg","visibility":"private"}
+{"file":"packages/taskasi/src/config.ts","name":"resolveWorkspaceSource","kind":"function","line":[178,195],"tokens":"path cfg expandPlaceholders pathVars candidates ctx fs","visibility":"public"}
+{"file":"packages/taskasi/src/config.ts","name":"resolveWorkspaceSource.p","kind":"variable","line":[180,180],"parent":"resolveWorkspaceSource","tokens":"expandPlaceholders ctx cfg pathVars","visibility":"private"}
+{"file":"packages/taskasi/src/config.ts","name":"resolveWorkspaceSource.candidates","kind":"variable","line":[183,188],"parent":"resolveWorkspaceSource","tokens":"ctx path","visibility":"private"}
+{"file":"packages/taskasi/src/config.ts","name":"resolveWorkspaceOutput","kind":"function","line":[197,204],"tokens":"ctx pathVars expandPlaceholders expanded pattern path cfg","visibility":"public"}
+{"file":"packages/taskasi/src/config.ts","name":"resolveWorkspaceOutput.pattern","kind":"variable","line":[198,199],"parent":"resolveWorkspaceOutput","tokens":"cfg","visibility":"private"}
+{"file":"packages/taskasi/src/config.ts","name":"resolveWorkspaceOutput.expanded","kind":"variable","line":[200,200],"parent":"resolveWorkspaceOutput","tokens":"pathVars pattern ctx expandPlaceholders","visibility":"private"}
+{"file":"packages/taskasi/src/env-mirror.ts","name":"node:child_process.spawnSync","kind":"import","line":[1,1],"visibility":"private"}
+{"file":"packages/taskasi/src/env-mirror.ts","name":"node:fs","kind":"import","line":[2,2],"alias":"fs","visibility":"private"}
+{"file":"packages/taskasi/src/env-mirror.ts","name":"node:path","kind":"import","line":[3,3],"alias":"path","visibility":"private"}
+{"file":"packages/taskasi/src/env-mirror.ts","name":"DEFAULT_SKIP_DIR_NAMES","kind":"constant","line":[5,12],"visibility":"private"}
+{"file":"packages/taskasi/src/env-mirror.ts","name":"isStandardDotenvBasename","kind":"function","line":[15,17],"tokens":"basename","visibility":"public"}
+{"file":"packages/taskasi/src/env-mirror.ts","name":"patternLooksEnvRelated","kind":"function","line":[23,35],"tokens":"pattern","visibility":"public"}
+{"file":"packages/taskasi/src/env-mirror.ts","name":"patternLooksEnvRelated.p","kind":"variable","line":[24,24],"parent":"patternLooksEnvRelated","tokens":"pattern","visibility":"private"}
+{"file":"packages/taskasi/src/env-mirror.ts","name":"parseCheckIgnoreVerboseLine","kind":"function","line":[37,47],"tokens":"line tab pathname meta","visibility":"private"}
+{"file":"packages/taskasi/src/env-mirror.ts","name":"parseCheckIgnoreVerboseLine.tab","kind":"variable","line":[40,40],"parent":"parseCheckIgnoreVerboseLine","tokens":"line","visibility":"private"}
+{"file":"packages/taskasi/src/env-mirror.ts","name":"parseCheckIgnoreVerboseLine.pathname","kind":"variable","line":[42,42],"parent":"parseCheckIgnoreVerboseLine","tokens":"line tab","visibility":"private"}
+{"file":"packages/taskasi/src/env-mirror.ts","name":"parseCheckIgnoreVerboseLine.meta","kind":"variable","line":[43,43],"parent":"parseCheckIgnoreVerboseLine","tokens":"line tab","visibility":"private"}
+{"file":"packages/taskasi/src/env-mirror.ts","name":"parseCheckIgnoreVerboseLine.m","kind":"variable","line":[44,44],"parent":"parseCheckIgnoreVerboseLine","tokens":"meta","visibility":"private"}
+{"file":"packages/taskasi/src/env-mirror.ts","name":"batchEnvRelatedIgnoredPaths","kind":"function","line":[52,92],"tokens":"chunkSize parsed matched line out norm repoRoot relPosixPaths parseCheckIgnoreVerboseLine Error patternLooksEnvRelated slice input Set spawnSync","visibility":"public"}
+{"file":"packages/taskasi/src/env-mirror.ts","name":"batchEnvRelatedIgnoredPaths.matched","kind":"variable","line":[56,56],"parent":"batchEnvRelatedIgnoredPaths","tokens":"Set","visibility":"private"}
+{"file":"packages/taskasi/src/env-mirror.ts","name":"batchEnvRelatedIgnoredPaths.chunkSize","kind":"variable","line":[61,61],"parent":"batchEnvRelatedIgnoredPaths","visibility":"private"}
+{"file":"packages/taskasi/src/env-mirror.ts","name":"batchEnvRelatedIgnoredPaths.i","kind":"variable","line":[62,62],"parent":"batchEnvRelatedIgnoredPaths","visibility":"private"}
+{"file":"packages/taskasi/src/env-mirror.ts","name":"batchEnvRelatedIgnoredPaths.slice","kind":"variable","line":[63,63],"parent":"batchEnvRelatedIgnoredPaths","tokens":"relPosixPaths chunkSize","visibility":"private"}
+{"file":"packages/taskasi/src/env-mirror.ts","name":"batchEnvRelatedIgnoredPaths.input","kind":"variable","line":[64,64],"parent":"batchEnvRelatedIgnoredPaths","tokens":"slice","visibility":"private"}
+{"file":"packages/taskasi/src/env-mirror.ts","name":"batchEnvRelatedIgnoredPaths.r","kind":"variable","line":[65,70],"parent":"batchEnvRelatedIgnoredPaths","tokens":"spawnSync repoRoot","visibility":"private"}
+{"file":"packages/taskasi/src/env-mirror.ts","name":"batchEnvRelatedIgnoredPaths.out","kind":"variable","line":[80,80],"parent":"batchEnvRelatedIgnoredPaths","visibility":"private"}
+{"file":"packages/taskasi/src/env-mirror.ts","name":"batchEnvRelatedIgnoredPaths.parsed","kind":"variable","line":[84,84],"parent":"batchEnvRelatedIgnoredPaths","tokens":"line parseCheckIgnoreVerboseLine","visibility":"private"}
+{"file":"packages/taskasi/src/env-mirror.ts","name":"batchEnvRelatedIgnoredPaths.norm","kind":"variable","line":[87,87],"parent":"batchEnvRelatedIgnoredPaths","tokens":"parsed","visibility":"private"}
+{"file":"packages/taskasi/src/env-mirror.ts","name":"walkCollectRelFiles","kind":"function","line":[94,119],"tokens":"out ent repoRoot full entries walkCollectRelFiles path fs skipDirs dir rel","visibility":"private"}
+{"file":"packages/taskasi/src/env-mirror.ts","name":"walkCollectRelFiles.entries","kind":"variable","line":[100,100],"parent":"walkCollectRelFiles","visibility":"private"}
+{"file":"packages/taskasi/src/env-mirror.ts","name":"walkCollectRelFiles.full","kind":"variable","line":[107,107],"parent":"walkCollectRelFiles","tokens":"path dir ent","visibility":"private"}
+{"file":"packages/taskasi/src/env-mirror.ts","name":"walkCollectRelFiles.rel","kind":"variable","line":[114,114],"parent":"walkCollectRelFiles","tokens":"repoRoot path full","visibility":"private"}
+{"file":"packages/taskasi/src/env-mirror.ts","name":"findEnvFilesInRepo","kind":"function","line":[121,170],"tokens":"Set relFiles rel DEFAULT_SKIP_DIR_NAMES batchEnvRelatedIgnoredPaths repoRoot forGitCheck skipDirs options relPosix isStandardDotenvBasename abs path useHints toCopy extra resolvedRoot walkCollectRelFiles base ignored","visibility":"public"}
+{"file":"packages/taskasi/src/env-mirror.ts","name":"findEnvFilesInRepo.resolvedRoot","kind":"variable","line":[132,132],"parent":"findEnvFilesInRepo","tokens":"path repoRoot","visibility":"private"}
+{"file":"packages/taskasi/src/env-mirror.ts","name":"findEnvFilesInRepo.skipDirs","kind":"variable","line":[133,137],"parent":"findEnvFilesInRepo","tokens":"options DEFAULT_SKIP_DIR_NAMES Set","visibility":"private"}
+{"file":"packages/taskasi/src/env-mirror.ts","name":"findEnvFilesInRepo.relFiles","kind":"variable","line":[139,139],"parent":"findEnvFilesInRepo","visibility":"private"}
+{"file":"packages/taskasi/src/env-mirror.ts","name":"findEnvFilesInRepo.extra","kind":"variable","line":[142,142],"parent":"findEnvFilesInRepo","tokens":"Set options","visibility":"private"}
+{"file":"packages/taskasi/src/env-mirror.ts","name":"findEnvFilesInRepo.useHints","kind":"variable","line":[143,143],"parent":"findEnvFilesInRepo","tokens":"options","visibility":"private"}
+{"file":"packages/taskasi/src/env-mirror.ts","name":"findEnvFilesInRepo.toCopy","kind":"variable","line":[145,145],"parent":"findEnvFilesInRepo","tokens":"Set","visibility":"private"}
+{"file":"packages/taskasi/src/env-mirror.ts","name":"findEnvFilesInRepo.forGitCheck","kind":"variable","line":[146,146],"parent":"findEnvFilesInRepo","visibility":"private"}
+{"file":"packages/taskasi/src/env-mirror.ts","name":"findEnvFilesInRepo.base","kind":"variable","line":[149,149],"parent":"findEnvFilesInRepo","tokens":"relPosix path","visibility":"private"}
+{"file":"packages/taskasi/src/env-mirror.ts","name":"findEnvFilesInRepo.ignored","kind":"variable","line":[160,160],"parent":"findEnvFilesInRepo","tokens":"batchEnvRelatedIgnoredPaths forGitCheck resolvedRoot","visibility":"private"}
+{"file":"packages/taskasi/src/env-mirror.ts","name":"findEnvFilesInRepo.abs","kind":"variable","line":[166,168],"parent":"findEnvFilesInRepo","tokens":"resolvedRoot rel path toCopy","visibility":"private"}
+{"file":"packages/taskasi/src/env-mirror.ts","name":"mirrorEnvFilesToWorktree","kind":"function","line":[172,192],"tokens":"rel repoRoot path wt dest sources fs worktreePath absSrc root","visibility":"public"}
+{"file":"packages/taskasi/src/env-mirror.ts","name":"mirrorEnvFilesToWorktree.root","kind":"variable","line":[177,177],"parent":"mirrorEnvFilesToWorktree","tokens":"path repoRoot","visibility":"private"}
+{"file":"packages/taskasi/src/env-mirror.ts","name":"mirrorEnvFilesToWorktree.wt","kind":"variable","line":[178,178],"parent":"mirrorEnvFilesToWorktree","tokens":"path worktreePath","visibility":"private"}
+{"file":"packages/taskasi/src/env-mirror.ts","name":"mirrorEnvFilesToWorktree.n","kind":"variable","line":[179,179],"parent":"mirrorEnvFilesToWorktree","visibility":"private"}
+{"file":"packages/taskasi/src/env-mirror.ts","name":"mirrorEnvFilesToWorktree.rel","kind":"variable","line":[181,181],"parent":"mirrorEnvFilesToWorktree","tokens":"path root absSrc","visibility":"private"}
+{"file":"packages/taskasi/src/env-mirror.ts","name":"mirrorEnvFilesToWorktree.dest","kind":"variable","line":[185,185],"parent":"mirrorEnvFilesToWorktree","tokens":"path rel wt","visibility":"private"}
+{"file":"packages/taskasi/src/git.ts","name":"node:child_process.execFileSync","kind":"import","line":[1,1],"visibility":"private"}
+{"file":"packages/taskasi/src/git.ts","name":"node:fs","kind":"import","line":[2,2],"alias":"fs","visibility":"private"}
+{"file":"packages/taskasi/src/git.ts","name":"node:path","kind":"import","line":[3,3],"alias":"path","visibility":"private"}
+{"file":"packages/taskasi/src/git.ts","name":"getGitRoot","kind":"function","line":[5,14],"tokens":"out execFileSync Error","visibility":"public"}
+{"file":"packages/taskasi/src/git.ts","name":"getGitRoot.out","kind":"variable","line":[6,9],"parent":"getGitRoot","tokens":"execFileSync","visibility":"private"}
+{"file":"packages/taskasi/src/git.ts","name":"localBranchExists","kind":"function","line":[16,26],"tokens":"execFileSync branch repoRoot","visibility":"public"}
+{"file":"packages/taskasi/src/git.ts","name":"GitWorktreeStdio","kind":"type_alias","line":[28,28],"visibility":"public"}
+{"file":"packages/taskasi/src/git.ts","name":"addWorktree","kind":"function","line":[30,50],"tokens":"stdio localBranchExists path fs options repoRoot execFileSync worktreePath exists branch","visibility":"public"}
+{"file":"packages/taskasi/src/git.ts","name":"addWorktree.stdio","kind":"variable","line":[36,36],"parent":"addWorktree","tokens":"options","visibility":"private"}
+{"file":"packages/taskasi/src/git.ts","name":"addWorktree.exists","kind":"variable","line":[38,38],"parent":"addWorktree","tokens":"branch localBranchExists repoRoot","visibility":"private"}
+{"file":"packages/taskasi/src/gitignore.ts","name":"node:fs","kind":"import","line":[1,1],"alias":"fs","visibility":"private"}
+{"file":"packages/taskasi/src/gitignore.ts","name":"node:path","kind":"import","line":[2,2],"alias":"path","visibility":"private"}
+{"file":"packages/taskasi/src/gitignore.ts","name":"MARKER_START","kind":"constant","line":[4,4],"visibility":"private"}
+{"file":"packages/taskasi/src/gitignore.ts","name":"MARKER_END","kind":"constant","line":[5,5],"visibility":"private"}
+{"file":"packages/taskasi/src/gitignore.ts","name":"formatBlock","kind":"function","line":[7,16],"tokens":"MARKER_END MARKER_START basename","visibility":"private"}
+{"file":"packages/taskasi/src/gitignore.ts","name":"escapeRegExp","kind":"function","line":[18,20],"visibility":"private"}
+{"file":"packages/taskasi/src/gitignore.ts","name":"ensureTaskasiGitignoreRules","kind":"function","line":[28,54],"tokens":"newBlock escapeRegExp MARKER_END repoRoot basename prefix updated blockRegex path formatBlock existing fs RegExp MARKER_START gitignorePath","visibility":"public"}
+{"file":"packages/taskasi/src/gitignore.ts","name":"ensureTaskasiGitignoreRules.gitignorePath","kind":"variable","line":[29,29],"parent":"ensureTaskasiGitignoreRules","tokens":"repoRoot path","visibility":"private"}
+{"file":"packages/taskasi/src/gitignore.ts","name":"ensureTaskasiGitignoreRules.newBlock","kind":"variable","line":[30,30],"parent":"ensureTaskasiGitignoreRules","tokens":"formatBlock basename","visibility":"private"}
+{"file":"packages/taskasi/src/gitignore.ts","name":"ensureTaskasiGitignoreRules.existing","kind":"variable","line":[32,32],"parent":"ensureTaskasiGitignoreRules","visibility":"private"}
+{"file":"packages/taskasi/src/gitignore.ts","name":"ensureTaskasiGitignoreRules.blockRegex","kind":"variable","line":[37,40],"parent":"ensureTaskasiGitignoreRules","tokens":"MARKER_END escapeRegExp MARKER_START RegExp","visibility":"private"}
+{"file":"packages/taskasi/src/gitignore.ts","name":"ensureTaskasiGitignoreRules.updated","kind":"variable","line":[43,43],"parent":"ensureTaskasiGitignoreRules","tokens":"blockRegex newBlock existing","visibility":"private"}
+{"file":"packages/taskasi/src/gitignore.ts","name":"ensureTaskasiGitignoreRules.prefix","kind":"variable","line":[51,51],"parent":"ensureTaskasiGitignoreRules","tokens":"existing","visibility":"private"}
+{"file":"packages/taskasi/src/paths.ts","name":"node:fs","kind":"import","line":[1,1],"alias":"fs","visibility":"private"}
+{"file":"packages/taskasi/src/paths.ts","name":"node:os","kind":"import","line":[2,2],"alias":"os","visibility":"private"}
+{"file":"packages/taskasi/src/paths.ts","name":"node:path","kind":"import","line":[3,3],"alias":"path","visibility":"private"}
+{"file":"packages/taskasi/src/paths.ts","name":"TASKASI_CONFIG_DIR","kind":"constant","line":[5,5],"tokens":"os path","visibility":"public"}
+{"file":"packages/taskasi/src/paths.ts","name":"TASKASI_CONFIG_PATH","kind":"constant","line":[6,6],"tokens":"path TASKASI_CONFIG_DIR","visibility":"public"}
+{"file":"packages/taskasi/src/paths.ts","name":"getTaskasiConfigPath","kind":"function","line":[11,17],"tokens":"TASKASI_CONFIG_PATH process path","visibility":"public"}
+{"file":"packages/taskasi/src/paths.ts","name":"getTaskasiConfigPath.override","kind":"variable","line":[12,12],"parent":"getTaskasiConfigPath","tokens":"process","visibility":"private"}
+{"file":"packages/taskasi/src/paths.ts","name":"ensureDir","kind":"function","line":[19,21],"tokens":"dir fs","visibility":"public"}
+{"file":"packages/taskasi/src/paths.ts","name":"expandPlaceholders","kind":"function","line":[23,32],"tokens":"key value vars out template","visibility":"public"}
+{"file":"packages/taskasi/src/paths.ts","name":"expandPlaceholders.out","kind":"variable","line":[27,27],"parent":"expandPlaceholders","tokens":"template","visibility":"private"}
+{"file":"packages/taskasi/src/paths.ts","name":"posixRelative","kind":"function","line":[34,37],"tokens":"fromDir path rel toTarget","visibility":"public"}
+{"file":"packages/taskasi/src/paths.ts","name":"posixRelative.rel","kind":"variable","line":[35,35],"parent":"posixRelative","tokens":"toTarget fromDir path","visibility":"private"}
+{"file":"packages/taskasi/src/workspace.ts","name":"node:fs","kind":"import","line":[1,1],"alias":"fs","visibility":"private"}
+{"file":"packages/taskasi/src/workspace.ts","name":"node:path","kind":"import","line":[2,2],"alias":"path","visibility":"private"}
+{"file":"packages/taskasi/src/workspace.ts","name":"./paths.js.posixRelative","kind":"import","line":[3,3],"visibility":"private"}
+{"file":"packages/taskasi/src/workspace.ts","name":"VsCodeWorkspace","kind":"type_alias","line":[5,9],"tokens":"key","visibility":"private"}
+{"file":"packages/taskasi/src/workspace.ts","name":"shouldPreservePath","kind":"function","line":[11,17],"tokens":"path posix","visibility":"private"}
+{"file":"packages/taskasi/src/workspace.ts","name":"shouldPreservePath.posix","kind":"variable","line":[15,15],"parent":"shouldPreservePath","visibility":"private"}
+{"file":"packages/taskasi/src/workspace.ts","name":"rewriteWorkspaceFolders","kind":"function","line":[19,46],"tokens":"raw nextFolders posixRelative trimmed workspace path wt outDir Array joined folders Error outputFileAbs worktreeAbs shouldPreservePath","visibility":"public"}
+{"file":"packages/taskasi/src/workspace.ts","name":"rewriteWorkspaceFolders.outDir","kind":"variable","line":[24,24],"parent":"rewriteWorkspaceFolders","tokens":"outputFileAbs path","visibility":"private"}
+{"file":"packages/taskasi/src/workspace.ts","name":"rewriteWorkspaceFolders.wt","kind":"variable","line":[25,25],"parent":"rewriteWorkspaceFolders","tokens":"worktreeAbs path","visibility":"private"}
+{"file":"packages/taskasi/src/workspace.ts","name":"rewriteWorkspaceFolders.folders","kind":"variable","line":[26,26],"parent":"rewriteWorkspaceFolders","tokens":"workspace","visibility":"private"}
+{"file":"packages/taskasi/src/workspace.ts","name":"rewriteWorkspaceFolders.nextFolders","kind":"variable","line":[30,44],"parent":"rewriteWorkspaceFolders","tokens":"folders Error wt shouldPreservePath joined outDir path trimmed raw posixRelative","visibility":"private"}
+{"file":"packages/taskasi/src/workspace.ts","name":"rewriteWorkspaceFolders.raw","kind":"variable","line":[31,31],"parent":"rewriteWorkspaceFolders","visibility":"private"}
+{"file":"packages/taskasi/src/workspace.ts","name":"rewriteWorkspaceFolders.trimmed","kind":"variable","line":[35,35],"parent":"rewriteWorkspaceFolders","tokens":"raw","visibility":"private"}
+{"file":"packages/taskasi/src/workspace.ts","name":"rewriteWorkspaceFolders.joined","kind":"variable","line":[42,42],"parent":"rewriteWorkspaceFolders","tokens":"wt path trimmed","visibility":"private"}
+{"file":"packages/taskasi/src/workspace.ts","name":"writeWorkspace","kind":"function","line":[48,62],"tokens":"fs sourcePath parsed outputPath raw rewriteWorkspaceFolders rewritten worktreeAbs path JSON","visibility":"public"}
+{"file":"packages/taskasi/src/workspace.ts","name":"writeWorkspace.raw","kind":"variable","line":[53,53],"parent":"writeWorkspace","tokens":"sourcePath fs","visibility":"private"}
+{"file":"packages/taskasi/src/workspace.ts","name":"writeWorkspace.parsed","kind":"variable","line":[54,54],"parent":"writeWorkspace","tokens":"JSON raw","visibility":"private"}
+{"file":"packages/taskasi/src/workspace.ts","name":"writeWorkspace.rewritten","kind":"variable","line":[55,55],"parent":"writeWorkspace","tokens":"parsed worktreeAbs outputPath rewriteWorkspaceFolders","visibility":"private"}
+{"file":"packages/taskasi/test/cli.test.mjs","name":"node:assert/strict","kind":"import","line":[1,1],"alias":"assert","visibility":"private"}
+{"file":"packages/taskasi/test/cli.test.mjs","name":"node:child_process.spawnSync","kind":"import","line":[2,2],"visibility":"private"}
+{"file":"packages/taskasi/test/cli.test.mjs","name":"node:fs","kind":"import","line":[3,3],"alias":"fs","visibility":"private"}
+{"file":"packages/taskasi/test/cli.test.mjs","name":"node:path","kind":"import","line":[4,4],"alias":"path","visibility":"private"}
+{"file":"packages/taskasi/test/cli.test.mjs","name":"node:url.fileURLToPath","kind":"import","line":[5,5],"visibility":"private"}
+{"file":"packages/taskasi/test/cli.test.mjs","name":"node:test.describe","kind":"import","line":[6,6],"visibility":"private"}
+{"file":"packages/taskasi/test/cli.test.mjs","name":"node:test.it","kind":"import","line":[6,6],"visibility":"private"}
+{"file":"packages/taskasi/test/cli.test.mjs","name":"__dirname","kind":"variable","line":[8,8],"tokens":"path fileURLToPath","visibility":"private"}
+{"file":"packages/taskasi/test/cli.test.mjs","name":"cliJs","kind":"variable","line":[9,9],"tokens":"path __dirname","visibility":"private"}
+{"file":"packages/taskasi/test/cli.test.mjs","name":"r","kind":"variable","line":[13,15],"tokens":"spawnSync process cliJs","visibility":"private"}
+{"file":"packages/taskasi/test/cli.test.mjs","name":"r","kind":"variable","line":[21,23],"tokens":"cliJs spawnSync process","visibility":"private"}
+{"file":"packages/taskasi/test/cli.test.mjs","name":"head","kind":"variable","line":[30,30],"tokens":"fs cliJs","visibility":"private"}
+{"file":"packages/taskasi/test/config.test.mjs","name":"node:assert/strict","kind":"import","line":[1,1],"alias":"assert","visibility":"private"}
+{"file":"packages/taskasi/test/config.test.mjs","name":"node:fs","kind":"import","line":[2,2],"alias":"fs","visibility":"private"}
+{"file":"packages/taskasi/test/config.test.mjs","name":"node:path","kind":"import","line":[3,3],"alias":"path","visibility":"private"}
+{"file":"packages/taskasi/test/config.test.mjs","name":"node:test.describe","kind":"import","line":[4,4],"visibility":"private"}
+{"file":"packages/taskasi/test/config.test.mjs","name":"node:test.it","kind":"import","line":[4,4],"visibility":"private"}
+{"file":"packages/taskasi/test/config.test.mjs","name":"node:test.before","kind":"import","line":[4,4],"visibility":"private"}
+{"file":"packages/taskasi/test/config.test.mjs","name":"node:test.after","kind":"import","line":[4,4],"visibility":"private"}
+{"file":"packages/taskasi/test/config.test.mjs","name":"./helpers/tmp.mjs.mkTestTmp","kind":"import","line":[5,5],"visibility":"private"}
+{"file":"packages/taskasi/test/config.test.mjs","name":"./helpers/tmp.mjs.rmTestTmp","kind":"import","line":[5,5],"visibility":"private"}
+{"file":"packages/taskasi/test/config.test.mjs","name":"../dist/config.js.buildPathContext","kind":"import","line":[6,13],"visibility":"private"}
+{"file":"packages/taskasi/test/config.test.mjs","name":"../dist/config.js.loadConfig","kind":"import","line":[6,13],"visibility":"private"}
+{"file":"packages/taskasi/test/config.test.mjs","name":"../dist/config.js.resolveEnvSource","kind":"import","line":[6,13],"visibility":"private"}
+{"file":"packages/taskasi/test/config.test.mjs","name":"../dist/config.js.resolveWorkspaceOutput","kind":"import","line":[6,13],"visibility":"private"}
+{"file":"packages/taskasi/test/config.test.mjs","name":"../dist/config.js.resolveWorktreeFolder","kind":"import","line":[6,13],"visibility":"private"}
+{"file":"packages/taskasi/test/config.test.mjs","name":"../dist/config.js.resolveWorkspaceSource","kind":"import","line":[6,13],"visibility":"private"}
+{"file":"packages/taskasi/test/config.test.mjs","name":"DEFAULTS_CFG","kind":"function","line":[15,32],"visibility":"private"}
+{"file":"packages/taskasi/test/config.test.mjs","name":"cfg","kind":"variable","line":[36,36],"tokens":"DEFAULTS_CFG","visibility":"private"}
+{"file":"packages/taskasi/test/config.test.mjs","name":"ctx","kind":"variable","line":[37,37],"tokens":"buildPathContext cfg","visibility":"private"}
+{"file":"packages/taskasi/test/config.test.mjs","name":"cfg","kind":"variable","line":[44,44],"tokens":"DEFAULTS_CFG","visibility":"private"}
+{"file":"packages/taskasi/test/config.test.mjs","name":"ctx","kind":"variable","line":[45,45],"tokens":"cfg buildPathContext","visibility":"private"}
+{"file":"packages/taskasi/test/config.test.mjs","name":"cfg","kind":"variable","line":[50,53],"tokens":"DEFAULTS_CFG","visibility":"private"}
+{"file":"packages/taskasi/test/config.test.mjs","name":"ctx","kind":"variable","line":[54,54],"tokens":"cfg buildPathContext","visibility":"private"}
+{"file":"packages/taskasi/test/config.test.mjs","name":"cfg","kind":"variable","line":[61,61],"tokens":"DEFAULTS_CFG","visibility":"private"}
+{"file":"packages/taskasi/test/config.test.mjs","name":"ctx","kind":"variable","line":[62,62],"tokens":"buildPathContext cfg","visibility":"private"}
+{"file":"packages/taskasi/test/config.test.mjs","name":"cfg","kind":"variable","line":[67,70],"tokens":"DEFAULTS_CFG","visibility":"private"}
+{"file":"packages/taskasi/test/config.test.mjs","name":"ctx","kind":"variable","line":[71,71],"tokens":"cfg buildPathContext","visibility":"private"}
+{"file":"packages/taskasi/test/config.test.mjs","name":"cfg","kind":"variable","line":[78,78],"tokens":"DEFAULTS_CFG","visibility":"private"}
+{"file":"packages/taskasi/test/config.test.mjs","name":"ctx","kind":"variable","line":[79,79],"tokens":"cfg buildPathContext","visibility":"private"}
+{"file":"packages/taskasi/test/config.test.mjs","name":"cfg","kind":"variable","line":[87,93],"tokens":"DEFAULTS_CFG","visibility":"private"}
+{"file":"packages/taskasi/test/config.test.mjs","name":"ctx","kind":"variable","line":[94,94],"tokens":"cfg buildPathContext","visibility":"private"}
+{"file":"packages/taskasi/test/config.test.mjs","name":"tmpDir","kind":"variable","line":[103,103],"visibility":"private"}
+{"file":"packages/taskasi/test/config.test.mjs","name":"prevEnv","kind":"variable","line":[104,104],"visibility":"private"}
+{"file":"packages/taskasi/test/config.test.mjs","name":"yamlPath","kind":"variable","line":[109,109],"tokens":"tmpDir path","visibility":"private"}
+{"file":"packages/taskasi/test/config.test.mjs","name":"cfg","kind":"variable","line":[131,131],"tokens":"loadConfig","visibility":"private"}
+{"file":"packages/taskasi/test/config.test.mjs","name":"prevEnv","kind":"variable","line":[140,140],"visibility":"private"}
+{"file":"packages/taskasi/test/config.test.mjs","name":"repo","kind":"variable","line":[156,156],"tokens":"mkTestTmp","visibility":"private"}
+{"file":"packages/taskasi/test/config.test.mjs","name":"base","kind":"variable","line":[158,158],"tokens":"repo path","visibility":"private"}
+{"file":"packages/taskasi/test/config.test.mjs","name":"cfg","kind":"variable","line":[159,159],"tokens":"DEFAULTS_CFG","visibility":"private"}
+{"file":"packages/taskasi/test/config.test.mjs","name":"ctx","kind":"variable","line":[161,161],"tokens":"buildPathContext cfg repo","visibility":"private"}
+{"file":"packages/taskasi/test/config.test.mjs","name":"repo","kind":"variable","line":[169,169],"tokens":"mkTestTmp","visibility":"private"}
+{"file":"packages/taskasi/test/config.test.mjs","name":"base","kind":"variable","line":[171,171],"tokens":"path repo","visibility":"private"}
+{"file":"packages/taskasi/test/config.test.mjs","name":"cfg","kind":"variable","line":[172,172],"tokens":"DEFAULTS_CFG","visibility":"private"}
+{"file":"packages/taskasi/test/config.test.mjs","name":"ctx","kind":"variable","line":[174,174],"tokens":"buildPathContext cfg repo","visibility":"private"}
+{"file":"packages/taskasi/test/env-discovery.test.mjs","name":"node:assert/strict","kind":"import","line":[1,1],"alias":"assert","visibility":"private"}
+{"file":"packages/taskasi/test/env-discovery.test.mjs","name":"node:fs","kind":"import","line":[2,2],"alias":"fs","visibility":"private"}
+{"file":"packages/taskasi/test/env-discovery.test.mjs","name":"node:path","kind":"import","line":[3,3],"alias":"path","visibility":"private"}
+{"file":"packages/taskasi/test/env-discovery.test.mjs","name":"node:test.describe","kind":"import","line":[4,4],"visibility":"private"}
+{"file":"packages/taskasi/test/env-discovery.test.mjs","name":"node:test.it","kind":"import","line":[4,4],"visibility":"private"}
+{"file":"packages/taskasi/test/env-discovery.test.mjs","name":"node:test.before","kind":"import","line":[4,4],"visibility":"private"}
+{"file":"packages/taskasi/test/env-discovery.test.mjs","name":"node:test.after","kind":"import","line":[4,4],"visibility":"private"}
+{"file":"packages/taskasi/test/env-discovery.test.mjs","name":"../dist/env-mirror.js.findEnvFilesInRepo","kind":"import","line":[5,5],"visibility":"private"}
+{"file":"packages/taskasi/test/env-discovery.test.mjs","name":"../dist/env-mirror.js.mirrorEnvFilesToWorktree","kind":"import","line":[5,5],"visibility":"private"}
+{"file":"packages/taskasi/test/env-discovery.test.mjs","name":"./helpers/tmp.mjs.mkTestTmp","kind":"import","line":[6,6],"visibility":"private"}
+{"file":"packages/taskasi/test/env-discovery.test.mjs","name":"./helpers/tmp.mjs.rmTestTmp","kind":"import","line":[6,6],"visibility":"private"}
+{"file":"packages/taskasi/test/env-discovery.test.mjs","name":"repo","kind":"variable","line":[9,9],"visibility":"private"}
+{"file":"packages/taskasi/test/env-discovery.test.mjs","name":"files","kind":"variable","line":[25,27],"tokens":"findEnvFilesInRepo repo","visibility":"private"}
+{"file":"packages/taskasi/test/env-discovery.test.mjs","name":"rel","kind":"variable","line":[28,28],"tokens":"path files repo","visibility":"private"}
+{"file":"packages/taskasi/test/env-discovery.test.mjs","name":"files","kind":"variable","line":[34,37],"tokens":"findEnvFilesInRepo repo","visibility":"private"}
+{"file":"packages/taskasi/test/env-discovery.test.mjs","name":"basenames","kind":"variable","line":[38,38],"tokens":"files path","visibility":"private"}
+{"file":"packages/taskasi/test/env-discovery.test.mjs","name":"repo","kind":"variable","line":[45,45],"tokens":"mkTestTmp","visibility":"private"}
+{"file":"packages/taskasi/test/env-discovery.test.mjs","name":"wt","kind":"variable","line":[46,46],"tokens":"path repo","visibility":"private"}
+{"file":"packages/taskasi/test/env-discovery.test.mjs","name":"n","kind":"variable","line":[50,50],"tokens":"repo mirrorEnvFilesToWorktree wt path","visibility":"private"}
+{"file":"packages/taskasi/test/env-mirror.test.mjs","name":"node:assert/strict","kind":"import","line":[1,1],"alias":"assert","visibility":"private"}
+{"file":"packages/taskasi/test/env-mirror.test.mjs","name":"node:test.describe","kind":"import","line":[2,2],"visibility":"private"}
+{"file":"packages/taskasi/test/env-mirror.test.mjs","name":"node:test.it","kind":"import","line":[2,2],"visibility":"private"}
+{"file":"packages/taskasi/test/env-mirror.test.mjs","name":"../dist/env-mirror.js.isStandardDotenvBasename","kind":"import","line":[3,6],"visibility":"private"}
+{"file":"packages/taskasi/test/env-mirror.test.mjs","name":"../dist/env-mirror.js.patternLooksEnvRelated","kind":"import","line":[3,6],"visibility":"private"}
+{"file":"packages/taskasi/test/gitignore.test.mjs","name":"node:assert/strict","kind":"import","line":[1,1],"alias":"assert","visibility":"private"}
+{"file":"packages/taskasi/test/gitignore.test.mjs","name":"node:fs","kind":"import","line":[2,2],"alias":"fs","visibility":"private"}
+{"file":"packages/taskasi/test/gitignore.test.mjs","name":"node:path","kind":"import","line":[3,3],"alias":"path","visibility":"private"}
+{"file":"packages/taskasi/test/gitignore.test.mjs","name":"node:test.describe","kind":"import","line":[4,4],"visibility":"private"}
+{"file":"packages/taskasi/test/gitignore.test.mjs","name":"node:test.it","kind":"import","line":[4,4],"visibility":"private"}
+{"file":"packages/taskasi/test/gitignore.test.mjs","name":"../dist/gitignore.js.ensureTaskasiGitignoreRules","kind":"import","line":[5,5],"visibility":"private"}
+{"file":"packages/taskasi/test/gitignore.test.mjs","name":"./helpers/tmp.mjs.mkTestTmp","kind":"import","line":[6,6],"visibility":"private"}
+{"file":"packages/taskasi/test/gitignore.test.mjs","name":"./helpers/tmp.mjs.rmTestTmp","kind":"import","line":[6,6],"visibility":"private"}
+{"file":"packages/taskasi/test/gitignore.test.mjs","name":"tmp","kind":"variable","line":[10,10],"tokens":"mkTestTmp","visibility":"private"}
+{"file":"packages/taskasi/test/gitignore.test.mjs","name":"touched","kind":"variable","line":[12,12],"tokens":"ensureTaskasiGitignoreRules","visibility":"private"}
+{"file":"packages/taskasi/test/gitignore.test.mjs","name":"gi","kind":"variable","line":[14,14],"tokens":"fs path","visibility":"private"}
+{"file":"packages/taskasi/test/gitignore.test.mjs","name":"tmp","kind":"variable","line":[24,24],"tokens":"mkTestTmp","visibility":"private"}
+{"file":"packages/taskasi/test/helpers/tmp.mjs","name":"node:fs","kind":"import","line":[1,1],"alias":"fs","visibility":"private"}
+{"file":"packages/taskasi/test/helpers/tmp.mjs","name":"node:path","kind":"import","line":[2,2],"alias":"path","visibility":"private"}
+{"file":"packages/taskasi/test/helpers/tmp.mjs","name":"node:url.fileURLToPath","kind":"import","line":[3,3],"visibility":"private"}
+{"file":"packages/taskasi/test/helpers/tmp.mjs","name":"testDir","kind":"variable","line":[5,5],"tokens":"fileURLToPath path","visibility":"private"}
+{"file":"packages/taskasi/test/helpers/tmp.mjs","name":"testTmpRoot","kind":"variable","line":[7,7],"tokens":"testDir path","visibility":"public"}
+{"file":"packages/taskasi/test/helpers/tmp.mjs","name":"mkTestTmp","kind":"function","line":[9,12],"tokens":"prefix fs testTmpRoot path","visibility":"public"}
+{"file":"packages/taskasi/test/helpers/tmp.mjs","name":"rmTestTmp","kind":"function","line":[14,20],"tokens":"absPath fs","visibility":"public"}
+{"file":"packages/taskasi/test/integration/git.test.mjs","name":"node:assert/strict","kind":"import","line":[1,1],"alias":"assert","visibility":"private"}
+{"file":"packages/taskasi/test/integration/git.test.mjs","name":"node:child_process.execFileSync","kind":"import","line":[2,2],"visibility":"private"}
+{"file":"packages/taskasi/test/integration/git.test.mjs","name":"node:fs","kind":"import","line":[3,3],"alias":"fs","visibility":"private"}
+{"file":"packages/taskasi/test/integration/git.test.mjs","name":"node:path","kind":"import","line":[4,4],"alias":"path","visibility":"private"}
+{"file":"packages/taskasi/test/integration/git.test.mjs","name":"node:test.describe","kind":"import","line":[5,5],"visibility":"private"}
+{"file":"packages/taskasi/test/integration/git.test.mjs","name":"node:test.it","kind":"import","line":[5,5],"visibility":"private"}
+{"file":"packages/taskasi/test/integration/git.test.mjs","name":"node:test.before","kind":"import","line":[5,5],"visibility":"private"}
+{"file":"packages/taskasi/test/integration/git.test.mjs","name":"node:test.after","kind":"import","line":[5,5],"visibility":"private"}
+{"file":"packages/taskasi/test/integration/git.test.mjs","name":"../../dist/git.js.addWorktree","kind":"import","line":[6,6],"visibility":"private"}
+{"file":"packages/taskasi/test/integration/git.test.mjs","name":"../../dist/git.js.getGitRoot","kind":"import","line":[6,6],"visibility":"private"}
+{"file":"packages/taskasi/test/integration/git.test.mjs","name":"../../dist/git.js.localBranchExists","kind":"import","line":[6,6],"visibility":"private"}
+{"file":"packages/taskasi/test/integration/git.test.mjs","name":"../helpers/tmp.mjs.mkTestTmp","kind":"import","line":[7,7],"visibility":"private"}
+{"file":"packages/taskasi/test/integration/git.test.mjs","name":"../helpers/tmp.mjs.rmTestTmp","kind":"import","line":[7,7],"visibility":"private"}
+{"file":"packages/taskasi/test/integration/git.test.mjs","name":"git","kind":"function","line":[16,18],"tokens":"args repo execFileSync","visibility":"private"}
+{"file":"packages/taskasi/test/integration/git.test.mjs","name":"repo","kind":"variable","line":[21,21],"visibility":"private"}
+{"file":"packages/taskasi/test/integration/git.test.mjs","name":"sub","kind":"variable","line":[38,38],"tokens":"repo path","visibility":"private"}
+{"file":"packages/taskasi/test/integration/git.test.mjs","name":"wt","kind":"variable","line":[52,52],"tokens":"repo path","visibility":"private"}
+{"file":"packages/taskasi/test/paths.test.mjs","name":"node:assert/strict","kind":"import","line":[1,1],"alias":"assert","visibility":"private"}
+{"file":"packages/taskasi/test/paths.test.mjs","name":"node:path","kind":"import","line":[2,2],"alias":"path","visibility":"private"}
+{"file":"packages/taskasi/test/paths.test.mjs","name":"node:test.describe","kind":"import","line":[3,3],"visibility":"private"}
+{"file":"packages/taskasi/test/paths.test.mjs","name":"node:test.it","kind":"import","line":[3,3],"visibility":"private"}
+{"file":"packages/taskasi/test/paths.test.mjs","name":"../dist/paths.js.expandPlaceholders","kind":"import","line":[4,4],"visibility":"private"}
+{"file":"packages/taskasi/test/paths.test.mjs","name":"../dist/paths.js.posixRelative","kind":"import","line":[4,4],"visibility":"private"}
+{"file":"packages/taskasi/test/paths.test.mjs","name":"from","kind":"variable","line":[26,26],"tokens":"path","visibility":"private"}
+{"file":"packages/taskasi/test/paths.test.mjs","name":"to","kind":"variable","line":[27,27],"tokens":"path","visibility":"private"}
+{"file":"packages/taskasi/test/workspace-write.test.mjs","name":"node:assert/strict","kind":"import","line":[1,1],"alias":"assert","visibility":"private"}
+{"file":"packages/taskasi/test/workspace-write.test.mjs","name":"node:fs","kind":"import","line":[2,2],"alias":"fs","visibility":"private"}
+{"file":"packages/taskasi/test/workspace-write.test.mjs","name":"node:path","kind":"import","line":[3,3],"alias":"path","visibility":"private"}
+{"file":"packages/taskasi/test/workspace-write.test.mjs","name":"node:test.describe","kind":"import","line":[4,4],"visibility":"private"}
+{"file":"packages/taskasi/test/workspace-write.test.mjs","name":"node:test.it","kind":"import","line":[4,4],"visibility":"private"}
+{"file":"packages/taskasi/test/workspace-write.test.mjs","name":"../dist/workspace.js.writeWorkspace","kind":"import","line":[5,5],"visibility":"private"}
+{"file":"packages/taskasi/test/workspace-write.test.mjs","name":"./helpers/tmp.mjs.mkTestTmp","kind":"import","line":[6,6],"visibility":"private"}
+{"file":"packages/taskasi/test/workspace-write.test.mjs","name":"./helpers/tmp.mjs.rmTestTmp","kind":"import","line":[6,6],"visibility":"private"}
+{"file":"packages/taskasi/test/workspace-write.test.mjs","name":"tmp","kind":"variable","line":[10,10],"tokens":"mkTestTmp","visibility":"private"}
+{"file":"packages/taskasi/test/workspace-write.test.mjs","name":"src","kind":"variable","line":[11,11],"tokens":"path","visibility":"private"}
+{"file":"packages/taskasi/test/workspace-write.test.mjs","name":"out","kind":"variable","line":[12,12],"tokens":"path","visibility":"private"}
+{"file":"packages/taskasi/test/workspace-write.test.mjs","name":"wt","kind":"variable","line":[13,13],"tokens":"path","visibility":"private"}
+{"file":"packages/taskasi/test/workspace-write.test.mjs","name":"parsed","kind":"variable","line":[24,24],"tokens":"fs out JSON","visibility":"private"}
+{"file":"packages/taskasi/test/workspace.test.mjs","name":"node:assert/strict","kind":"import","line":[1,1],"alias":"assert","visibility":"private"}
+{"file":"packages/taskasi/test/workspace.test.mjs","name":"node:test.describe","kind":"import","line":[2,2],"visibility":"private"}
+{"file":"packages/taskasi/test/workspace.test.mjs","name":"node:test.it","kind":"import","line":[2,2],"visibility":"private"}
+{"file":"packages/taskasi/test/workspace.test.mjs","name":"node:path","kind":"import","line":[3,3],"alias":"path","visibility":"private"}
+{"file":"packages/taskasi/test/workspace.test.mjs","name":"node:url.fileURLToPath","kind":"import","line":[4,4],"visibility":"private"}
+{"file":"packages/taskasi/test/workspace.test.mjs","name":"../dist/workspace.js.rewriteWorkspaceFolders","kind":"import","line":[5,5],"visibility":"private"}
+{"file":"packages/taskasi/test/workspace.test.mjs","name":"__dirname","kind":"variable","line":[7,7],"tokens":"path fileURLToPath","visibility":"private"}
+{"file":"packages/taskasi/test/workspace.test.mjs","name":"repoRoot","kind":"variable","line":[11,11],"tokens":"__dirname path","visibility":"private"}
+{"file":"packages/taskasi/test/workspace.test.mjs","name":"outFile","kind":"variable","line":[12,12],"tokens":"repoRoot path","visibility":"private"}
+{"file":"packages/taskasi/test/workspace.test.mjs","name":"worktree","kind":"variable","line":[13,13],"tokens":"path repoRoot","visibility":"private"}
+{"file":"packages/taskasi/test/workspace.test.mjs","name":"ws","kind":"variable","line":[15,21],"visibility":"private"}
+{"file":"packages/taskasi/test/workspace.test.mjs","name":"next","kind":"variable","line":[23,23],"tokens":"rewriteWorkspaceFolders outFile worktree ws","visibility":"private"}

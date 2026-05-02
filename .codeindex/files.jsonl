@@ -1,0 +1,93 @@
+{"path":"apps/agent/config/custom-environment-variables.json","lang":null,"hash":"7feeac756c56446b","lines":30}
+{"path":"apps/agent/config/default.json","lang":null,"hash":"5ebdf4b25843101d","lines":33}
+{"path":"apps/agent/eslint.config.js","lang":"javascript","hash":"723c87bba582b32d","lines":29}
+{"path":"apps/agent/nest-cli.json","lang":null,"hash":"d92ed4406f1bd743","lines":15}
+{"path":"apps/agent/package-lock.json","lang":null,"hash":"82910394fa694404","lines":8234}
+{"path":"apps/agent/package.json","lang":null,"hash":"dae2ddc03beeac0d","lines":42}
+{"path":"apps/agent/project.json","lang":null,"hash":"8b0228018d5e6de1","lines":7}
+{"path":"apps/agent/scripts/infisical-run.sh","lang":null,"hash":"8aa23459b43eb56c","lines":44}
+{"path":"apps/agent/src/app.module.ts","lang":"typescript","hash":"485940aaed87d698","lines":44,"title":"HTTP logging: nestjs-pino (LoggerModule) + app.useLogger(Logger) in main.ts.","description":"Config: node `config` package merged into ConfigService (examples/nest-js pattern)."}
+{"path":"apps/agent/src/infrastructure/controllers/openai.controller.ts","lang":"typescript","hash":"662f16f9a73b7a88","lines":35}
+{"path":"apps/agent/src/infrastructure/controllers/openai.dto.ts","lang":"typescript","hash":"c0e5d32302706658","lines":36}
+{"path":"apps/agent/src/infrastructure/logging/base-pino-logger.ts","lang":"typescript","hash":"dc8eb5b20880368e","lines":42}
+{"path":"apps/agent/src/infrastructure/logging/logger.module.ts","lang":"typescript","hash":"a99d3fc730b3ba2c","lines":20,"title":"Global BasePinoLogger via nestjs-pino (agent-rules-n-skills examples/nest-js pattern)."}
+{"path":"apps/agent/src/infrastructure/logging/nestjs-pino-logger.ts","lang":"typescript","hash":"a4a842480e03a53e","lines":114}
+{"path":"apps/agent/src/infrastructure/logging/pino-logger-config.factory.ts","lang":"typescript","hash":"ea05cb6e36e9bcee","lines":78}
+{"path":"apps/agent/src/infrastructure/services/mastra-agent.service.ts","lang":"typescript","hash":"1b27f59b69879c3e","lines":99}
+{"path":"apps/agent/src/main.ts","lang":"typescript","hash":"d95d299b1ea54657","lines":39,"title":"Bootstrap: nestjs-pino Logger + Nest Logger for startup lines (examples/nest-js style)."}
+{"path":"apps/agent/src/tests/smoke-chat-completions.sh","lang":null,"hash":"c428506b893b4e51","lines":60}
+{"path":"apps/agent/src/use-cases/run-prompt.use-case.ts","lang":"typescript","hash":"5f7614046ac2588f","lines":38}
+{"path":"apps/agent/tsconfig.build.json","lang":null,"hash":"e56a26c7d419c554","lines":12}
+{"path":"apps/agent/tsconfig.json","lang":null,"hash":"9c5ed186a576609e","lines":22}
+{"path":"eslint.config.base.js","lang":"javascript","hash":"0be1fb8d5c8dc09b","lines":22}
+{"path":"nx.json","lang":null,"hash":"51cc8185ffc8bbc5","lines":48}
+{"path":"package-lock.json","lang":null,"hash":"7e9fd1b041318d00","lines":11184}
+{"path":"package.json","lang":null,"hash":"d630147b02cc23da","lines":34}
+{"path":"packages/agasi/LICENSE","lang":null,"hash":"a0aee41ebb0dcea5","lines":21}
+{"path":"packages/agasi/PUBLISHING.md","lang":"markdown","hash":"651d5cf3fd4cd453","lines":112,"title":"Publishing `@zyreth/agasi` to npm","description":"This package is **scoped** (`@zyreth/agasi`)."}
+{"path":"packages/agasi/README.md","lang":"markdown","hash":"b44a2ebbcb51f430","lines":155,"title":"@zyreth/agasi","description":"**agasi** is a small CLI that keeps **one canonical folder of agent skills** (flat layout: each skill is a directory with `SKILL.md`) and **symlinks** it into every tool-specific path you need—**Cursor** (`.cursor/skills`), **`.agents/skills`**, **Codex** (`~/.codex/skills` or `$CODEX_HOME/skills`), or a **custom** directory under a repo."}
+{"path":"packages/agasi/docs/.vitepress/config.mts","lang":"typescript","hash":"db6f87aea17e36c3","lines":57}
+{"path":"packages/agasi/docs/README.md","lang":"markdown","hash":"7936b07620b51d64","lines":9,"title":"agasi documentation sources","description":"These **Markdown** files are the source for the **VitePress** site."}
+{"path":"packages/agasi/docs/advanced/publishing.md","lang":"markdown","hash":"a42bc6e26f2b61df","lines":31,"title":"Publishing to npm","description":"This page summarizes maintainer steps."}
+{"path":"packages/agasi/docs/guide/configuration.md","lang":"markdown","hash":"eec7c520c2dec01c","lines":80,"title":"Configuration","description":"| Mechanism | Path |"}
+{"path":"packages/agasi/docs/guide/getting-started.md","lang":"markdown","hash":"d4fb69b2f2e0f735","lines":35,"title":"Getting started","description":"**agasi** keeps a **single canonical folder** of skills (each subfolder contains `SKILL.md`) and creates **symlinks** into every tool-specific location you care about: Cursor, a generic `.agents` tree, Codex’s global skills directory, or a custom path."}
+{"path":"packages/agasi/docs/guide/installation.md","lang":"markdown","hash":"9ac332b9e85c06d3","lines":78,"title":"Installation","description":"- **Node.js ≥ 20**"}
+{"path":"packages/agasi/docs/guide/integrations.md","lang":"markdown","hash":"3290e3dae846cc12","lines":60,"title":"Integrations — Cursor, Codex, and other agents","description":"agasi does not load skills inside the IDE itself."}
+{"path":"packages/agasi/docs/guide/troubleshooting.md","lang":"markdown","hash":"0bc0ce69eb9e394c","lines":22,"title":"Troubleshooting","description":"| Symptom | What to check |"}
+{"path":"packages/agasi/docs/index.md","lang":"markdown","hash":"2f7037957ffcb3dd","lines":38,"title":"Search","description":"Use the **search box** in the header."}
+{"path":"packages/agasi/docs/reference/cli.md","lang":"markdown","hash":"c78e0181817b5366","lines":126,"title":"CLI reference","description":"Global option (all commands):"}
+{"path":"packages/agasi/docs/reference/config.md","lang":"markdown","hash":"2229486d49412958","lines":74,"title":"Config file reference","description":"**Path:** `~/.agasi/config.yaml` (unless overridden)."}
+{"path":"packages/agasi/package-lock.json","lang":null,"hash":"5e98b45a257a64f2","lines":2581}
+{"path":"packages/agasi/package.json","lang":null,"hash":"25818a32fee50fba","lines":53}
+{"path":"packages/agasi/src/cli.ts","lang":"typescript","hash":"10fd8d77c078fa08","lines":436}
+{"path":"packages/agasi/src/config.ts","lang":"typescript","hash":"29eddd59f392f701","lines":237}
+{"path":"packages/agasi/src/link.ts","lang":"typescript","hash":"8eb338a6e70419f4","lines":114}
+{"path":"packages/agasi/src/paths.ts","lang":"typescript","hash":"7fa083d292817eae","lines":19}
+{"path":"packages/agasi/src/skills.ts","lang":"typescript","hash":"93dbce8027ea803d","lines":25}
+{"path":"packages/agasi/src/targets.ts","lang":"typescript","hash":"45bf60a0813babe3","lines":82}
+{"path":"packages/agasi/test/README.md","lang":"markdown","hash":"6b3b359c32eeefe4","lines":7,"title":"agasi tests","description":"- **Runner:** Node.js built-in **`node:test`** (requires `npm run build` first — tests import **`../dist/*.js`**)."}
+{"path":"packages/agasi/test/cli.integration.test.mjs","lang":"javascript","hash":"dba95c02e3dd5a3c","lines":75}
+{"path":"packages/agasi/test/config.test.mjs","lang":"javascript","hash":"e78f29e2b6a13f59","lines":184}
+{"path":"packages/agasi/test/helpers.mjs","lang":"javascript","hash":"8971d8ddf8179f55","lines":24}
+{"path":"packages/agasi/test/link.test.mjs","lang":"javascript","hash":"244282ad23996891","lines":96}
+{"path":"packages/agasi/test/paths.test.mjs","lang":"javascript","hash":"79862487e9c42359","lines":17}
+{"path":"packages/agasi/test/skills.test.mjs","lang":"javascript","hash":"55f6b82e7aede3cb","lines":33}
+{"path":"packages/agasi/test/targets.test.mjs","lang":"javascript","hash":"0946f1ee17b89160","lines":105}
+{"path":"packages/agasi/tsconfig.json","lang":null,"hash":"c00642a55db8feba","lines":15}
+{"path":"packages/taskasi/LICENSE","lang":null,"hash":"a0aee41ebb0dcea5","lines":21}
+{"path":"packages/taskasi/PUBLISHING.md","lang":"markdown","hash":"fbc6d87281e30c47","lines":87,"title":"Publishing `@zyreth/taskasi`","description":"Checklist before **`npm publish`**."}
+{"path":"packages/taskasi/README.md","lang":"markdown","hash":"78dd5bb8d6fb4fb2","lines":137,"title":"@zyreth/taskasi","description":"**taskasi** is a global CLI for **git worktrees**, **gitignore-aware env file mirroring**, and optional **VS Code / Cursor** multi-root **`.workspace`** generation — with persistent defaults in **`~/.taskasi/config.yaml`**."}
+{"path":"packages/taskasi/docs/.vitepress/config.mts","lang":"typescript","hash":"d98d182b9801aa20","lines":57}
+{"path":"packages/taskasi/docs/README.md","lang":"markdown","hash":"119bd3138c766fc0","lines":9,"title":"taskasi documentation sources","description":"This directory contains **Markdown** for the **VitePress** site."}
+{"path":"packages/taskasi/docs/guide/configuration.md","lang":"markdown","hash":"0d1d4f623c23a730","lines":55,"title":"Configuration","description":"Global defaults live in **`~/.taskasi/config.yaml`**."}
+{"path":"packages/taskasi/docs/guide/env-files.md","lang":"markdown","hash":"a6bf0cb0f7c4d8c8","lines":59,"title":"Environment files","description":"When **`env.source`** is **unset** in `~/.taskasi/config.yaml`, taskasi **discovers** env files in the **main repository checkout** and **mirrors** them to the **same relative paths** inside the new worktree."}
+{"path":"packages/taskasi/docs/guide/getting-started.md","lang":"markdown","hash":"8618ddc42bcccab9","lines":49,"title":"Getting started","description":"**taskasi** helps you spin up a **parallel git worktree** for a task id, copy **environment files** into matching paths, and optionally emit a **VS Code / Cursor workspace** file that points folder roots at that worktree."}
+{"path":"packages/taskasi/docs/guide/installation.md","lang":"markdown","hash":"787c7909ea2313ea","lines":67,"title":"Installation","description":"Verify:"}
+{"path":"packages/taskasi/docs/guide/troubleshooting.md","lang":"markdown","hash":"363bd34f16a82035","lines":27,"title":"Troubleshooting","description":"Run **`taskasi`** from inside a directory that belongs to a Git working tree (any subfolder of the repo is fine)."}
+{"path":"packages/taskasi/docs/guide/workflows.md","lang":"markdown","hash":"f135209d6e3ab1a7","lines":29,"title":"Workflows","description":"1."}
+{"path":"packages/taskasi/docs/guide/workspaces.md","lang":"markdown","hash":"aea30e78717046bc","lines":67,"title":"Workspaces (VS Code / Cursor)","description":"taskasi can **duplicate** a **multi-root workspace** JSON file (`.code-workspace` or `.workspace`) and **rewrite** `folders[].path` entries so they point at the **new worktree** instead of the main checkout."}
+{"path":"packages/taskasi/docs/index.md","lang":"markdown","hash":"fa333ee64331ea9d","lines":37,"title":"Search","description":"Use the **search box** in the header (built from the Markdown index — no backend required after `vitepress build`)."}
+{"path":"packages/taskasi/docs/reference/commands.md","lang":"markdown","hash":"cbea1ff7712fe608","lines":53,"title":"CLI commands","description":"All commands resolve the **git repository root** from the current working directory."}
+{"path":"packages/taskasi/docs/reference/config-keys.md","lang":"markdown","hash":"fff85e35b8d8c8fa","lines":36,"title":"Config keys","description":"Defaults apply when a key is omitted from **`~/.taskasi/config.yaml`**."}
+{"path":"packages/taskasi/docs/reference/placeholders.md","lang":"markdown","hash":"88b6b495e5536edd","lines":43,"title":"Placeholders","description":"Used in **`worktreeFolderTemplate`**, **`workspace.source`**, **`workspace.output`**, and similar string fields."}
+{"path":"packages/taskasi/docs/reference/testing.md","lang":"markdown","hash":"f9ff98cb4f2eafff","lines":54,"title":"Testing","description":"The package uses **Node.js’s built-in test runner** (`node:test`)."}
+{"path":"packages/taskasi/package-lock.json","lang":null,"hash":"ef38ec3a984e9433","lines":2581}
+{"path":"packages/taskasi/package.json","lang":null,"hash":"b93a3ed5310d25c6","lines":55}
+{"path":"packages/taskasi/src/cli.ts","lang":"typescript","hash":"8fe41927123acae2","lines":134}
+{"path":"packages/taskasi/src/config.ts","lang":"typescript","hash":"f9dd7e0e2e3c9b8f","lines":204}
+{"path":"packages/taskasi/src/env-mirror.ts","lang":"typescript","hash":"c0b8ae1740b3e1f3","lines":192}
+{"path":"packages/taskasi/src/git.ts","lang":"typescript","hash":"6e920adadc80e33a","lines":50}
+{"path":"packages/taskasi/src/gitignore.ts","lang":"typescript","hash":"ee1be0491f6b21f1","lines":54}
+{"path":"packages/taskasi/src/paths.ts","lang":"typescript","hash":"aabbffa5ce9cc45b","lines":37}
+{"path":"packages/taskasi/src/workspace.ts","lang":"typescript","hash":"04cc4ae59a5a99f4","lines":62}
+{"path":"packages/taskasi/test/cli.test.mjs","lang":"javascript","hash":"3006aac7c2b32424","lines":33}
+{"path":"packages/taskasi/test/config.test.mjs","lang":"javascript","hash":"f1b9951e7d21c149","lines":180}
+{"path":"packages/taskasi/test/env-discovery.test.mjs","lang":"javascript","hash":"88225df8ac533177","lines":60}
+{"path":"packages/taskasi/test/env-mirror.test.mjs","lang":"javascript","hash":"6d19e3d5e6f80b63","lines":35}
+{"path":"packages/taskasi/test/gitignore.test.mjs","lang":"javascript","hash":"16ec98368c6c4384","lines":32}
+{"path":"packages/taskasi/test/helpers/tmp.mjs","lang":"javascript","hash":"391260b8e1028734","lines":20}
+{"path":"packages/taskasi/test/integration/git.test.mjs","lang":"javascript","hash":"8a6481d2e0dd83e5","lines":57}
+{"path":"packages/taskasi/test/paths.test.mjs","lang":"javascript","hash":"c610259b5f8dd1c1","lines":30}
+{"path":"packages/taskasi/test/workspace-write.test.mjs","lang":"javascript","hash":"5eb7dcf72c06b6bb","lines":31}
+{"path":"packages/taskasi/test/workspace.test.mjs","lang":"javascript","hash":"46bbf472a52c2d04","lines":29}
+{"path":"packages/taskasi/tsconfig.json","lang":null,"hash":"cfd375ecb5e569e9","lines":14}

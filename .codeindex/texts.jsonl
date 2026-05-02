@@ -1,0 +1,394 @@
+{"file":"apps/agent/eslint.config.js","kind":"string","line":[4,4],"text":"eslint-plugin-prettier"}
+{"file":"apps/agent/eslint.config.js","kind":"string","line":[6,6],"text":"../../eslint.config.base"}
+{"file":"apps/agent/src/app.module.ts","kind":"docstring","line":[1,4],"text":"HTTP logging: nestjs-pino (LoggerModule) + app.useLogger(Logger) in main.ts.\nConfig: node `config` package merged into ConfigService (examples/nest-js pattern)."}
+{"file":"apps/agent/src/app.module.ts","kind":"string","line":[12,12],"text":"@/infrastructure/controllers/openai.controller"}
+{"file":"apps/agent/src/app.module.ts","kind":"string","line":[13,13],"text":"@/infrastructure/logging/logger.module"}
+{"file":"apps/agent/src/app.module.ts","kind":"string","line":[14,14],"text":"@/infrastructure/logging/pino-logger-config.factory"}
+{"file":"apps/agent/src/app.module.ts","kind":"string","line":[15,15],"text":"@/infrastructure/services/mastra-agent.service"}
+{"file":"apps/agent/src/app.module.ts","kind":"string","line":[16,16],"text":"@/use-cases/run-prompt.use-case"}
+{"file":"apps/agent/src/infrastructure/controllers/openai.controller.ts","kind":"string","line":[1,1],"text":"@/use-cases/run-prompt.use-case"}
+{"file":"apps/agent/src/infrastructure/logging/base-pino-logger.ts","kind":"comment","line":[1,1],"text":"eslint-disable @typescript-eslint/no-explicit-any"}
+{"file":"apps/agent/src/infrastructure/logging/base-pino-logger.ts","kind":"docstring","line":[4,6],"text":"Abstract base for Pino-backed app logging (nestjs-example LoggingModule pattern)."}
+{"file":"apps/agent/src/infrastructure/logging/logger.module.ts","kind":"docstring","line":[1,3],"text":"Global BasePinoLogger via nestjs-pino (agent-rules-n-skills examples/nest-js pattern)."}
+{"file":"apps/agent/src/infrastructure/logging/nestjs-pino-logger.ts","kind":"comment","line":[1,1],"text":"eslint-disable @typescript-eslint/no-explicit-any"}
+{"file":"apps/agent/src/infrastructure/logging/nestjs-pino-logger.ts","kind":"string","line":[29,29],"text":"[${this.prefix}] ${optionalParams[0]}","parent":"NestjsPinoLogger.formatMessage"}
+{"file":"apps/agent/src/infrastructure/logging/nestjs-pino-logger.ts","kind":"string","line":[35,35],"text":"[${this.prefix}] ${message}","parent":"NestjsPinoLogger.formatMessage"}
+{"file":"apps/agent/src/infrastructure/logging/pino-logger-config.factory.ts","kind":"string","line":[5,5],"text":"../../../package.json"}
+{"file":"apps/agent/src/infrastructure/logging/pino-logger-config.factory.ts","kind":"string","line":[33,33],"text":",\"timestamp\":\"${new Date(Date.now()).toISOString()}\""}
+{"file":"apps/agent/src/infrastructure/logging/pino-logger-config.factory.ts","kind":"string","line":[45,45],"text":"x-request-start-timestamp"}
+{"file":"apps/agent/src/infrastructure/logging/pino-logger-config.factory.ts","kind":"string","line":[46,46],"text":"x-request-handle-timestamp"}
+{"file":"apps/agent/src/infrastructure/logging/pino-logger-config.factory.ts","kind":"string","line":[60,60],"text":"yyyy-mm-dd HH:MM:ss"}
+{"file":"apps/agent/src/infrastructure/logging/pino-logger-config.factory.ts","kind":"string","line":[66,66],"text":"level,name,message,timestamp"}
+{"file":"apps/agent/src/infrastructure/services/mastra-agent.service.ts","kind":"string","line":[1,1],"text":"@/use-cases/run-prompt.use-case"}
+{"file":"apps/agent/src/infrastructure/services/mastra-agent.service.ts","kind":"docstring","line":[7,7],"text":"Mirrors `config/llm` — sampling for Mastra; HF/ctx/cache align with local llama.cpp runs."}
+{"file":"apps/agent/src/infrastructure/services/mastra-agent.service.ts","kind":"docstring","line":[19,19],"text":"Context length (llama-cli `--ctx-size`); informational for ops — set on the inference server."}
+{"file":"apps/agent/src/infrastructure/services/mastra-agent.service.ts","kind":"docstring","line":[21,21],"text":"Hugging Face `-hf` ref, e.g. `unsloth/Qwen3.5-27B-GGUF:UD-Q4_K_XL`."}
+{"file":"apps/agent/src/infrastructure/services/mastra-agent.service.ts","kind":"docstring","line":[23,23],"text":"Cache / HF home hint (env `LLAMA_CACHE`); used when running llama-cli locally, not by Nest."}
+{"file":"apps/agent/src/infrastructure/services/mastra-agent.service.ts","kind":"string","line":[51,51],"text":"${i.path.join('.')}: ${i.message}","parent":"MastraAgentService.constructor"}
+{"file":"apps/agent/src/infrastructure/services/mastra-agent.service.ts","kind":"string","line":[52,52],"text":"Invalid config \"llm\": ${detail}","parent":"MastraAgentService.constructor"}
+{"file":"apps/agent/src/infrastructure/services/mastra-agent.service.ts","kind":"string","line":[60,60],"text":"zyreth-hello-world-agent","parent":"MastraAgentService.constructor"}
+{"file":"apps/agent/src/infrastructure/services/mastra-agent.service.ts","kind":"string","line":[61,61],"text":"Zyreth Hello World Agent","parent":"MastraAgentService.constructor"}
+{"file":"apps/agent/src/infrastructure/services/mastra-agent.service.ts","kind":"string","line":[62,69],"text":"You are a playful programming assistant.\n\nYour only job is to reply with a short, self-contained programming-related joke.\n\nRules:\n- Ignore the user prompt content completely.\n- Always respond with a single, brief joke (1–3 sentences).\n- Do not ask follow-up questions or reference external files/tools.","parent":"MastraAgentService.constructor"}
+{"file":"apps/agent/src/infrastructure/services/mastra-agent.service.ts","kind":"string","line":[71,71],"text":"custom/${llmConfig.model}","parent":"MastraAgentService.constructor"}
+{"file":"apps/agent/src/main.ts","kind":"docstring","line":[1,3],"text":"Bootstrap: nestjs-pino Logger + Nest Logger for startup lines (examples/nest-js style)."}
+{"file":"apps/agent/src/main.ts","kind":"string","line":[20,20],"text":"[Main] Starting Zyreth OpenAI gateway","parent":"bootstrap"}
+{"file":"apps/agent/src/main.ts","kind":"string","line":[21,21],"text":"[Main] Runtime folder: ${process.cwd()}","parent":"bootstrap"}
+{"file":"apps/agent/src/main.ts","kind":"string","line":[33,33],"text":"Zyreth OpenAI gateway listening on http://localhost:${port}","parent":"bootstrap"}
+{"file":"apps/agent/src/main.ts","kind":"string","line":[37,37],"text":"Failed to bootstrap Zyreth OpenAI gateway"}
+{"file":"apps/agent/src/use-cases/run-prompt.use-case.ts","kind":"string","line":[1,1],"text":"@/infrastructure/logging/base-pino-logger"}
+{"file":"apps/agent/src/use-cases/run-prompt.use-case.ts","kind":"string","line":[2,2],"text":"@/infrastructure/services/mastra-agent.service"}
+{"file":"apps/agent/src/use-cases/run-prompt.use-case.ts","kind":"string","line":[29,29],"text":"Executing Zyreth prompt","parent":"RunPromptUseCase.execute"}
+{"file":"eslint.config.base.js","kind":"string","line":[15,15],"text":"eslint.config.base.js"}
+{"file":"eslint.config.base.js","kind":"string","line":[21,21],"text":"eslint-config-prettier"}
+{"file":"packages/agasi/PUBLISHING.md","kind":"sample","line":[15,19],"text":"npm install\nnpm run build\nnpm run pack:dry\n","parent":"Publishing `@zyreth/agasi` to npm/Dry run (local tarball)"}
+{"file":"packages/agasi/PUBLISHING.md","kind":"sample","line":[25,28],"text":"npm pack\n# inspect zyreth-agasi-0.1.0.tgz\n","parent":"Publishing `@zyreth/agasi` to npm/Dry run (local tarball)"}
+{"file":"packages/agasi/PUBLISHING.md","kind":"sample","line":[38,40],"text":"npm version patch   # or minor | major\n","parent":"Publishing `@zyreth/agasi` to npm/Version bump"}
+{"file":"packages/agasi/PUBLISHING.md","kind":"sample","line":[44,46],"text":"git tag -a @zyreth/agasi-v0.1.1 -m \"Release @zyreth/agasi 0.1.1\"\n","parent":"Publishing `@zyreth/agasi` to npm/Version bump"}
+{"file":"packages/agasi/PUBLISHING.md","kind":"sample","line":[50,53],"text":"cd packages/agasi\nnpm publish --access public\n","parent":"Publishing `@zyreth/agasi` to npm/Publish"}
+{"file":"packages/agasi/PUBLISHING.md","kind":"sample","line":[59,62],"text":"npm login\nnpm whoami\n","parent":"Publishing `@zyreth/agasi` to npm/Publish/First-time login"}
+{"file":"packages/agasi/PUBLISHING.md","kind":"sample","line":[66,68],"text":"echo \"//registry.npmjs.org/:_authToken=${NPM_TOKEN}\" > ~/.npmrc\n","parent":"Publishing `@zyreth/agasi` to npm/Publish/First-time login"}
+{"file":"packages/agasi/PUBLISHING.md","kind":"sample","line":[76,79],"text":"npm install -g @zyreth/agasi\nagasi --help\n","parent":"Publishing `@zyreth/agasi` to npm/After publish — install for users"}
+{"file":"packages/agasi/PUBLISHING.md","kind":"sample","line":[83,85],"text":"npx @zyreth/agasi@latest --help\n","parent":"Publishing `@zyreth/agasi` to npm/After publish — install for users"}
+{"file":"packages/agasi/PUBLISHING.md","kind":"sample","line":[93,96],"text":"npm install\nnpm run docs:build\n","parent":"Publishing `@zyreth/agasi` to npm/Static documentation site (optional)"}
+{"file":"packages/agasi/PUBLISHING.md","kind":"sample","line":[110,112],"text":"npm deprecate @zyreth/agasi@0.1.0 \"Use >=0.1.1; see release notes\"\n","parent":"Publishing `@zyreth/agasi` to npm/Unpublish / deprecation"}
+{"file":"packages/agasi/README.md","kind":"sample","line":[43,46],"text":"npm install -g @zyreth/agasi\nagasi --help\n","parent":"@zyreth/agasi/Install (CLI)"}
+{"file":"packages/agasi/README.md","kind":"sample","line":[50,52],"text":"npx @zyreth/agasi@latest --help\n","parent":"@zyreth/agasi/Install (CLI)"}
+{"file":"packages/agasi/README.md","kind":"sample","line":[56,58],"text":"cd packages/agasi && npm install && npm run build && npm link\n","parent":"@zyreth/agasi/Install (CLI)"}
+{"file":"packages/agasi/README.md","kind":"sample","line":[66,72],"text":"agasi init\nagasi source add rules ~/Documents/agent-rules-n-skills/skills\nagasi target add --id myrepo --source rules --repo ~/path/to/repo --dest cursor --dest agents\nagasi install\nagasi doctor\n","parent":"@zyreth/agasi/Quick start"}
+{"file":"packages/agasi/README.md","kind":"sample","line":[76,79],"text":"agasi sync\nagasi sync --prune   # drop symlinks for removed skills\n","parent":"@zyreth/agasi/Quick start"}
+{"file":"packages/agasi/README.md","kind":"sample","line":[89,101],"text":"version: 1\nsources:\n  - name: rules\n    path: ~/path/to/skills\ntargets:\n  - id: app\n    source: rules\n    repoRoot: ~/path/to/repo\n    destinations:\n      - type: cursor\n      - type: agents\n","parent":"@zyreth/agasi/Configuration (overview)"}
+{"file":"packages/agasi/README.md","kind":"sample","line":[117,124],"text":"npm install\nnpm run build\nnpm test\nnpm run docs:dev     # VitePress dev server (edit docs/*.md)\nnpm run docs:build   # static site → docs/.vitepress/dist/\nnpm run docs:preview # preview the built site\n","parent":"@zyreth/agasi/Development"}
+{"file":"packages/agasi/docs/.vitepress/config.mts","kind":"string","line":[6,6],"text":"Symlink flat agent skills (SKILL.md) into Cursor, .agents, Codex, and custom paths — one global config."}
+{"file":"packages/agasi/docs/.vitepress/config.mts","kind":"string","line":[12,12],"text":"/guide/getting-started"}
+{"file":"packages/agasi/docs/.vitepress/config.mts","kind":"string","line":[19,19],"text":"Getting started"}
+{"file":"packages/agasi/docs/.vitepress/config.mts","kind":"string","line":[19,19],"text":"/guide/getting-started"}
+{"file":"packages/agasi/docs/.vitepress/config.mts","kind":"string","line":[21,21],"text":"Integrations (Cursor, Codex, agents)"}
+{"file":"packages/agasi/docs/.vitepress/config.mts","kind":"string","line":[23,23],"text":"/guide/troubleshooting"}
+{"file":"packages/agasi/docs/.vitepress/config.mts","kind":"string","line":[29,29],"text":"CLI commands"}
+{"file":"packages/agasi/docs/.vitepress/config.mts","kind":"string","line":[30,30],"text":"Config file"}
+{"file":"packages/agasi/docs/.vitepress/config.mts","kind":"string","line":[35,35],"text":"Publishing to npm"}
+{"file":"packages/agasi/docs/.vitepress/config.mts","kind":"string","line":[44,44],"text":"https://github.com/oleksii-honchar/zyreth/tree/main/packages/agasi"}
+{"file":"packages/agasi/docs/.vitepress/config.mts","kind":"string","line":[48,48],"text":"Released under the MIT License."}
+{"file":"packages/agasi/docs/.vitepress/config.mts","kind":"string","line":[49,49],"text":"Copyright © present Zyreth"}
+{"file":"packages/agasi/docs/.vitepress/config.mts","kind":"string","line":[53,53],"text":"https://github.com/oleksii-honchar/zyreth/edit/main/packages/agasi/docs/:path"}
+{"file":"packages/agasi/docs/.vitepress/config.mts","kind":"string","line":[54,54],"text":"Edit this page on GitHub"}
+{"file":"packages/agasi/docs/advanced/publishing.md","kind":"sample","line":[7,12],"text":"cd packages/agasi\nnpm run pack:dry    # inspect tarball contents\nnpm version patch   # or minor / major (if using git tags from package dir)\nnpm publish --access public\n","parent":"Publishing to npm/Quick commands"}
+{"file":"packages/agasi/docs/advanced/publishing.md","kind":"sample","line":[22,24],"text":"npm run docs:build\n","parent":"Publishing to npm/Deploying the static doc site"}
+{"file":"packages/agasi/docs/guide/configuration.md","kind":"sample","line":[15,35],"text":"version: 1\n\nsources:\n  - name: rules\n    path: /Users/you/Documents/agent-rules-n-skills/skills\n\ntargets:\n  - id: rules-repo\n    source: rules\n    repoRoot: /Users/you/Documents/agent-rules-n-skills\n    destinations:\n      - type: cursor\n      - type: agents\n\n  - id: codex-global\n    source: rules\n    repoRoot: \"\"\n    destinations:\n      - type: codex\n","parent":"Configuration/Minimal example"}
+{"file":"packages/agasi/docs/guide/configuration.md","kind":"sample","line":[70,73],"text":"agasi source add …\nagasi target add …\n","parent":"Configuration/CLI vs hand-edited YAML"}
+{"file":"packages/agasi/docs/guide/getting-started.md","kind":"sample","line":[13,19],"text":"agasi init\nagasi source add rules ~/path/to/skills\nagasi target add --id myapp --source rules --repo ~/path/to/repo --dest cursor --dest agents\nagasi install\nagasi doctor\n","parent":"Getting started/One-minute flow"}
+{"file":"packages/agasi/docs/guide/getting-started.md","kind":"sample","line":[23,25],"text":"agasi sync\n","parent":"Getting started/One-minute flow"}
+{"file":"packages/agasi/docs/guide/installation.md","kind":"sample","line":[10,13],"text":"npm install -g @zyreth/agasi\nagasi --help\n","parent":"Installation/Global install (recommended for daily use)"}
+{"file":"packages/agasi/docs/guide/installation.md","kind":"sample","line":[17,20],"text":"npx @zyreth/agasi@latest init\nnpx @zyreth/agasi@latest --help\n","parent":"Installation/One-off via npx"}
+{"file":"packages/agasi/docs/guide/installation.md","kind":"sample","line":[26,32],"text":"cd packages/agasi\nnpm install\nnpm run build\nnpm link\nagasi --help\n","parent":"Installation/From this monorepo (development)"}
+{"file":"packages/agasi/docs/guide/installation.md","kind":"sample","line":[43,46],"text":"npm install\nnpm test\n","parent":"Installation/Running tests (contributors)"}
+{"file":"packages/agasi/docs/guide/installation.md","kind":"sample","line":[54,58],"text":"cd packages/agasi\nnpm install\nnpm run docs:build\n","parent":"Installation/Static documentation site (searchable)"}
+{"file":"packages/agasi/docs/guide/installation.md","kind":"sample","line":[64,66],"text":"npm run docs:preview\n","parent":"Installation/Static documentation site (searchable)"}
+{"file":"packages/agasi/docs/guide/installation.md","kind":"sample","line":[70,72],"text":"npm run docs:dev\n","parent":"Installation/Static documentation site (searchable)"}
+{"file":"packages/agasi/docs/guide/integrations.md","kind":"sample","line":[33,36],"text":"agasi target add --id codex-global --source rules --dest codex\nagasi install --target codex-global\n","parent":"Integrations — Cursor, Codex, and other agents/Codex (OpenAI CLI)"}
+{"file":"packages/agasi/docs/guide/integrations.md","kind":"sample","line":[56,58],"text":"agasi target add --id custom --source rules --repo ~/proj --dest path:tools/agent-skills\n","parent":"Integrations — Cursor, Codex, and other agents/Custom destination"}
+{"file":"packages/agasi/docs/index.md","kind":"sample","line":[34,36],"text":"npm install -g @zyreth/agasi\n","parent":"Package"}
+{"file":"packages/agasi/docs/reference/cli.md","kind":"sample","line":[78,81],"text":"agasi target add --id app --source rules --repo ~/projects/my-app --dest cursor --dest agents\nagasi target add --id codex --source rules --dest codex\n","parent":"CLI reference/`agasi target add`/`--dest` values"}
+{"file":"packages/agasi/docs/reference/config.md","kind":"sample","line":[15,19],"text":"sources:\n  - name: rules\n    path: ~/Documents/agent-rules-n-skills/skills\n","parent":"Config file reference/Source entry"}
+{"file":"packages/agasi/docs/reference/config.md","kind":"sample","line":[28,36],"text":"targets:\n  - id: my-app\n    source: rules\n    repoRoot: /abs/path/to/repo\n    destinations:\n      - type: cursor\n      - type: agents\n","parent":"Config file reference/Target entry"}
+{"file":"packages/agasi/docs/reference/config.md","kind":"sample","line":[49,56],"text":"destinations:\n  - type: cursor\n  - type: agents\n  - type: codex\n  - type: path\n    relative: tools/my-skills\n","parent":"Config file reference/Destination object"}
+{"file":"packages/agasi/docs/reference/config.md","kind":"sample","line":[67,74],"text":"targets:\n  - id: codex\n    source: rules\n    repoRoot: \"\"\n    destinations:\n      - type: codex\n","parent":"Config file reference/Example: codex-only"}
+{"file":"packages/agasi/src/cli.ts","kind":"string","line":[45,45],"text":"Invalid --dest \"${s}\" (use path:relative/path)","parent":"parseDestToken"}
+{"file":"packages/agasi/src/cli.ts","kind":"string","line":[49,49],"text":"Invalid --dest \"${s}\" (expected cursor|agents|codex|path:rel)","parent":"parseDestToken"}
+{"file":"packages/agasi/src/cli.ts","kind":"string","line":[75,75],"text":"Unknown target id: ${opts.targetId}","parent":"runInstallOrSync"}
+{"file":"packages/agasi/src/cli.ts","kind":"string","line":[87,87],"text":"agasi: skill not found under source (skipped): ${n}","parent":"runInstallOrSync"}
+{"file":"packages/agasi/src/cli.ts","kind":"string","line":[103,103],"text":"real directory","parent":"runInstallOrSync"}
+{"file":"packages/agasi/src/cli.ts","kind":"string","line":[108,108],"text":"${outcome.message}\\nRefuse to replace without --yes (or remove the directory manually).","parent":"runInstallOrSync"}
+{"file":"packages/agasi/src/cli.ts","kind":"string","line":[111,111],"text":"real directory","parent":"runInstallOrSync"}
+{"file":"packages/agasi/src/cli.ts","kind":"string","line":[112,112],"text":"${outcome.message}\\nUse --force --yes to attempt replacement (dangerous).","parent":"runInstallOrSync"}
+{"file":"packages/agasi/src/cli.ts","kind":"string","line":[117,117],"text":"agasi: link ${t.id}/${label} -> ${skill}","parent":"runInstallOrSync"}
+{"file":"packages/agasi/src/cli.ts","kind":"string","line":[119,119],"text":"agasi: fixed link ${t.id}/${label} -> ${skill}","parent":"runInstallOrSync"}
+{"file":"packages/agasi/src/cli.ts","kind":"string","line":[125,125],"text":"agasi: pruned ${removed} stale symlink(s) under ${baseDir}","parent":"runInstallOrSync"}
+{"file":"packages/agasi/src/cli.ts","kind":"string","line":[137,137],"text":"agasi: source \"${s.name}\" missing path: ${s.path}","parent":"runDoctor"}
+{"file":"packages/agasi/src/cli.ts","kind":"string","line":[146,146],"text":"agasi: target \"${t.id}\": ${e instanceof Error ? e.message : e}","parent":"runDoctor"}
+{"file":"packages/agasi/src/cli.ts","kind":"string","line":[155,155],"text":"agasi: target \"${t.id}\": ${e instanceof Error ? e.message : e}","parent":"runDoctor"}
+{"file":"packages/agasi/src/cli.ts","kind":"string","line":[161,161],"text":"agasi: destination base missing: ${t.id}/${label} (${baseDir})","parent":"runDoctor"}
+{"file":"packages/agasi/src/cli.ts","kind":"string","line":[174,174],"text":"agasi: broken symlink (read failed): ${p}","parent":"runDoctor"}
+{"file":"packages/agasi/src/cli.ts","kind":"string","line":[182,182],"text":"agasi: broken symlink: ${p} -> ${cur}","parent":"runDoctor"}
+{"file":"packages/agasi/src/cli.ts","kind":"string","line":[188,188],"text":"agasi: symlink target missing SKILL.md: ${p} -> ${resolved}","parent":"runDoctor"}
+{"file":"packages/agasi/src/cli.ts","kind":"string","line":[194,194],"text":"agasi: symlink name not in current source listing: ${ent.name} (${p}); run sync --prune to drop","parent":"runDoctor"}
+{"file":"packages/agasi/src/cli.ts","kind":"string","line":[201,201],"text":"agasi: doctor finished (no hard errors)","parent":"runDoctor"}
+{"file":"packages/agasi/src/cli.ts","kind":"string","line":[203,203],"text":"agasi: doctor found ${issues} issue(s)","parent":"runDoctor"}
+{"file":"packages/agasi/src/cli.ts","kind":"string","line":[212,212],"text":"Symlink flat agent skills into Cursor, .agents, and Codex directories"}
+{"file":"packages/agasi/src/cli.ts","kind":"string","line":[214,214],"text":"--config <file>"}
+{"file":"packages/agasi/src/cli.ts","kind":"string","line":[214,214],"text":"Path to config file (default ~/.agasi/config.yaml)"}
+{"file":"packages/agasi/src/cli.ts","kind":"string","line":[223,223],"text":"Create ~/.agasi/config.yaml if missing"}
+{"file":"packages/agasi/src/cli.ts","kind":"string","line":[232,232],"text":"Print config path and effective configuration"}
+{"file":"packages/agasi/src/cli.ts","kind":"string","line":[237,237],"text":"config: ${cfgPath}"}
+{"file":"packages/agasi/src/cli.ts","kind":"string","line":[241,241],"text":"Manage skill sources"}
+{"file":"packages/agasi/src/cli.ts","kind":"string","line":[245,245],"text":"List configured sources"}
+{"file":"packages/agasi/src/cli.ts","kind":"string","line":[257,257],"text":"Add a local source (skills root directory)"}
+{"file":"packages/agasi/src/cli.ts","kind":"string","line":[258,258],"text":"Source id"}
+{"file":"packages/agasi/src/cli.ts","kind":"string","line":[259,259],"text":"Absolute or ~/ path to skills folder"}
+{"file":"packages/agasi/src/cli.ts","kind":"string","line":[265,265],"text":"Source already exists: ${name}"}
+{"file":"packages/agasi/src/cli.ts","kind":"string","line":[269,269],"text":"Not a directory: ${abs}"}
+{"file":"packages/agasi/src/cli.ts","kind":"string","line":[273,273],"text":"agasi: added source ${name} -> ${abs}"}
+{"file":"packages/agasi/src/cli.ts","kind":"string","line":[278,278],"text":"Remove a source (must not be referenced by targets)"}
+{"file":"packages/agasi/src/cli.ts","kind":"string","line":[279,279],"text":"Source id"}
+{"file":"packages/agasi/src/cli.ts","kind":"string","line":[284,284],"text":"Source \"${name}\" is still referenced by a target"}
+{"file":"packages/agasi/src/cli.ts","kind":"string","line":[288,288],"text":"Unknown source: ${name}"}
+{"file":"packages/agasi/src/cli.ts","kind":"string","line":[292,292],"text":"agasi: removed source ${name}"}
+{"file":"packages/agasi/src/cli.ts","kind":"string","line":[295,295],"text":"Manage install targets"}
+{"file":"packages/agasi/src/cli.ts","kind":"string","line":[299,299],"text":"List targets and resolved destination bases"}
+{"file":"packages/agasi/src/cli.ts","kind":"string","line":[305,305],"text":"${t.id}\\tsource=${t.source}\\trepoRoot=${t.repoRoot ?? \"\"}"}
+{"file":"packages/agasi/src/cli.ts","kind":"string","line":[310,310],"text":"  (error: ${e instanceof Error ? e.message : e})"}
+{"file":"packages/agasi/src/cli.ts","kind":"string","line":[314,314],"text":"  - ${d.label}: ${d.baseDir}"}
+{"file":"packages/agasi/src/cli.ts","kind":"string","line":[321,321],"text":"Add a target"}
+{"file":"packages/agasi/src/cli.ts","kind":"string","line":[322,322],"text":"--id <id>"}
+{"file":"packages/agasi/src/cli.ts","kind":"string","line":[322,322],"text":"Target id"}
+{"file":"packages/agasi/src/cli.ts","kind":"string","line":[323,323],"text":"--source <name>"}
+{"file":"packages/agasi/src/cli.ts","kind":"string","line":[323,323],"text":"Source name"}
+{"file":"packages/agasi/src/cli.ts","kind":"string","line":[324,324],"text":"--repo <root>"}
+{"file":"packages/agasi/src/cli.ts","kind":"string","line":[324,324],"text":"Repo root (required for cursor/agents/path destinations)"}
+{"file":"packages/agasi/src/cli.ts","kind":"string","line":[326,326],"text":"--dest <d>"}
+{"file":"packages/agasi/src/cli.ts","kind":"string","line":[327,327],"text":"Repeatable: cursor | agents | codex | path:relative"}
+{"file":"packages/agasi/src/cli.ts","kind":"string","line":[341,341],"text":"Unknown source: ${o.source}"}
+{"file":"packages/agasi/src/cli.ts","kind":"string","line":[344,344],"text":"Target already exists: ${o.id}"}
+{"file":"packages/agasi/src/cli.ts","kind":"string","line":[348,348],"text":"Provide at least one --dest"}
+{"file":"packages/agasi/src/cli.ts","kind":"string","line":[359,359],"text":"agasi: added target ${o.id}"}
+{"file":"packages/agasi/src/cli.ts","kind":"string","line":[365,365],"text":"Remove a target"}
+{"file":"packages/agasi/src/cli.ts","kind":"string","line":[366,366],"text":"Target id"}
+{"file":"packages/agasi/src/cli.ts","kind":"string","line":[372,372],"text":"Unknown target: ${id}"}
+{"file":"packages/agasi/src/cli.ts","kind":"string","line":[376,376],"text":"agasi: removed target ${id}"}
+{"file":"packages/agasi/src/cli.ts","kind":"string","line":[387,387],"text":"Reconcile symlinks (fix wrong/missing links)","parent":"addInstallLikeCommand"}
+{"file":"packages/agasi/src/cli.ts","kind":"string","line":[388,388],"text":"Create symlinks for skills","parent":"addInstallLikeCommand"}
+{"file":"packages/agasi/src/cli.ts","kind":"string","line":[390,390],"text":"--target <id>","parent":"addInstallLikeCommand"}
+{"file":"packages/agasi/src/cli.ts","kind":"string","line":[390,390],"text":"Only this target id","parent":"addInstallLikeCommand"}
+{"file":"packages/agasi/src/cli.ts","kind":"string","line":[391,391],"text":"Replace symlinks that point to the wrong place","parent":"addInstallLikeCommand"}
+{"file":"packages/agasi/src/cli.ts","kind":"string","line":[392,392],"text":"Acknowledge replacing real directories with --force (unsafe)","parent":"addInstallLikeCommand"}
+{"file":"packages/agasi/src/cli.ts","kind":"string","line":[395,395],"text":"Remove stale symlinks for skills removed from source","parent":"addInstallLikeCommand"}
+{"file":"packages/agasi/src/cli.ts","kind":"string","line":[397,397],"text":"Skill folder names (default: all)","parent":"addInstallLikeCommand"}
+{"file":"packages/agasi/src/cli.ts","kind":"string","line":[424,424],"text":"Check config, sources, and symlinks"}
+{"file":"packages/agasi/src/config.ts","kind":"string","line":[94,94],"text":"Destination type \"path\" requires non-empty \"relative\"","parent":"normalizeDestinations"}
+{"file":"packages/agasi/src/config.ts","kind":"string","line":[116,116],"text":"Each source must have a non-empty name","parent":"normalizeSources"}
+{"file":"packages/agasi/src/config.ts","kind":"string","line":[121,121],"text":"Source \"${name}\" is git-backed (phase 2); this agasi version supports local paths only. Use path: or upgrade when fetch is available.","parent":"normalizeSources"}
+{"file":"packages/agasi/src/config.ts","kind":"string","line":[124,124],"text":"Source \"${name}\" must declare path (local skills root)","parent":"normalizeSources"}
+{"file":"packages/agasi/src/config.ts","kind":"string","line":[150,150],"text":"Each target must have a non-empty id","parent":"normalizeTargets"}
+{"file":"packages/agasi/src/config.ts","kind":"string","line":[153,153],"text":"Target \"${id}\" must reference a source name","parent":"normalizeTargets"}
+{"file":"packages/agasi/src/config.ts","kind":"string","line":[157,157],"text":"Target \"${id}\" must declare at least one destination","parent":"normalizeTargets"}
+{"file":"packages/agasi/src/config.ts","kind":"string","line":[211,211],"text":"Source \"${s.name}\" path does not exist: ${s.path}","parent":"assertSourcePathsExist"}
+{"file":"packages/agasi/src/config.ts","kind":"string","line":[214,214],"text":"Source \"${s.name}\" path is not a directory: ${s.path}","parent":"assertSourcePathsExist"}
+{"file":"packages/agasi/src/config.ts","kind":"string","line":[234,234],"text":"Target \"${t.id}\" needs repoRoot for non-codex destinations","parent":"validateTargetForInstall"}
+{"file":"packages/agasi/src/link.ts","kind":"string","line":[27,27],"text":"Missing skill directory: ${src}","parent":"linkSkillDir"}
+{"file":"packages/agasi/src/link.ts","kind":"string","line":[42,42],"text":"Symlink points elsewhere: ${destLinkPath} -> ${cur}","parent":"linkSkillDir"}
+{"file":"packages/agasi/src/link.ts","kind":"string","line":[52,52],"text":"Could not read symlink at ${destLinkPath}","parent":"linkSkillDir"}
+{"file":"packages/agasi/src/link.ts","kind":"string","line":[63,63],"text":"Destination is a real directory (not a symlink): ${destLinkPath}","parent":"linkSkillDir"}
+{"file":"packages/agasi/src/link.ts","kind":"string","line":[68,68],"text":"Destination exists and is not a symlink: ${destLinkPath}","parent":"linkSkillDir"}
+{"file":"packages/agasi/src/targets.ts","kind":"string","line":[36,36],"text":"Target \"${target.id}\": cursor destination requires repoRoot","parent":"resolveDestinations"}
+{"file":"packages/agasi/src/targets.ts","kind":"string","line":[44,44],"text":"Target \"${target.id}\": agents destination requires repoRoot","parent":"resolveDestinations"}
+{"file":"packages/agasi/src/targets.ts","kind":"string","line":[57,57],"text":"Target \"${target.id}\": path destination requires repoRoot","parent":"resolveDestinations"}
+{"file":"packages/agasi/src/targets.ts","kind":"string","line":[71,71],"text":"Unknown source \"${target.source}\" for target \"${target.id}\"","parent":"resolveSkillsRoot"}
+{"file":"packages/agasi/test/cli.integration.test.mjs","kind":"string","line":[15,15],"text":"CLI --help exits 0"}
+{"file":"packages/agasi/test/cli.integration.test.mjs","kind":"string","line":[21,21],"text":"CLI init creates config file"}
+{"file":"packages/agasi/test/cli.integration.test.mjs","kind":"string","line":[30,30],"text":"CLI source add and target add and install create symlink"}
+{"file":"packages/agasi/test/cli.integration.test.mjs","kind":"string","line":[68,68],"text":"CLI config prints JSON"}
+{"file":"packages/agasi/test/config.test.mjs","kind":"string","line":[17,17],"text":"loadConfig returns defaults when file missing"}
+{"file":"packages/agasi/test/config.test.mjs","kind":"string","line":[25,25],"text":"loadConfig round-trip save and load"}
+{"file":"packages/agasi/test/config.test.mjs","kind":"string","line":[52,52],"text":"loadConfig expands tilde in source path"}
+{"file":"packages/agasi/test/config.test.mjs","kind":"string","line":[53,53],"text":"agasi-tilde-${Date.now()}"}
+{"file":"packages/agasi/test/config.test.mjs","kind":"string","line":[62,67],"text":"version: 1\nsources:\n  - name: main\n    path: ~/${marker}\ntargets: []\n"}
+{"file":"packages/agasi/test/config.test.mjs","kind":"string","line":[77,77],"text":"loadConfig throws on git-only source"}
+{"file":"packages/agasi/test/config.test.mjs","kind":"string","line":[82,89],"text":"\nversion: 1\nsources:\n  - name: remote\n    git:\n      url: https://github.com/x/y.git\ntargets: []\n"}
+{"file":"packages/agasi/test/config.test.mjs","kind":"string","line":[95,95],"text":"loadConfig throws on path destination with empty relative"}
+{"file":"packages/agasi/test/config.test.mjs","kind":"string","line":[100,110],"text":"\nversion: 1\nsources: []\ntargets:\n  - id: bad\n    source: x\n    repoRoot: ${dir.replace(/\\\\/g, \"/\")}\n    destinations:\n      - type: path\n        relative: \"\"\n"}
+{"file":"packages/agasi/test/config.test.mjs","kind":"string","line":[116,116],"text":"assertSourcePathsExist passes when dirs exist"}
+{"file":"packages/agasi/test/config.test.mjs","kind":"string","line":[127,127],"text":"assertSourcePathsExist throws when path missing"}
+{"file":"packages/agasi/test/config.test.mjs","kind":"string","line":[139,139],"text":"findSource and targetReferencesSource"}
+{"file":"packages/agasi/test/config.test.mjs","kind":"string","line":[154,154],"text":"needsRepoRoot and validateTargetForInstall"}
+{"file":"packages/agasi/test/config.test.mjs","kind":"string","line":[164,164],"text":"Target \"x\" needs repoRoot for non-codex destinations"}
+{"file":"packages/agasi/test/helpers.mjs","kind":"docstring","line":[8,8],"text":"Temporary directory under os.tmpdir()"}
+{"file":"packages/agasi/test/helpers.mjs","kind":"docstring","line":[13,13],"text":"Absolute path to compiled CLI"}
+{"file":"packages/agasi/test/helpers.mjs","kind":"docstring","line":[18,18],"text":"Create a minimal skill directory with SKILL.md"}
+{"file":"packages/agasi/test/helpers.mjs","kind":"string","line":[22,22],"text":"---\\nname: x\\n---\\n"}
+{"file":"packages/agasi/test/link.test.mjs","kind":"string","line":[12,12],"text":"linkSkillDir creates symlink to skill directory"}
+{"file":"packages/agasi/test/link.test.mjs","kind":"string","line":[26,26],"text":"linkSkillDir ok when symlink already correct"}
+{"file":"packages/agasi/test/link.test.mjs","kind":"string","line":[37,37],"text":"linkSkillDir blocks when symlink points elsewhere without force"}
+{"file":"packages/agasi/test/link.test.mjs","kind":"string","line":[52,52],"text":"linkSkillDir replaces wrong symlink when force"}
+{"file":"packages/agasi/test/link.test.mjs","kind":"string","line":[67,67],"text":"linkSkillDir blocks real directory"}
+{"file":"packages/agasi/test/link.test.mjs","kind":"string","line":[79,79],"text":"pruneStaleSymlinks removes symlink for removed skill name"}
+{"file":"packages/agasi/test/paths.test.mjs","kind":"string","line":[7,7],"text":"expandHome resolves tilde to homedir"}
+{"file":"packages/agasi/test/paths.test.mjs","kind":"string","line":[13,13],"text":"expandHome resolves relative paths against cwd"}
+{"file":"packages/agasi/test/skills.test.mjs","kind":"string","line":[8,8],"text":"listSkillNames returns empty for missing root"}
+{"file":"packages/agasi/test/skills.test.mjs","kind":"string","line":[9,9],"text":"/nonexistent/path/agasi-xyz"}
+{"file":"packages/agasi/test/skills.test.mjs","kind":"string","line":[12,12],"text":"listSkillNames ignores dirs without SKILL.md and non-directories"}
+{"file":"packages/agasi/test/skills.test.mjs","kind":"string","line":[20,20],"text":"listSkillNames sorts names"}
+{"file":"packages/agasi/test/skills.test.mjs","kind":"string","line":[28,28],"text":"skillSourceDir joins paths"}
+{"file":"packages/agasi/test/targets.test.mjs","kind":"string","line":[8,8],"text":"resolveSkillsRoot returns resolved source path"}
+{"file":"packages/agasi/test/targets.test.mjs","kind":"string","line":[26,26],"text":"resolveSkillsRoot throws for unknown source"}
+{"file":"packages/agasi/test/targets.test.mjs","kind":"string","line":[42,42],"text":"resolveDestinations cursor and agents"}
+{"file":"packages/agasi/test/targets.test.mjs","kind":"string","line":[57,57],"text":"resolveDestinations path relative"}
+{"file":"packages/agasi/test/targets.test.mjs","kind":"string","line":[69,69],"text":"resolveDestinations codex uses CODEX_HOME when set"}
+{"file":"packages/agasi/test/targets.test.mjs","kind":"string","line":[91,91],"text":"resolveDestinations throws when cursor needs repoRoot"}
+{"file":"packages/taskasi/PUBLISHING.md","kind":"sample","line":[14,17],"text":"npm login\nnpm whoami\n","parent":"Publishing `@zyreth/taskasi`/One-time: npm login"}
+{"file":"packages/taskasi/PUBLISHING.md","kind":"sample","line":[24,26],"text":"npm version patch\n   ","parent":"Publishing `@zyreth/taskasi`/Before every release"}
+{"file":"packages/taskasi/PUBLISHING.md","kind":"sample","line":[32,36],"text":"npm install\n   npm test\n   npm run pack:dry\n   ","parent":"Publishing `@zyreth/taskasi`/Before every release"}
+{"file":"packages/taskasi/PUBLISHING.md","kind":"sample","line":[48,50],"text":"npm publish --access public\n","parent":"Publishing `@zyreth/taskasi`/Publish"}
+{"file":"packages/taskasi/PUBLISHING.md","kind":"sample","line":[56,60],"text":"npm view @zyreth/taskasi version\nnpm install -g @zyreth/taskasi\ntaskasi --help\n","parent":"Publishing `@zyreth/taskasi`/After publish"}
+{"file":"packages/taskasi/PUBLISHING.md","kind":"sample","line":[66,68],"text":"npm run docs:build\n","parent":"Publishing `@zyreth/taskasi`/Documentation site (optional)"}
+{"file":"packages/taskasi/PUBLISHING.md","kind":"sample","line":[74,76],"text":"npm pack\n","parent":"Publishing `@zyreth/taskasi`/Dry run without publishing"}
+{"file":"packages/taskasi/README.md","kind":"sample","line":[24,27],"text":"npm install -g @zyreth/taskasi\ntaskasi --help\n","parent":"@zyreth/taskasi/Install"}
+{"file":"packages/taskasi/README.md","kind":"sample","line":[35,41],"text":"# Optional: create ~/.taskasi/config.yaml\ntaskasi init\n\ncd /path/to/your/git/repo\ntaskasi switch 1587\n","parent":"@zyreth/taskasi/Quick start"}
+{"file":"packages/taskasi/README.md","kind":"sample","line":[69,73],"text":"cd packages/taskasi\nnpm install\nnpm run docs:dev\n","parent":"@zyreth/taskasi/Documentation (static site)/Develop (hot reload)"}
+{"file":"packages/taskasi/README.md","kind":"sample","line":[79,81],"text":"npm run docs:build\n","parent":"@zyreth/taskasi/Documentation (static site)/Build static HTML"}
+{"file":"packages/taskasi/README.md","kind":"sample","line":[85,87],"text":"npm run docs:preview   # preview the production build locally\n","parent":"@zyreth/taskasi/Documentation (static site)/Build static HTML"}
+{"file":"packages/taskasi/README.md","kind":"sample","line":[105,110],"text":"cd packages/taskasi\nnpm install\nnpm run build\nnpm test\n","parent":"@zyreth/taskasi/Development (package)"}
+{"file":"packages/taskasi/README.md","kind":"sample","line":[116,118],"text":"npm test\n","parent":"@zyreth/taskasi/Tests"}
+{"file":"packages/taskasi/docs/.vitepress/config.mts","kind":"string","line":[6,6],"text":"Git worktrees, gitignore-aware env mirroring, and VS Code / Cursor workspace helper CLI."}
+{"file":"packages/taskasi/docs/.vitepress/config.mts","kind":"string","line":[12,12],"text":"/guide/getting-started"}
+{"file":"packages/taskasi/docs/.vitepress/config.mts","kind":"string","line":[19,19],"text":"Getting started"}
+{"file":"packages/taskasi/docs/.vitepress/config.mts","kind":"string","line":[19,19],"text":"/guide/getting-started"}
+{"file":"packages/taskasi/docs/.vitepress/config.mts","kind":"string","line":[22,22],"text":"Environment files"}
+{"file":"packages/taskasi/docs/.vitepress/config.mts","kind":"string","line":[23,23],"text":"Workspaces (VS Code / Cursor)"}
+{"file":"packages/taskasi/docs/.vitepress/config.mts","kind":"string","line":[25,25],"text":"/guide/troubleshooting"}
+{"file":"packages/taskasi/docs/.vitepress/config.mts","kind":"string","line":[31,31],"text":"CLI commands"}
+{"file":"packages/taskasi/docs/.vitepress/config.mts","kind":"string","line":[32,32],"text":"Config keys"}
+{"file":"packages/taskasi/docs/.vitepress/config.mts","kind":"string","line":[32,32],"text":"/reference/config-keys"}
+{"file":"packages/taskasi/docs/.vitepress/config.mts","kind":"string","line":[33,33],"text":"/reference/placeholders"}
+{"file":"packages/taskasi/docs/.vitepress/config.mts","kind":"string","line":[44,44],"text":"https://github.com/oleksii-honchar/zyreth/tree/main/packages/taskasi"}
+{"file":"packages/taskasi/docs/.vitepress/config.mts","kind":"string","line":[48,48],"text":"Released under the MIT License."}
+{"file":"packages/taskasi/docs/.vitepress/config.mts","kind":"string","line":[49,49],"text":"Copyright © present Zyreth"}
+{"file":"packages/taskasi/docs/.vitepress/config.mts","kind":"string","line":[53,53],"text":"https://github.com/oleksii-honchar/zyreth/edit/main/packages/taskasi/docs/:path"}
+{"file":"packages/taskasi/docs/.vitepress/config.mts","kind":"string","line":[54,54],"text":"Edit this page on GitHub"}
+{"file":"packages/taskasi/docs/guide/configuration.md","kind":"sample","line":[7,9],"text":"taskasi config\n","parent":"Configuration"}
+{"file":"packages/taskasi/docs/guide/configuration.md","kind":"sample","line":[35,39],"text":"branchPrefix: \"NWDEXP-\"\nworktreeRelativeDir: \".worktrees\"\nworktreeFolderTemplate: \"{branch}\"\n","parent":"Configuration/Example: custom branch prefix"}
+{"file":"packages/taskasi/docs/guide/configuration.md","kind":"sample","line":[43,46],"text":"workspace:\n  enabled: false\n","parent":"Configuration/Example: disable workspace generation"}
+{"file":"packages/taskasi/docs/guide/configuration.md","kind":"sample","line":[50,53],"text":"env:\n  source: \".env\"\n","parent":"Configuration/Example: legacy single `.env` at worktree root"}
+{"file":"packages/taskasi/docs/guide/env-files.md","kind":"sample","line":[45,47],"text":"taskasi switch 1587 --no-env\n","parent":"Environment files/Disabling env copy"}
+{"file":"packages/taskasi/docs/guide/env-files.md","kind":"sample","line":[51,54],"text":"env:\n  enabled: false\n","parent":"Environment files/Disabling env copy"}
+{"file":"packages/taskasi/docs/guide/getting-started.md","kind":"sample","line":[13,16],"text":"npm install -g @zyreth/taskasi\ntaskasi --help\n","parent":"Getting started/Install the CLI"}
+{"file":"packages/taskasi/docs/guide/getting-started.md","kind":"sample","line":[22,24],"text":"taskasi init\n","parent":"Getting started/Initialize config (optional)"}
+{"file":"packages/taskasi/docs/guide/getting-started.md","kind":"sample","line":[32,35],"text":"cd ~/src/my-monorepo\ntaskasi switch 1587\n","parent":"Getting started/Run a switch"}
+{"file":"packages/taskasi/docs/guide/installation.md","kind":"sample","line":[5,7],"text":"npm install -g @zyreth/taskasi\n","parent":"Installation/From npm (recommended)"}
+{"file":"packages/taskasi/docs/guide/installation.md","kind":"sample","line":[11,14],"text":"which taskasi\ntaskasi --help\n","parent":"Installation/From npm (recommended)"}
+{"file":"packages/taskasi/docs/guide/installation.md","kind":"sample","line":[22,27],"text":"cd packages/taskasi\nnpm install\nnpm run build\nnpm link\n","parent":"Installation/From a git clone (development)"}
+{"file":"packages/taskasi/docs/guide/installation.md","kind":"sample","line":[31,33],"text":"npm run build\n","parent":"Installation/From a git clone (development)"}
+{"file":"packages/taskasi/docs/guide/installation.md","kind":"sample","line":[39,41],"text":"npm run docs:dev\n","parent":"Installation/Documentation site (this book)"}
+{"file":"packages/taskasi/docs/guide/installation.md","kind":"sample","line":[47,49],"text":"npm run docs:build\n","parent":"Installation/Documentation site (this book)"}
+{"file":"packages/taskasi/docs/guide/installation.md","kind":"sample","line":[53,55],"text":"npm run docs:preview\n","parent":"Installation/Documentation site (this book)"}
+{"file":"packages/taskasi/docs/guide/workflows.md","kind":"sample","line":[8,10],"text":"taskasi switch 1597\n   ","parent":"Workflows/Typical task branch"}
+{"file":"packages/taskasi/docs/guide/workspaces.md","kind":"sample","line":[20,22],"text":"{repo-name}-{id}.workspace\n","parent":"Workspaces (VS Code / Cursor)/Default output"}
+{"file":"packages/taskasi/docs/guide/workspaces.md","kind":"sample","line":[38,44],"text":"# >>> taskasi\n# Local per-task workspace copies (template file stays tracked).\nsubscriptions-*.workspace\nsubscriptions-*.code-workspace\n# <<< taskasi\n","parent":"Workspaces (VS Code / Cursor)/`.gitignore` integration"}
+{"file":"packages/taskasi/docs/guide/workspaces.md","kind":"sample","line":[50,54],"text":"workspace:\n  gitignore:\n    enabled: false\n","parent":"Workspaces (VS Code / Cursor)/`.gitignore` integration"}
+{"file":"packages/taskasi/docs/guide/workspaces.md","kind":"sample","line":[58,60],"text":"taskasi switch 1587 --no-workspace\n","parent":"Workspaces (VS Code / Cursor)/Disabling workspace generation"}
+{"file":"packages/taskasi/docs/guide/workspaces.md","kind":"sample","line":[64,67],"text":"workspace:\n  enabled: false\n","parent":"Workspaces (VS Code / Cursor)/Disabling workspace generation"}
+{"file":"packages/taskasi/docs/index.md","kind":"sample","line":[33,35],"text":"npm install -g @zyreth/taskasi\n","parent":"Package"}
+{"file":"packages/taskasi/docs/reference/commands.md","kind":"sample","line":[9,11],"text":"taskasi init\n","parent":"CLI commands/`taskasi init`"}
+{"file":"packages/taskasi/docs/reference/commands.md","kind":"sample","line":[17,19],"text":"taskasi config\n","parent":"CLI commands/`taskasi config`"}
+{"file":"packages/taskasi/docs/reference/commands.md","kind":"sample","line":[25,29],"text":"taskasi switch 1587\ntaskasi switch 1587 --no-env\ntaskasi switch 1587 --no-workspace\n","parent":"CLI commands/`taskasi switch <id>`"}
+{"file":"packages/taskasi/docs/reference/commands.md","kind":"sample","line":[50,53],"text":"taskasi --help\ntaskasi -V\n","parent":"CLI commands/Global options"}
+{"file":"packages/taskasi/docs/reference/placeholders.md","kind":"sample","line":[21,23],"text":"worktreeFolderTemplate: \"{branch}\"\n","parent":"Placeholders/`worktreeFolderTemplate`"}
+{"file":"packages/taskasi/docs/reference/placeholders.md","kind":"sample","line":[31,34],"text":"workspace:\n  output: \"{parent}/{basename}-{id}.code-workspace\"\n","parent":"Placeholders/`workspace.output`"}
+{"file":"packages/taskasi/docs/reference/placeholders.md","kind":"sample","line":[38,41],"text":"workspace:\n  output: \"{basename}-{id}.workspace\"\n","parent":"Placeholders/`workspace.output`"}
+{"file":"packages/taskasi/docs/reference/testing.md","kind":"sample","line":[7,9],"text":"npm test\n","parent":"Testing/Commands"}
+{"file":"packages/taskasi/docs/reference/testing.md","kind":"sample","line":[15,18],"text":"npm run test:integration\n# or: npm run test:all\n","parent":"Testing/Commands/Git integration (open shell / full permissions)"}
+{"file":"packages/taskasi/docs/reference/testing.md","kind":"sample","line":[35,37],"text":"node --test --test-concurrency=1 test/*.test.mjs\n","parent":"Testing/`node --test` flags"}
+{"file":"packages/taskasi/docs/reference/testing.md","kind":"sample","line":[45,47],"text":"TASKASI_CONFIG_PATH=/path/to/config.yaml node --test test/config.test.mjs\n","parent":"Testing/Config tests"}
+{"file":"packages/taskasi/src/cli.ts","kind":"docstring","line":[21,21],"text":"Legacy: single `env.source` file copied to worktree root as `.env`."}
+{"file":"packages/taskasi/src/cli.ts","kind":"string","line":[24,24],"text":"taskasi: skip env copy (missing source): ${source}","parent":"copyLegacyEnvToRoot"}
+{"file":"packages/taskasi/src/cli.ts","kind":"string","line":[29,29],"text":"taskasi: copied .env -> ${dest}","parent":"copyLegacyEnvToRoot"}
+{"file":"packages/taskasi/src/cli.ts","kind":"string","line":[36,36],"text":"Create git worktrees and optional VS Code workspace copies"}
+{"file":"packages/taskasi/src/cli.ts","kind":"string","line":[41,41],"text":"Create ~/.taskasi/config.yaml with defaults if missing"}
+{"file":"packages/taskasi/src/cli.ts","kind":"string","line":[49,49],"text":"Print config file path and effective defaults"}
+{"file":"packages/taskasi/src/cli.ts","kind":"string","line":[53,53],"text":"config: ${getTaskasiConfigPath()}"}
+{"file":"packages/taskasi/src/cli.ts","kind":"string","line":[59,59],"text":"Add a worktree for task id (branch = prefix + id)"}
+{"file":"packages/taskasi/src/cli.ts","kind":"string","line":[60,60],"text":"Task id (e.g. 1587)"}
+{"file":"packages/taskasi/src/cli.ts","kind":"string","line":[61,61],"text":"Do not copy .env into the worktree"}
+{"file":"packages/taskasi/src/cli.ts","kind":"string","line":[62,62],"text":"Do not write a workspace copy or touch .gitignore"}
+{"file":"packages/taskasi/src/cli.ts","kind":"string","line":[80,80],"text":"taskasi: repo ${ctx.repoRoot}"}
+{"file":"packages/taskasi/src/cli.ts","kind":"string","line":[81,81],"text":"taskasi: worktree ${worktreePath}"}
+{"file":"packages/taskasi/src/cli.ts","kind":"string","line":[82,82],"text":"taskasi: branch ${ctx.branch}"}
+{"file":"packages/taskasi/src/cli.ts","kind":"string","line":[99,99],"text":"taskasi: no env files matched discovery rules (env mirror skipped)"}
+{"file":"packages/taskasi/src/cli.ts","kind":"string","line":[112,112],"text":"taskasi: workspace enabled but no template found (expected {basename}.workspace or {basename}.code-workspace in repo or parent; set workspace.source to override)"}
+{"file":"packages/taskasi/src/cli.ts","kind":"string","line":[117,117],"text":"taskasi: workspace -> ${out}"}
+{"file":"packages/taskasi/src/cli.ts","kind":"string","line":[122,122],"text":"taskasi: .gitignore updated (taskasi block: ignore per-task workspace copies)"}
+{"file":"packages/taskasi/src/config.ts","kind":"docstring","line":[12,12],"text":"If set, copy only this file into the worktree root as `.env` (legacy). If unset, discover env files (see README)."}
+{"file":"packages/taskasi/src/config.ts","kind":"docstring","line":[14,14],"text":"Extra basenames to always mirror (exact match), in addition to `.env` / `.env.*`."}
+{"file":"packages/taskasi/src/config.ts","kind":"docstring","line":[16,16],"text":"If true (default), also copy files ignored by gitignore when the matching rule looks env-related (e.g. `*.env`)."}
+{"file":"packages/taskasi/src/config.ts","kind":"docstring","line":[18,18],"text":"Extra directory names to skip when walking (always skips `.git`, `node_modules`, `dist`, etc., and `worktreeRelativeDir`)."}
+{"file":"packages/taskasi/src/config.ts","kind":"string","line":[164,164],"text":"Resolved worktree folder name is empty; check worktreeFolderTemplate","parent":"sanitizePathSegment"}
+{"file":"packages/taskasi/src/config.ts","kind":"string","line":[184,184],"text":"${ctx.basename}.code-workspace","parent":"resolveWorkspaceSource"}
+{"file":"packages/taskasi/src/config.ts","kind":"string","line":[185,185],"text":"${ctx.basename}.workspace","parent":"resolveWorkspaceSource"}
+{"file":"packages/taskasi/src/config.ts","kind":"string","line":[186,186],"text":"${ctx.basename}.code-workspace","parent":"resolveWorkspaceSource"}
+{"file":"packages/taskasi/src/config.ts","kind":"string","line":[187,187],"text":"${ctx.basename}.workspace","parent":"resolveWorkspaceSource"}
+{"file":"packages/taskasi/src/config.ts","kind":"string","line":[199,199],"text":"{basename}-{id}.workspace","parent":"resolveWorkspaceOutput"}
+{"file":"packages/taskasi/src/env-mirror.ts","kind":"docstring","line":[14,14],"text":"`.env`, `.env.local`, `.env.dev`, `.env.tpl`, etc. — not `foo.env` (handled via gitignore)."}
+{"file":"packages/taskasi/src/env-mirror.ts","kind":"docstring","line":[19,22],"text":"True if a .gitignore rule line (pattern) is treating this as an env-style file.\nAvoid matching unrelated rules (e.g. `.envrc` pattern should not match `.env` substring loosely)."}
+{"file":"packages/taskasi/src/env-mirror.ts","kind":"docstring","line":[49,51],"text":"For relative paths (posix), returns paths that are ignored by git with an env-related pattern."}
+{"file":"packages/taskasi/src/env-mirror.ts","kind":"string","line":[64,64],"text":"${slice.join(\"\\n\")}\\n","parent":"batchEnvRelatedIgnoredPaths"}
+{"file":"packages/taskasi/src/env-mirror.ts","kind":"string","line":[76,76],"text":"git check-ignore failed (${r.status}): ${r.stderr?.trim() || \"unknown error\"}","parent":"batchEnvRelatedIgnoredPaths"}
+{"file":"packages/taskasi/src/env-mirror.ts","kind":"comment","line":[79,79],"text":"status 0: at least one path ignored; 1: none ignored — both may still print matches on stdout for 0 only","parent":"batchEnvRelatedIgnoredPaths"}
+{"file":"packages/taskasi/src/env-mirror.ts","kind":"string","line":[189,189],"text":"taskasi: env mirrored ${rel.split(path.sep).join(\"/\")}","parent":"mirrorEnvFilesToWorktree"}
+{"file":"packages/taskasi/src/git.ts","kind":"string","line":[11,11],"text":"Could not resolve git repository root","parent":"getGitRoot"}
+{"file":"packages/taskasi/src/gitignore.ts","kind":"string","line":[4,4],"text":"# >>> taskasi"}
+{"file":"packages/taskasi/src/gitignore.ts","kind":"string","line":[5,5],"text":"# <<< taskasi"}
+{"file":"packages/taskasi/src/gitignore.ts","kind":"string","line":[10,10],"text":"# Local per-task workspace copies (template file stays tracked).","parent":"formatBlock"}
+{"file":"packages/taskasi/src/gitignore.ts","kind":"string","line":[11,11],"text":"${basename}-*.workspace","parent":"formatBlock"}
+{"file":"packages/taskasi/src/gitignore.ts","kind":"string","line":[12,12],"text":"${basename}-*.code-workspace","parent":"formatBlock"}
+{"file":"packages/taskasi/src/gitignore.ts","kind":"docstring","line":[22,27],"text":"Ensures repo `.gitignore` contains a taskasi-managed section that ignores\n`{basename}-*.workspace` and `{basename}-*.code-workspace` so the canonical\n`basename.workspace` / `basename.code-workspace` template is not matched.\n@returns true if `.gitignore` was created or modified"}
+{"file":"packages/taskasi/src/gitignore.ts","kind":"string","line":[38,38],"text":"^${escapeRegExp(MARKER_START)}[\\\\s\\\\S]*?^${escapeRegExp(MARKER_END)}\\\\s*","parent":"ensureTaskasiGitignoreRules"}
+{"file":"packages/taskasi/src/paths.ts","kind":"docstring","line":[8,10],"text":"Absolute path to global config file. Override with env `TASKASI_CONFIG_PATH` (tests, sandboxes)."}
+{"file":"packages/taskasi/src/workspace.ts","kind":"string","line":[28,28],"text":"Workspace JSON has no folders array","parent":"rewriteWorkspaceFolders"}
+{"file":"packages/taskasi/src/workspace.ts","kind":"string","line":[33,33],"text":"Workspace folder entry missing string path","parent":"rewriteWorkspaceFolders"}
+{"file":"packages/taskasi/src/workspace.ts","kind":"string","line":[59,59],"text":"${JSON.stringify(rewritten, null, 2)}\\n","parent":"writeWorkspace"}
+{"file":"packages/taskasi/test/cli.test.mjs","kind":"string","line":[11,11],"text":"cli smoke"}
+{"file":"packages/taskasi/test/cli.test.mjs","kind":"string","line":[12,12],"text":"prints help with exit 0"}
+{"file":"packages/taskasi/test/cli.test.mjs","kind":"string","line":[20,20],"text":"switch --help lists flags"}
+{"file":"packages/taskasi/test/cli.test.mjs","kind":"string","line":[29,29],"text":"cli.js has shebang for bin"}
+{"file":"packages/taskasi/test/config.test.mjs","kind":"string","line":[34,34],"text":"buildPathContext / resolveWorktreeFolder"}
+{"file":"packages/taskasi/test/config.test.mjs","kind":"string","line":[35,35],"text":"builds branch and prefixLower"}
+{"file":"packages/taskasi/test/config.test.mjs","kind":"string","line":[43,43],"text":"resolves worktree folder from template"}
+{"file":"packages/taskasi/test/config.test.mjs","kind":"string","line":[49,49],"text":"sanitizes slashes in template output"}
+{"file":"packages/taskasi/test/config.test.mjs","kind":"string","line":[60,60],"text":"defaults to repo .env"}
+{"file":"packages/taskasi/test/config.test.mjs","kind":"string","line":[66,66],"text":"respects env.source relative to repo"}
+{"file":"packages/taskasi/test/config.test.mjs","kind":"string","line":[76,76],"text":"resolveWorkspaceOutput"}
+{"file":"packages/taskasi/test/config.test.mjs","kind":"string","line":[77,77],"text":"defaults to basename-id.workspace under repo"}
+{"file":"packages/taskasi/test/config.test.mjs","kind":"string","line":[82,82],"text":"subscriptions-1587.workspace"}
+{"file":"packages/taskasi/test/config.test.mjs","kind":"string","line":[86,86],"text":"expands custom pattern with parent"}
+{"file":"packages/taskasi/test/config.test.mjs","kind":"string","line":[91,91],"text":"{parent}/{basename}-{id}.code-workspace"}
+{"file":"packages/taskasi/test/config.test.mjs","kind":"string","line":[97,97],"text":"subscriptions-1.code-workspace"}
+{"file":"packages/taskasi/test/config.test.mjs","kind":"string","line":[102,102],"text":"loadConfig with TASKASI_CONFIG_PATH"}
+{"file":"packages/taskasi/test/config.test.mjs","kind":"string","line":[112,115],"text":"branchPrefix: \"TICKET-\"\nenv:\n  enabled: false\n"}
+{"file":"packages/taskasi/test/config.test.mjs","kind":"string","line":[130,130],"text":"merges YAML over defaults"}
+{"file":"packages/taskasi/test/config.test.mjs","kind":"string","line":[139,139],"text":"resolveWorkspaceSource with temp files"}
+{"file":"packages/taskasi/test/config.test.mjs","kind":"string","line":[155,155],"text":"finds repo-root .code-workspace first"}
+{"file":"packages/taskasi/test/config.test.mjs","kind":"string","line":[160,160],"text":"${base}.code-workspace"}
+{"file":"packages/taskasi/test/config.test.mjs","kind":"string","line":[162,162],"text":"${base}.code-workspace"}
+{"file":"packages/taskasi/test/config.test.mjs","kind":"string","line":[168,168],"text":"finds .workspace in repo when code-workspace missing"}
+{"file":"packages/taskasi/test/env-discovery.test.mjs","kind":"string","line":[5,5],"text":"../dist/env-mirror.js"}
+{"file":"packages/taskasi/test/env-discovery.test.mjs","kind":"string","line":[24,24],"text":"finds .env and nested .env.local but skips node_modules"}
+{"file":"packages/taskasi/test/env-discovery.test.mjs","kind":"string","line":[32,32],"text":"includes extra basename from fileNames"}
+{"file":"packages/taskasi/test/env-discovery.test.mjs","kind":"string","line":[43,43],"text":"mirrorEnvFilesToWorktree"}
+{"file":"packages/taskasi/test/env-discovery.test.mjs","kind":"string","line":[44,44],"text":"copies relative structure"}
+{"file":"packages/taskasi/test/env-mirror.test.mjs","kind":"string","line":[6,6],"text":"../dist/env-mirror.js"}
+{"file":"packages/taskasi/test/env-mirror.test.mjs","kind":"string","line":[8,8],"text":"isStandardDotenvBasename"}
+{"file":"packages/taskasi/test/env-mirror.test.mjs","kind":"string","line":[9,9],"text":"matches .env"}
+{"file":"packages/taskasi/test/env-mirror.test.mjs","kind":"string","line":[12,12],"text":"matches .env.*"}
+{"file":"packages/taskasi/test/env-mirror.test.mjs","kind":"string","line":[17,17],"text":"rejects foo.env and .envrc"}
+{"file":"packages/taskasi/test/env-mirror.test.mjs","kind":"string","line":[23,23],"text":"patternLooksEnvRelated"}
+{"file":"packages/taskasi/test/env-mirror.test.mjs","kind":"string","line":[24,24],"text":"matches common gitignore env patterns"}
+{"file":"packages/taskasi/test/env-mirror.test.mjs","kind":"string","line":[31,31],"text":"rejects unrelated patterns"}
+{"file":"packages/taskasi/test/gitignore.test.mjs","kind":"string","line":[8,8],"text":"ensureTaskasiGitignoreRules"}
+{"file":"packages/taskasi/test/gitignore.test.mjs","kind":"string","line":[9,9],"text":"creates .gitignore with taskasi block"}
+{"file":"packages/taskasi/test/gitignore.test.mjs","kind":"string","line":[23,23],"text":"is idempotent when basename unchanged"}
+{"file":"packages/taskasi/test/helpers/tmp.mjs","kind":"docstring","line":[6,6],"text":"Writable under package (works in restricted CI sandboxes that block system temp)."}
+{"file":"packages/taskasi/test/integration/git.test.mjs","kind":"docstring","line":[9,14],"text":"Integration tests against a real `git` binary (init, worktree).\nNot included in default `npm test` — run `npm run test:integration` or `npm run test:all`.\nRequires a normal environment (e.g. Cursor **open shell** / full permissions) so `git init`\ncan create `.git/hooks`; restricted sandboxes often block this."}
+{"file":"packages/taskasi/test/integration/git.test.mjs","kind":"string","line":[20,20],"text":"git helpers (integration)"}
+{"file":"packages/taskasi/test/integration/git.test.mjs","kind":"string","line":[28,28],"text":"# t\\n"}
+{"file":"packages/taskasi/test/integration/git.test.mjs","kind":"string","line":[37,37],"text":"getGitRoot resolves from subfolder"}
+{"file":"packages/taskasi/test/integration/git.test.mjs","kind":"string","line":[43,43],"text":"localBranchExists is false for unknown branch"}
+{"file":"packages/taskasi/test/integration/git.test.mjs","kind":"string","line":[44,44],"text":"nonexistent-branch-xyz"}
+{"file":"packages/taskasi/test/integration/git.test.mjs","kind":"string","line":[47,47],"text":"localBranchExists is true for main"}
+{"file":"packages/taskasi/test/integration/git.test.mjs","kind":"string","line":[51,51],"text":"addWorktree creates new branch and path"}
+{"file":"packages/taskasi/test/paths.test.mjs","kind":"string","line":[7,7],"text":"replaces known tokens"}
+{"file":"packages/taskasi/test/paths.test.mjs","kind":"string","line":[9,9],"text":"{basename}-{id}.workspace"}
+{"file":"packages/taskasi/test/paths.test.mjs","kind":"string","line":[16,16],"text":"replaces multiple occurrences"}
+{"file":"packages/taskasi/test/paths.test.mjs","kind":"string","line":[25,25],"text":"uses forward slashes"}
+{"file":"packages/taskasi/test/workspace-write.test.mjs","kind":"string","line":[9,9],"text":"writes rewritten JSON next to template shape"}
+{"file":"packages/taskasi/test/workspace.test.mjs","kind":"string","line":[9,9],"text":"rewriteWorkspaceFolders"}
+{"file":"packages/taskasi/test/workspace.test.mjs","kind":"string","line":[10,10],"text":"rewrites root and in-repo paths; preserves ../"}
+{"file":"packages/taskasi/test/workspace.test.mjs","kind":"string","line":[26,26],"text":".worktrees/NWDEXP-1/apps/api"}
